@@ -12,6 +12,11 @@ const Login = () => {
 
     let navigate = useNavigate();
 
+    // useEffect(()=>{
+    //     console.log("useEffect", state)
+    //     localStorage.setItem("SAVEJWT", JSON.stringify(state))
+    //   },[state])
+
     const [user, setUser] = useState({
         mail : "",
         password : ""
@@ -43,14 +48,16 @@ const Login = () => {
             .then(res => {
                 //Aqui procedo a guardar el token en redux, o en alguna otra parte del proyecto
                 console.log(res);
+                localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt))
                 
-                if(res){
-                    //Quiere decir que la respuesta del backend al proceso de login es correcta...
+                
+                // if(res){
+                //     //Quiere decir que la respuesta del backend al proceso de login es correcta...
 
-                    setTimeout(()=>{
-                        navigate("/");
-                    },1000);
-                }
+                //     setTimeout(()=>{
+                //         navigate("/");
+                //     },1000);
+                // }
             });
 
     }
