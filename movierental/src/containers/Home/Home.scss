@@ -2,7 +2,7 @@
 
 .homeDesign {
 
-height: 80vh;
+height: 90vh;
 width: 100vw;
 
 display: flex;
@@ -14,17 +14,33 @@ color: greenyellow;
 }
 
 .buttonHomeDesign{
-    width: 10vw;
-    height: 4vh;
+    width: 15vw;
+    height: 7vh;
+    
+    margin-left: 1em;
     border-radius: 2em;
-
-    background-color: greenyellow;
+    cursor: pointer;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: greenyellow;
+    background-image: -webkit-linear-gradient(top, greenyellow, #2079b0);
+        background-image: -moz-linear-gradient(top, greenyellow, #2079b0);
+        background-image: -ms-linear-gradient(top, greenyellow, #2079b0);
+        background-image: -o-linear-gradient(top, greenyellow, #2079b0);
+        background-image: linear-gradient(to bottom, greenyellow, #2079b0);
     transition: 0.2s;
 }
 
 .buttonHomeDesign:hover {
 
-    background-color: darkred;
+    background: #2079b0;
+        background-image: -webkit-linear-gradient(top, #2079b0, greenyellow);
+        background-image: -moz-linear-gradient(top, #2079b0, greenyellow);
+        background-image: -ms-linear-gradient(top, #2079b0, greenyellow);
+        background-image: -o-linear-gradient(top, #2079b0, greenyellow);
+        background-image: linear-gradient(to bottom, #2079b0, greenyellow);
+        text-decoration: none;
 
     transition: 0.2s;
 }
+
