@@ -5,13 +5,14 @@ import './App.css';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import navbar from './components/Navigator/Navegacion/Navbar';
+//import navbar from './components/Navigator/Navegacion/Navbar';
 //Importaciones de containers y componentes
 
-// import Home from './containers/Home/Home';
+
 // import Register from './containers/Register/Register';
 import Login from './containers/Login/Login';
 import Home from './containers/Login/Home/Home';
+import navbar from './components/Navigator/Navegacion/Navbar';
 import Header from './components/Navigator/Header/Header';
 // import Films from './containers/Films/Films';
 
@@ -26,12 +27,15 @@ function App() {
       
         <Header />
         
+        <navbar/>
+        
         <Routes>
         {/* La parte cambiante es lo que contiene Routes DENTRO */}
 
             {/* Cada Route contendrá una vista..... */} 
-
-            <Route path="/" element= {<Home/>}/>;
+         
+          
+          <Route path="/" element={<Home />} />;
           
             <Route path="/login" element={<Login/>}/>
             {/* <Route path="/films" element={<Films/>}/> */}
