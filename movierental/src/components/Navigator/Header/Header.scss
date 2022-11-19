@@ -15,7 +15,7 @@
 
 font-weight: bold;
 
-margin-right: 3em;
+//margin-right: 3em;
 margin-bottom: 1.5em;
 
 }
@@ -59,4 +59,19 @@ margin-top: 1em;
 margin-right: 2em;
 
 
+}
+
+.menuDesign{
+width: 6em;
+height: 3em;
+margin-right: 40em;
+margin-top: 0.5em;
+border-radius: 2em;
+background: greenyellow;
+    background-image: -webkit-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -moz-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -ms-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -o-linear-gradient(top, greenyellow, #2079b0);
+    background-image: linear-gradient(to bottom, greenyellow, #2079b0);
+    transition: 0.2s;
 }
