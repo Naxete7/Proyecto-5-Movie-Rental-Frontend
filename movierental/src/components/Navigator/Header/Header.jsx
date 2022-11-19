@@ -3,7 +3,7 @@ import React from "react";
 import "./Header.scss"
 
 import { useNavigate } from "react-router-dom";
-//import navbar from "../Navegacion/Navbar";
+import navbar from "../Navegacion/navbar";
 
 
 const Header = () => {
