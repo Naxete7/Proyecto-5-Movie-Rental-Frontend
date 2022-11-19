@@ -11,7 +11,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 // import Register from './containers/Register/Register';
 import Login from './containers/Login/Login';
-import Home from './containers/Login/Home/Home';
+import Home from './containers/Home/Home';
 import navbar from './components/Navigator/Navegacion/Navbar';
 import Header from './components/Navigator/Header/Header';
 // import Films from './containers/Films/Films';
