@@ -48,7 +48,9 @@ const Login = () => {
             .then(res => {
                 //Aqui procedo a guardar el token en redux, o en alguna otra parte del proyecto
                 console.log(res);
-                localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt))
+                localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt));
+                localStorage.setItem("SAVEUSERMAIL", JSON.stringify(res.data.mail));
+                localStorage.setItem("SAVEUSERROLE", JSON.stringify(res.data.role))
                 
                 
                 // if(res){
