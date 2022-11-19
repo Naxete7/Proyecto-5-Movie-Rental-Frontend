@@ -5,6 +5,7 @@ import './App.css';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
+import navbar from './components/Navigator/Navegacion/Navbar';
 //Importaciones de containers y componentes
 
 // import Home from './containers/Home/Home';
