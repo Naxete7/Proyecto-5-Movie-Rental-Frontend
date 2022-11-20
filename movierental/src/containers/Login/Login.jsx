@@ -61,17 +61,11 @@ const Login = () => {
             .then(res => {
                 //Aqui procedo a guardar el token en redux, o en alguna otra parte del proyecto
                 console.log(res);
-<<<<<<< HEAD
                 localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt));
                 localStorage.setItem("SAVEUSERMAIL", JSON.stringify(res.data.mail));
                 localStorage.setItem("SAVEUSERROLE", JSON.stringify(res.data.role))
                 
                 
-=======
-                localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt))
-
-
->>>>>>> login
                 // if(res){
                 //     //Quiere decir que la respuesta del backend al proceso de login es correcta...
 
