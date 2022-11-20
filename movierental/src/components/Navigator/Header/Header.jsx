@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { AudioOutlined } from '@ant-design/icons';
 import { Button, Space,Dropdown } from 'antd';
 import { Input} from 'antd';
-import type { MenuProps } from 'antd';
+import { MenuProps } from 'antd';
 
     const Header = () => {
 
