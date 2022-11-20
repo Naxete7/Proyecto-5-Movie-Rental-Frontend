@@ -8,7 +8,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 //Importaciones de containers y componentes
 
 // import Home from './containers/Home/Home';
-// import Register from './containers/Register/Register';
+import Register from './containers/Register/Register';
 import Login from './containers/Login/Login';
 // import Films from './containers/Films/Films';
 
@@ -27,8 +27,8 @@ function App() {
 
             {/* Cada Route contendrá una vista..... */} 
 
-            {/* <Route path="/" element={<Home/>}/>
-            <Route path="/register" element={<Register/>}/> */}
+            {/* <Route path="/" element={<Home/>}/>*/}
+            <Route path="/register" element={<Register/>}/> 
             <Route path="/login" element={<Login/>}/>
             {/* <Route path="/films" element={<Films/>}/> */}
 
