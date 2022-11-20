@@ -4,7 +4,7 @@
     height: 100vh;
     width: 100vw;
 
-    background-color: lightgoldenrodyellow;
+    background-color: #030328;
 
     display: flex;
     flex-direction: column;
@@ -23,21 +23,30 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: red;
-    border-radius: 1em;
-
+   
+border-radius: 2em;
     cursor: pointer;
-
-    color: white;
-
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: greenyellow;
+    background-image: -webkit-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -moz-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -ms-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -o-linear-gradient(top, greenyellow, #2079b0);
+    background-image: linear-gradient(to bottom, greenyellow, #2079b0);
     transition: 0.2s;
-    
 }
 
 .buttonDesign:hover{
-
-    background-color: darkred;
+background: #2079b0;
+    background-image: -webkit-linear-gradient(top, #2079b0, greenyellow);
+    background-image: -moz-linear-gradient(top, #2079b0, greenyellow);
+    background-image: -ms-linear-gradient(top, #2079b0, greenyellow);
+    background-image: -o-linear-gradient(top, #2079b0, greenyellow);
+    background-image: linear-gradient(to bottom, #2079b0, greenyellow);
+    text-decoration: none;
 
     transition: 0.2s;
+
+    
 }
