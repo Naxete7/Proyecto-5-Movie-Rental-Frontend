@@ -32,7 +32,7 @@ const items: MenuProps['items'] = [
   {
     key: '1',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.antgroup.com">
+      <a rel="noopener noreferrer" href="https://www.antgroup.com">
         Películas
       </a>
     ),
@@ -40,7 +40,7 @@ const items: MenuProps['items'] = [
   {
     key: '2',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.aliyun.com">
+      <a rel="noopener noreferrer" href="https://www.aliyun.com">
         Series
       </a>
     ),
@@ -48,7 +48,7 @@ const items: MenuProps['items'] = [
   {
     key: '3',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="../../../containers/Login/Login.jsx">
+      <a  onClick={() => navigate("/Login")} href="../../../Login/">
         Inicio de sesión
       </a>
     ),
@@ -56,7 +56,7 @@ const items: MenuProps['items'] = [
   {
     key: '4',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+      <a rel="noopener noreferrer" href="https://www.luohanacademy.com">
         Mi cuenta
       </a>
     ),
@@ -64,7 +64,7 @@ const items: MenuProps['items'] = [
   {
     key: '5',
     label: (
-      <a target="_blank" rel="noopener noreferrer" href="https://www.luohanacademy.com">
+      <a rel="noopener noreferrer" href="https://www.luohanacademy.com">
         Cerrar sesión
       </a>
     ),
@@ -84,8 +84,8 @@ const items: MenuProps['items'] = [
 
  <div className="buttonHeader">
                 {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</button>*/}
-        <Button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</Button>
-        <Button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>" >Subscríbete</Button>
+        <Button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/">Login</Button>
+        <Button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/" >Subscríbete</Button>
                 {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
             </div>
 
