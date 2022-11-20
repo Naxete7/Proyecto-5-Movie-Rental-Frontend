@@ -32,13 +32,21 @@ const items: MenuProps['items'] = [
   {
     key: '1',
     label: (
+      <a onClick={() => navigate("/")} href="../../../">
+        Home
+      </a>
+    ),
+  },
+  {
+    key: '2',
+    label: (
       <a rel="noopener noreferrer" href="https://www.antgroup.com">
         Películas
       </a>
     ),
   },
   {
-    key: '2',
+    key: '3',
     label: (
       <a rel="noopener noreferrer" href="https://www.aliyun.com">
         Series
@@ -46,7 +54,7 @@ const items: MenuProps['items'] = [
     ),
   },
   {
-    key: '3',
+    key: '4',
     label: (
       <a  onClick={() => navigate("/Login")} href="../../../Login/">
         Inicio de sesión
@@ -54,7 +62,7 @@ const items: MenuProps['items'] = [
     ),
   },
   {
-    key: '4',
+    key: '5',
     label: (
       <a rel="noopener noreferrer" href="https://www.luohanacademy.com">
         Mi cuenta
@@ -62,7 +70,7 @@ const items: MenuProps['items'] = [
     ),
   },
   {
-    key: '5',
+    key: '6',
     label: (
       <a rel="noopener noreferrer" href="https://www.luohanacademy.com">
         Cerrar sesión
