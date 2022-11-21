@@ -8,6 +8,8 @@ import { AudioOutlined } from '@ant-design/icons';
 import { Button, Space,Dropdown } from 'antd';
 import { Input} from 'antd';
 import { MenuProps } from 'antd';
+//import Image from 'react-bootstrap/Image'
+
 
     const Header = () => {
 
@@ -80,20 +82,21 @@ const items: MenuProps['items'] = [
 ];
 
 
-  return (
-      <div className='headerDesign'>
+  return ( <div className="container-fluid fixed-top">
+      <div className='headerDesign row display-grid'>
       
-<Dropdown className="menuDesign" menu={{ items }} placement="bottomRight" arrow>
+<Dropdown className="menuDesign col-3 col-lg-1 justify-content-center d-flex align-items-center mt-3 ps-0 ps-lg-3" menu={{ items }} placement="bottomRight" arrow>
       <Button>Menú</Button>
     </Dropdown>
+{/*
+<div className="col-3 col-lg-1 justify-content-center d-flex align-items-center mt-3 ps-0 ps-lg-3">
+        <img src="logo" className="logo image-fluid" alt="logo" />*/}
+<div className="searchDesign  col-3 col-lg-2 justify-content-end d-flex align-items-center " ><Search placeholder="input search text" onSearch={onSearch}  /></div>
 
-
-<div className="searchDesign" ><Search placeholder="input search text" onSearch={onSearch} style={{ width: 200 }} /></div>
-
- <div className="buttonHeader">
+      <div className="buttonHeader col-4  d-flex  ">
                 {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</button>*/}
-        <Button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/">Login</Button>
-        <Button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/" >Subscríbete</Button>
+        <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/login")} href="../Login/">Login</Button>
+        <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/login")} href="../Login/" >Suscríbete</Button>
                 {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
             </div>
 
@@ -103,7 +106,9 @@ const items: MenuProps['items'] = [
      
     */}
     
-      </div>
+    </div>
+    </div>
+    //</div>
   )
 
 
