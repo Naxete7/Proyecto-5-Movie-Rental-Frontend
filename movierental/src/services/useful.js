@@ -1,3 +1,6 @@
+
+
+
 export const errorCheck = (field, value, type) => {
 
     switch(type){
