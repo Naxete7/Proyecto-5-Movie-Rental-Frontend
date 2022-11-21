@@ -13,6 +13,7 @@ import Home from './containers/Home/Home';
  import Register from './containers/Register/Register';
 import Login from './containers/Login/Login';
 import Header from './components/Navigator/Header/Header';
+import Footer from './components/Footer/Footer';
 // import Films from './containers/Films/Films';
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
 
         </Routes>
       
+        <Footer/>
       
       </BrowserRouter>
 

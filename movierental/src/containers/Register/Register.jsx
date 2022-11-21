@@ -50,7 +50,8 @@ const Register = () => {
       >
         
           <Navigator pathUno={"/login"} destinoUno={"Login"} pathDos={"/"} destinoDos={"Home"}/>
-        <Form.Item
+          <Form.Item
+            className="itemDesign"
           label="Username"
           name="username"
           rules={[

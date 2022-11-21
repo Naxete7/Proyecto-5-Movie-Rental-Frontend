@@ -2,10 +2,10 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { bringFilms } from '../../services/apicalls'
 import { Button, Space } from 'antd';
-//import anillo  from '../../assets/img/anillo.png'
 import { useState } from "react";
 import { useEffect } from "react";
-import Carousel from 'react-bootstrap/Carousel';
+//import Carousel from 'react-bootstrap/Carousel';
+import {img} from '../../assets/img/logo.png'
 
 import "./Home.scss"
 
@@ -46,7 +46,7 @@ const [movies, setMovies] = useState([]);
         <div className="homeDesign container-fluid   d-flex flex-column align-items-center justify-content-around" >
           
           
-            {/*<div><img src="../../assets/img/anillo.png" alt="imagen de portada" /></div> */}
+            <div className="logo row"><img src="../../assets/img/logo.png" alt="imagen de portada" /></div>
             
 
             <div className="textCentralDesign row-12 d-flex align-items-center justify-content-center">Alquila todas las películas y series que quieras.</div>
@@ -81,10 +81,6 @@ const [movies, setMovies] = useState([]);
     )
 
   
-  
-    
-
-
 
 
 
