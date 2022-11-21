@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import "./Register.css"
+import "./Register.scss"
 import Navigator from "../../components/Navigator/Navigator";
 import { useNavigate } from "react-router-dom";
 
@@ -50,7 +50,9 @@ const Register = () => {
       >
         
           <Navigator pathUno={"/login"} destinoUno={"Login"} pathDos={"/"} destinoDos={"Home"}/>
-        <Form.Item
+    
+          <Form.Item
+            
           label="Username"
           name="username"
           rules={[
@@ -99,7 +101,8 @@ const Register = () => {
           }}
         >
           <Checkbox>Remember me</Checkbox>
-        </Form.Item>
+       
+            </Form.Item>
   
         <Form.Item
           wrapperCol={{
@@ -107,7 +110,7 @@ const Register = () => {
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit">
+          <Button className="buttonDesign" type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>
