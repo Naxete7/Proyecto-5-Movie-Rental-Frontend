@@ -50,8 +50,9 @@ const Register = () => {
       >
         
           <Navigator pathUno={"/login"} destinoUno={"Login"} pathDos={"/"} destinoDos={"Home"}/>
+    
           <Form.Item
-            className="itemDesign"
+            
           label="Username"
           name="username"
           rules={[
@@ -100,7 +101,8 @@ const Register = () => {
           }}
         >
           <Checkbox>Remember me</Checkbox>
-        </Form.Item>
+       
+            </Form.Item>
   
         <Form.Item
           wrapperCol={{
