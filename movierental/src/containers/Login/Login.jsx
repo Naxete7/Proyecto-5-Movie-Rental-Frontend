@@ -1,5 +1,5 @@
 
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import "./Login.scss";
 
 import { loginUser } from '../../services/apicalls';
@@ -7,35 +7,48 @@ import { loginUser } from '../../services/apicalls';
 import { useNavigate } from 'react-router-dom';
 
 import Navigator from '../../components/Navigator/Navigator';
- 
+
+import { errorCheck } from '../../services/useful';
+
 const Login = () => {
 
     let navigate = useNavigate();
 
-    // useEffect(()=>{
-    //     console.log("useEffect", state)
-    //     localStorage.setItem("SAVEJWT", JSON.stringify(state))
-    //   },[state])
-
     const [user, setUser] = useState({
-        mail : "",
-        password : ""
+        mail: "",
+        password: ""
     });
+
+    const [userError, setUserError] = useState({
+        mailError: "",
+        passwordError: ""
+    })
 
     //Handlers
 
     const inputHandler = (e) => {
         //console.log(e.target.value);
-        
+
         //Aqui setearemos DINÁMICAMENTE el BINDEO entre inputs y hook.
         setUser((prevState) => ({
-            ...prevState, 
+            ...prevState,
             [e.target.name]: e.target.value
 
         }));
-
-        
     }
+
+    const errorHandler = (field, value, type) => {
+
+        let error = ""
+
+        error = errorCheck(field, value, type)
+
+        setUserError(((prevState) => ({
+            ...prevState,
+            [field + "Error"]: error
+
+        })))
+    };
 
 
     //Funciones
@@ -64,20 +77,26 @@ const Login = () => {
 
     }
 
-     return (
-         <div className='loginDesign'>
-            <pre>{JSON.stringify(user, null,2)}</pre>
-            <Navigator pathUno={"/"} destinoUno={"Home"} pathDos={"/register"} destinoDos={"Register"}/>         
+    return (
+        <div className='loginDesign'>
+            <pre>{JSON.stringify(user, null, 2)}</pre>
+            <Navigator pathUno={"/"} destinoUno={"Home"} pathDos={"/register"} destinoDos={"Register"} />
 
             <div className="inputsContainer">
-                <input type="text" name="mail" placeholder="mail" onChange={(e)=>inputHandler(e)}/>
-                <input type="password" name="password" placeholder="password" onChange={(e)=>inputHandler(e)}/>
+                <div>
+                    <input type="mail" name="mail" placeholder="mail" onChange={(e) => inputHandler(e)} onBlur={(e)=>errorHandler(e.target.name, e.target.value, "mail")} />
+                    <div className="errorInput">{userError.mailError}</div>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="password" onChange={(e) => inputHandler(e)} onBlur={(e)=>errorHandler(e.target.name, e.target.value, "password")} />
+                    <div className="errorInput">{userError.passwordError}</div>
+                </div>
             </div>
-            <div onClick={()=>logMe()} className="buttonDesign">
+            <div onClick={() => logMe()} className="buttonDesign">
                 Login me!
             </div>
 
-         </div>
-     )
+        </div>
+    )
 }
 export default Login;
