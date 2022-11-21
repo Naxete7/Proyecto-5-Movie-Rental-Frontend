@@ -50,3 +50,16 @@ color: greenyellow;
     transition: 0.2s;
 }
 
+
+.moviesShowcase{
+
+display: flex;
+    width: 100vw;
+    height: 100vh;
+}
+
+.moviePic{
+    display: grid;
+    width: 10vw;
+        height:20vh;
+}
