@@ -96,7 +96,7 @@ const items: MenuProps['items'] = [
       <div className="buttonHeader col-4  d-flex  ">
                 {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</button>*/}
         <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/login")} href="../Login/">Login</Button>
-        <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/login")} href="../Login/" >Suscríbete</Button>
+        <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/register")} href="../Register" >Suscríbete</Button>
                 {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
             </div>
 

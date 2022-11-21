@@ -55,7 +55,7 @@ const [movies, setMovies] = useState([]);
                 {/*<button className="buttonHomeDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</button>*/}
                  <Button className="buttonHomeDesign col-6  d-flex justify-content-center " onClick={() => navigate("/login")} href="../Login/">Login</Button>
 
-                <Button className="buttonHomeDesign col-6  d-flex justify-content-center  " onClick={() => navigate("/login")} href="../Login/" >Suscríbete</Button>
+                <Button className="buttonHomeDesign col-6  d-flex justify-content-center  " onClick={() => navigate("/register")} href="../Register" >Suscríbete</Button>
                 {/*<button className="buttonHomeDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
             </div>
 

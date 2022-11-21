@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import "./Register.css"
+import "./Register.scss"
 import Navigator from "../../components/Navigator/Navigator";
 import { useNavigate } from "react-router-dom";
 
@@ -107,7 +107,7 @@ const Register = () => {
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit">
+          <Button className="buttonDesign" type="primary" htmlType="submit">
             Submit
           </Button>
         </Form.Item>
