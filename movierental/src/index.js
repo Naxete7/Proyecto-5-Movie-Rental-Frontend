@@ -3,10 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+<<<<<<< HEAD
 
 import {Provider} from 'react-redux';
 import store from './app/store';
 
+=======
+import 'bootstrap/dist/css/bootstrap.min.css';
+>>>>>>> 3b6a92cc22703a0d00964763adf6129f0e3a94d1
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -2,28 +2,29 @@
 
 .homeDesign {
 
-height: 90vh;
-width: 100vw;
+height: auto;
+width: auto;
 
-display: flex;
-flex-direction: column;
+display: grid;
 justify-content: center;
-background-image: image(src"../../assets/img/anillo.png");
+flex-direction: row;
+justify-content: center;
+//background-image: image(src"../../assets/img/anillo.png");
 background-color: #030328;
 color: greenyellow;
 }
 
 .textCentralDesign {
-
+   margin-top: 10em;
+//justify-content: center;
     font-size: 1.5em;
 }
 
 
 .buttonHomeDesign{
-    width: 18vw;
-    height: 6vh;
     
-    //margin-left: 1em;
+margin-bottom: 3em;
+margin: 0.5em;
     border-radius: 2em;
     cursor: pointer;
     font-size: larger;
@@ -50,3 +51,22 @@ color: greenyellow;
     transition: 0.2s;
 }
 
+
+.moviesShowcase{
+//display: grid;
+    //flex-direction: column;
+    //justify-content: center;
+    //align-items: center;
+    margin:4em;
+}
+
+.moviePic{
+    margin: 4em;
+    height: 12em;
+    width: 8em;
+}
+
+.leftSide{
+    display: flex;
+    flex-wrap: wrap;
+}
