@@ -8,18 +8,13 @@ import Home from './containers/Home/Home';
 
 
 //Importaciones de containers y componentes
-
-
-<<<<<<< HEAD
 // import Register from './containers/Register/Register';
 import Login from './containers/User/Login/Login.jsx';
 import Header from './components/Header/Header';
-=======
  import Register from './containers/Register/Register';
 import Login from './containers/Login/Login';
 import Header from './components/Navigator/Header/Header';
 import Footer from './components/Footer/Footer';
->>>>>>> 3b6a92cc22703a0d00964763adf6129f0e3a94d1
 // import Films from './containers/Films/Films';
 
 function App() {
