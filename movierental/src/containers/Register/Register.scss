@@ -1,36 +1,23 @@
-.headerDesign {
-
-    height: 10vh;
+.registerDesign{
     width: 100vw;
-
+    height: 100vh;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-
-    background-color: #37ce1d65;
-
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: greenyellow;
+    background-color: #030328;
 }
 
-.linkDesign{
-
-font-weight: bold;
-
-//margin-right: 3em;
-margin-bottom: 1.5em;
-
-}
-
-
-.buttonHeaderDesign {
-    width: 12vw;
-    height: 5vh;
+.buttonDesign{
+margin-bottom: 3em;
+    margin: 0.5em;
     border-radius: 2em;
-    margin-top: 1em;
-    margin-right: 1em;
     cursor: pointer;
-    font-size: medium;
+    font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: greenyellow;
+    color: black;
     background-image: -webkit-linear-gradient(top, greenyellow, #2079b0);
     background-image: -moz-linear-gradient(top, greenyellow, #2079b0);
     background-image: -ms-linear-gradient(top, greenyellow, #2079b0);
@@ -39,7 +26,7 @@ margin-bottom: 1.5em;
     transition: 0.2s;
 }
 
-.buttonHeaderDesign:hover {
+.buttonHomeDesign:hover {
 
     background: #2079b0;
     background-image: -webkit-linear-gradient(top, #2079b0, greenyellow);
@@ -52,26 +39,3 @@ margin-bottom: 1.5em;
     transition: 0.2s;
 }
 
-
-.searchDesign{
-
-margin-top: 1em;
-margin-right: 2em;
-
-
-}
-
-.menuDesign{
-width: 6em;
-height: 3em;
-margin-right: 35em;
-margin-top: 0.5em;
-border-radius: 2em;
-background: greenyellow;
-    background-image: -webkit-linear-gradient(top, greenyellow, #2079b0);
-    background-image: -moz-linear-gradient(top, greenyellow, #2079b0);
-    background-image: -ms-linear-gradient(top, greenyellow, #2079b0);
-    background-image: -o-linear-gradient(top, greenyellow, #2079b0);
-    background-image: linear-gradient(to bottom, greenyellow, #2079b0);
-    transition: 0.2s;
-}

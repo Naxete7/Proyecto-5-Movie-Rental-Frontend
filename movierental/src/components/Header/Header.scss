@@ -1,0 +1,82 @@
+.headerDesign {
+
+    height: 10vh;
+       
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    background-color: #37ce1d65;
+
+}
+
+.linkDesign{
+
+//font-weight: bold;
+
+//margin-right: 3em;
+margin-bottom: 1.5em;
+
+}
+
+
+.buttonHeaderDesign {
+    width: 12vw;
+    height: 5vh;
+    border-radius: 2em;
+    margin-top: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+    font-size: medium;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: greenyellow;
+    background-image: -webkit-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -moz-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -ms-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -o-linear-gradient(top, greenyellow, #2079b0);
+    background-image: linear-gradient(to bottom, greenyellow, #2079b0);
+    transition: 0.2s;
+}
+
+.buttonHeaderDesign:hover {
+
+    background: #2079b0;
+    background-image: -webkit-linear-gradient(top, #2079b0, greenyellow);
+    background-image: -moz-linear-gradient(top, #2079b0, greenyellow);
+    background-image: -ms-linear-gradient(top, #2079b0, greenyellow);
+    background-image: -o-linear-gradient(top, #2079b0, greenyellow);
+    background-image: linear-gradient(to bottom, #2079b0, greenyellow);
+    text-decoration: none;
+
+    transition: 0.2s;
+}
+
+
+.searchDesign{
+
+
+
+//display: flex;
+//justify-content: flex-end;
+
+}
+
+.menuDesign{
+width: 4em;
+height: 3em;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-top: 0.5em;
+border-radius: 2em;
+background: greenyellow;
+    background-image: -webkit-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -moz-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -ms-linear-gradient(top, greenyellow, #2079b0);
+    background-image: -o-linear-gradient(top, greenyellow, #2079b0);
+    background-image: linear-gradient(to bottom, greenyellow, #2079b0);
+    transition: 0.2s;
+}
+
+.header{
+
+   
+
+  
+}

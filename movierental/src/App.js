@@ -8,11 +8,11 @@ import Home from './containers/Home/Home';
 
 
 //Importaciones de containers y componentes
-
-
 // import Register from './containers/Register/Register';
-import Login from './containers/Login/Login';
-import Header from './components/Navigator/Header/Header';
+import Login from './containers/User/Login/Login.jsx';
+import Header from './components/Header/Header';
+ import Register from './containers/Register/Register';
+import Footer from './components/Footer/Footer';
 // import Films from './containers/Films/Films';
 
 function App() {
@@ -38,12 +38,14 @@ function App() {
           
           <Route path="/" element={<Home />} />;
           
-            <Route path="/login" element={<Login/>}/>
+          <Route path="/login" element={<Login />} />;
+          <Route path='/register' element={<Register/>}/>;
             {/* <Route path="/films" element={<Films/>}/> */}
 
 
         </Routes>
       
+        <Footer/>
       
       </BrowserRouter>
 
