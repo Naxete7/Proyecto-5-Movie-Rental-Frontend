@@ -2,17 +2,24 @@
 import React, { useState } from 'react';
 import "./Login.scss";
 
-import { loginUser } from '../../services/apicalls';
+import { loginUser } from '../../../services/apicalls';
 
 import { useNavigate } from 'react-router-dom';
 
-import Navigator from '../../components/Navigator/Navigator';
 
-import { errorCheck } from '../../services/useful';
+import { useSelector, useDispatch } from "react-redux";
+
+import { userData, login } from "../userSlice";
+
+import Navigator from '../../../components/Navigator/Navigator';
+
+import { errorCheck } from '../../../services/useful';
 
 const Login = () => {
 
     let navigate = useNavigate();
+
+    const dispatch = useDispatch();
 
     const [user, setUser] = useState({
         mail: "",
@@ -64,6 +71,12 @@ const Login = () => {
                 localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt));
                 localStorage.setItem("SAVEUSERMAIL", JSON.stringify(res.data.mail));
                 localStorage.setItem("SAVEUSERROLE", JSON.stringify(res.data.role))
+                dispatch(login({credentials: {
+                    token: res.data.jwt,
+                    mail: res.data.mail,
+                    role: res.data.role
+                }}));
+
                 
                 
                 // if(res){
