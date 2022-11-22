@@ -9,7 +9,7 @@ import { Button, Space,Dropdown } from 'antd';
 import { Input} from 'antd';
 import { MenuProps } from 'antd';
 //import Image from 'react-bootstrap/Image'
-import img from '../../../assets/img/rentLogo.png'
+//import img from '../../../assets/img/rentLogo.png'
 
     const Header = () => {
 
@@ -90,7 +90,7 @@ const items: MenuProps['items'] = [
       </Dropdown>
       
 
-      <div className="logo col-2"><img src={img} alt="imagen de portada" /></div>
+      {/*<div className="logo col-2"><img src={img} alt="imagen de portada" /></div>*/}
 {/*
 <div className="col-3 col-lg-1 justify-content-center d-flex align-items-center mt-3 ps-0 ps-lg-3">
         <img src="logo" className="logo image-fluid" alt="logo" />*/}
