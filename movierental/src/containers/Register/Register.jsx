@@ -53,7 +53,7 @@ const Register = () => {
     
           <Form.Item
             
-          label="Username"
+          //label="Username"
           name="username"
           rules={[
             {
@@ -66,7 +66,7 @@ const Register = () => {
         </Form.Item>
   
         <Form.Item
-          label="Email"
+          //label="Email"
           name="Email"
           rules={[
             {
@@ -79,7 +79,7 @@ const Register = () => {
         </Form.Item>
   
         <Form.Item
-          label="Password"
+          //label="Password"
           name="password"
           rules={[
             {

@@ -11,7 +11,7 @@ import { MenuProps } from 'antd';
 import { useSelector, useDispatch } from "react-redux";
 import { userData, userout } from "../../containers/User/userSlice";
 //import Image from 'react-bootstrap/Image'
-
+//import img from '../../../assets/img/rentLogo.png'
 
 const Header = () => {
 
@@ -108,19 +108,18 @@ const Header = () => {
       <div className="searchDesign  col-3 col-lg-2 justify-content-end d-flex align-items-center " ><Search placeholder="input search text" onSearch={onSearch} /></div>
 
       <div className="buttonHeader col-4  d-flex  ">
-        {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</button>*/}
-        <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/login")} href="../Login/">Login</Button>
-        <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/register")} href="../Register" >Suscríbete</Button>
-        {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
-      </div>
-      <div className="linkDesign">{userReduxCredentials?.credentials?.mail}</div>
+                {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</button>*/}
+        <text className="buttonHeaderDesign col-4" onClick={() => navigate("/login")} href="../Login/">Login</text>
+        <text className="buttonHeaderDesign col-4" onClick={() => navigate("/register")} href="../Register" >Suscríbete</text>
+                {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
+            </div>
 
 
       {/*<div onClick={()=>navigate("/login")} className="linkDesign">Login</div>
       <div onClick={()=>navigate("/login")} className="linkDesign">Register</div>
      
     */}
-
+    
     </div>
   </div>
     //</div>
