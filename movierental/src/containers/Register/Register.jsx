@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import "./Register.css"
 import Navigator from "../../components/Navigator/Navigator";
 import { useNavigate } from "react-router-dom";
+import { registerUser } from "../../services/apicalls";
+
 
 import { Button, Checkbox, Form, Input } from 'antd';
 
@@ -9,6 +11,14 @@ import { Button, Checkbox, Form, Input } from 'antd';
 
 const Register = () => {
   let navigate = useNavigate()
+
+  const regMe = () => {
+    registerUser(user)
+      .then(res => {
+        console.log(res)
+      })
+  }
+
   const inputHandler = (e) => {
     console.log(e.target.value)
 
@@ -107,7 +117,7 @@ const Register = () => {
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit">
+          <Button type="primary" htmlType="submit" onClick={()=> regMe()}>
             Submit
           </Button>
         </Form.Item>
