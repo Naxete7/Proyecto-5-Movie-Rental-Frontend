@@ -25,7 +25,7 @@ export const registerUser = async (body) => {
     
     // const bodyReq = JSON.stringify(body)
     
-    // console.log(bodyReq)
+    console.log(body)
     
         return axios.post(
             "http://localhost:3000/auth/register",
