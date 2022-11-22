@@ -121,6 +121,8 @@ const Header = () => {
     */}
     
     </div>
+    <div className="linkDesign">{userReduxCredentials?.credentials?.mail}</div>
+
   </div>
     //</div>
   )
