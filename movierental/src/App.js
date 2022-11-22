@@ -12,8 +12,6 @@ import Home from './containers/Home/Home';
 import Login from './containers/User/Login/Login.jsx';
 import Header from './components/Header/Header';
  import Register from './containers/Register/Register';
-import Login from './containers/Login/Login';
-import Header from './components/Navigator/Header/Header';
 import Footer from './components/Footer/Footer';
 // import Films from './containers/Films/Films';
 
