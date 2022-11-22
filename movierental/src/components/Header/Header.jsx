@@ -16,7 +16,7 @@ import { userData, userout } from "../../containers/User/userSlice";
 const Header = () => {
 
   const dispatch = useDispatch();
-
+  const userReduxCredentials = useSelector(userData);
   const navigate = useNavigate();
   const { Search } = Input;
 
@@ -113,6 +113,7 @@ const Header = () => {
         <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/register")} href="../Register" >Suscríbete</Button>
         {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
       </div>
+      <div className="linkDesign">{userReduxCredentials?.credentials?.mail}</div>
 
 
       {/*<div onClick={()=>navigate("/login")} className="linkDesign">Login</div>
