@@ -9,7 +9,7 @@ import { Button, Space,Dropdown } from 'antd';
 import { Input} from 'antd';
 import { MenuProps } from 'antd';
 //import Image from 'react-bootstrap/Image'
-
+import img from '../../../assets/img/rentLogo.png'
 
     const Header = () => {
 
@@ -87,7 +87,10 @@ const items: MenuProps['items'] = [
       
 <Dropdown className="menuDesign col-3 col-lg-1 justify-content-center d-flex align-items-center mt-3 ps-0 ps-lg-3" menu={{ items }} placement="bottomRight" arrow>
       <Button>Menú</Button>
-    </Dropdown>
+      </Dropdown>
+      
+
+      <div className="logo col-2"><img src={img} alt="imagen de portada" /></div>
 {/*
 <div className="col-3 col-lg-1 justify-content-center d-flex align-items-center mt-3 ps-0 ps-lg-3">
         <img src="logo" className="logo image-fluid" alt="logo" />*/}
@@ -95,16 +98,14 @@ const items: MenuProps['items'] = [
 
       <div className="buttonHeader col-4  d-flex  ">
                 {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</button>*/}
-        <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/login")} href="../Login/">Login</Button>
-        <Button className="buttonHeaderDesign col-4" onClick={() => navigate("/register")} href="../Register" >Suscríbete</Button>
+        <text className="buttonHeaderDesign col-4" onClick={() => navigate("/login")} href="../Login/">Login</text>
+        <text className="buttonHeaderDesign col-4" onClick={() => navigate("/register")} href="../Register" >Suscríbete</text>
                 {/*<button className="buttonHeaderDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
             </div>
 
 
-      {/*<div onClick={()=>navigate("/login")} className="linkDesign">Login</div>
-      <div onClick={()=>navigate("/login")} className="linkDesign">Register</div>
-     
-    */}
+    
+
     
     </div>
     </div>

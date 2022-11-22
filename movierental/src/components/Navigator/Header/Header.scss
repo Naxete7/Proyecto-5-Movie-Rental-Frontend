@@ -27,37 +27,22 @@ margin-bottom: 1.5em;
     cursor: pointer;
     font-size: medium;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: greenyellow;
-    background-image: -webkit-linear-gradient(top, greenyellow, #2079b0);
-    background-image: -moz-linear-gradient(top, greenyellow, #2079b0);
-    background-image: -ms-linear-gradient(top, greenyellow, #2079b0);
-    background-image: -o-linear-gradient(top, greenyellow, #2079b0);
-    background-image: linear-gradient(to bottom, greenyellow, #2079b0);
-    transition: 0.2s;
+ 
 }
 
-.buttonHeaderDesign:hover {
+//.buttonHeaderDesign:hover {
 
-    background: #2079b0;
-    background-image: -webkit-linear-gradient(top, #2079b0, greenyellow);
-    background-image: -moz-linear-gradient(top, #2079b0, greenyellow);
-    background-image: -ms-linear-gradient(top, #2079b0, greenyellow);
-    background-image: -o-linear-gradient(top, #2079b0, greenyellow);
-    background-image: linear-gradient(to bottom, #2079b0, greenyellow);
-    text-decoration: none;
+//    background: #2079b0;
+//    background-image: -webkit-linear-gradient(top, #2079b0, greenyellow);
+//    background-image: -moz-linear-gradient(top, #2079b0, greenyellow);
+//    background-image: -ms-linear-gradient(top, #2079b0, greenyellow);
+//    background-image: -o-linear-gradient(top, #2079b0, greenyellow);
+//    background-image: linear-gradient(to bottom, #2079b0, greenyellow);
+//    text-decoration: none;
 
-    transition: 0.2s;
-}
+//    transition: 0.2s;
+//}
 
-
-.searchDesign{
-
-
-
-//display: flex;
-//justify-content: flex-end;
-
-}
 
 .menuDesign{
 width: 4em;
@@ -74,9 +59,6 @@ background: greenyellow;
     transition: 0.2s;
 }
 
-.header{
-
-   
-
-  
+.logo{
+    margin-top: 1em;
 }
