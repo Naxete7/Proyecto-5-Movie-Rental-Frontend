@@ -48,3 +48,12 @@ export const bringFilms = () => {
             console.log(error);
         }
     };
+
+    export const bringUserInfo = () => {
+    
+        try {
+            return axios.get("http://localhost:3000/users/id/jesu@gmail.com")
+        } catch (error) {
+            console.log(error);
+        }
+    };
