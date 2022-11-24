@@ -5,7 +5,7 @@ import { Button, Space } from 'antd';
 import { useState } from "react";
 import { useEffect } from "react";
 //import Carousel from 'react-bootstrap/Carousel';
-import img from '../../assets/img/rentLogo.png'
+import img from '../../assets/img/Sin título.png'
 
 import "./Home.scss"
 
@@ -46,7 +46,7 @@ const [movies, setMovies] = useState([]);
         <div className="homeDesign container-fluid   d-flex flex-column align-items-center justify-content-around" >
           
           
-            {/*<div className="logo row"><img src={img} alt="imagen de portada" /></div>*/}
+            <div className="logo row"><img className="imgDesign" src={img} alt="imagen de portada" /></div>
             
 
             <div className="textCentralDesign row-12 d-flex align-items-center justify-content-center">Alquila todas las películas y series que quieras.</div>
@@ -67,7 +67,7 @@ const [movies, setMovies] = useState([]);
                     {
                         movies.map(movie => {
                             return <div  className="movieDesign col " key={movie.id}>
-                                <div>{movie.original_title}</div>
+                                {/*<div>{movie.original_title}</div>*/}
                                 <div ><img className="moviePic" src={url+movie.poster_path} /></div>
                             </div>
                         })

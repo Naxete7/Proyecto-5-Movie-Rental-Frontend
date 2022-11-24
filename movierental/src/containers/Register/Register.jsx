@@ -120,7 +120,7 @@ const Register = () => {
             span: 16,
           }}
         >
-          <Button type="primary" htmlType="submit" onClick={()=> regMe()}>
+          <Button className="buttonDesign" type="primary" htmlType="submit" onClick={()=> regMe()}>
             Submit
           </Button>
         </Form.Item>
