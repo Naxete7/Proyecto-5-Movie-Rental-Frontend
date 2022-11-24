@@ -8,7 +8,12 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
+
 function OffcanvasExample() {
+  const inputHandler = (e) => {
+    console.log(e.target.value);
+  }
+
   return (
     <>
       {[ 'lg'].map((expand) => (
@@ -52,9 +57,14 @@ function OffcanvasExample() {
                     placeholder="Search"
                     className="me-2"
                     aria-label="Search"
+                    onChange={(e)=>inputHandler(e)}
                   />
                   <Button variant="outline-success">Search</Button>
                 </Form>
+
+
+
+                
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>
