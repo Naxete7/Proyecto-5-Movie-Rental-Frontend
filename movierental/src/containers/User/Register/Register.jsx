@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react";
 import "./Register.scss"
-import Navigator from "../../components/Navigator/Navigator";
+import Navigator from "../../../components/Navigator/Navigator";
 import { useNavigate } from "react-router-dom";
-import { registerUser } from "../../services/apicalls";
+import { registerUser } from "../../../services/apicalls";
 
 
 import { Button, Checkbox, Form, Input } from 'antd';

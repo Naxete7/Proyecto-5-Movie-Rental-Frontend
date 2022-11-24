@@ -34,8 +34,8 @@ function OffcanvasExample() {
                     title="Menú"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action3">Películas</NavDropdown.Item>
-                    <NavDropdown.Item href="#action4">
+                    <NavDropdown.Item href="/Films/">Películas</NavDropdown.Item>
+                    <NavDropdown.Item href="/Series/">
                       Series
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#action5">

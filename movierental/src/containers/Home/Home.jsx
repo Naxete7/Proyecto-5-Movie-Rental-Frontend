@@ -11,7 +11,7 @@ import "./Home.scss"
 
 const Home = () => {
     
-    const navigate = useNavigate();
+    let navigate = useNavigate();
     
 const [movies, setMovies] = useState([]);
  

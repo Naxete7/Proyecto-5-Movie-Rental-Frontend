@@ -11,9 +11,11 @@ import Home from './containers/Home/Home';
 // import Register from './containers/Register/Register';
 import Login from './containers/User/Login/Login.jsx';
 import Header from './components/Header/Header';
- import Register from './containers/Register/Register';
+ import Register from './containers/User/Register/Register';
 import Footer from './components/Footer/Footer';
-// import Films from './containers/Films/Films';
+ import Films from './containers/Films/Films';
+import Series from './containers/Series/Series'
+
 
 function App() {
   return (
@@ -39,8 +41,8 @@ function App() {
           
           <Route path="/login" element={<Login />} />;
           <Route path='/register' element={<Register/>}/>;
-            {/* <Route path="/films" element={<Films/>}/> */}
-
+            <Route path="/films" element={<Films/>}/>;
+          <Route path="/series" element={<Series/>}/>;
 
         </Routes>
       
