@@ -41,7 +41,6 @@ const [movies, setMovies] = useState([]);
 
         };
 
-
     }, [movies]);
 
 
@@ -49,14 +48,8 @@ const [movies, setMovies] = useState([]);
 
         
         <div className="homeDesign container-fluid   d-flex flex-column align-items-center justify-content-around" >
-          
-          
-            <div className="logo row"><img className="imgDesign" src={img} alt="imagen de portada" /></div>
             
-
-        
-                
-
+            
 
 <div className="moviesShowcase row">
                 {/* Here I proceed to MAP the hook which contains all the movies */}
