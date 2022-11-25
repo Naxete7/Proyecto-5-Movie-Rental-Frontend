@@ -48,3 +48,21 @@ export const bringFilms = () => {
             console.log(error);
         }
     };
+
+    export const bringUserInfo = (email) => {
+    
+        return axios.get("http://localhost:3000/users/id/" + email)
+        
+    };
+
+    export const bringUserOrders = (email) => {
+    
+        return axios.get(`http://localhost:3000/orders/${email}`)
+
+    };
+
+    export const bringAllOrders = () => {
+    
+        return axios.get(`http://localhost:3000/orders/`)
+
+    };

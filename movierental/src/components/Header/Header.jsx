@@ -80,8 +80,8 @@ const Header = () => {
     {
       key: '5',
       label: (
-        <a rel="noopener noreferrer" href="">
-          Mi cuenta
+        <a onClick={() => navigate("/myaccount")} href="../../../MyAccount">
+          Profile
         </a>
       ),
     },
@@ -96,7 +96,7 @@ const Header = () => {
   ];
 
 
-  return (<div className="container-fluid fixed-top">
+  return (<div className="container-fluid sticky-top">
     <div className='headerDesign row display-grid'>
 
       <Dropdown className="menuDesign col-3 col-lg-1 justify-content-center d-flex align-items-center mt-3 ps-0 ps-lg-3" menu={{ items }} placement="bottomRight" arrow>
