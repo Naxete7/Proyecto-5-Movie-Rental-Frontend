@@ -25,7 +25,7 @@ export const registerUser = async (body) => {
     
     // const bodyReq = JSON.stringify(body)
     
-    // console.log(bodyReq)
+    console.log(body)
     
         return axios.post(
             "http://localhost:3000/auth/register",
@@ -47,4 +47,22 @@ export const bringFilms = () => {
         } catch (error) {
             console.log(error);
         }
+    };
+
+    export const bringUserInfo = (email) => {
+    
+        return axios.get("http://localhost:3000/users/id/" + email)
+        
+    };
+
+    export const bringUserOrders = (email) => {
+    
+        return axios.get(`http://localhost:3000/orders/${email}`)
+
+    };
+
+    export const bringAllOrders = () => {
+    
+        return axios.get(`http://localhost:3000/orders/`)
+
     };
