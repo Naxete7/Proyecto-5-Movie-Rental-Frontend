@@ -14,6 +14,9 @@ import Header from './components/Header/Header';
  import Register from './containers/User/Register/Register';
 import Footer from './components/Footer/Footer';
 import Profile from './containers/User/Profile/Profile';
+import UserOrders from './containers/User/UserOrders/UserOrders';
+import AllOrders from './components/Admin/AllOrders/AllOrders';
+import MyAccount from './containers/MyAccount/MyAccount';
 // import Films from './containers/Films/Films';
 
 function App() {
@@ -25,10 +28,7 @@ function App() {
       
       <BrowserRouter>
       
-        <Header>
-
-        <navbar/>
-        </Header>
+        <Header></Header>
         
         
         <Routes>
@@ -42,6 +42,9 @@ function App() {
           <Route path="/login" element={<Login />} />;
           <Route path='/register' element={<Register/>}/>;
           <Route path='/profile' element={<Profile/>} />;
+          <Route path='/userorders' element={<UserOrders/>} />;
+          <Route path='/allorders' element={<AllOrders/>} />;
+          <Route path='/myaccount' element={<MyAccount/>} />;
             {/* <Route path="/films" element={<Films/>}/> */}
 
 

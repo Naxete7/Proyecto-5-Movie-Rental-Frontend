@@ -35,7 +35,9 @@ const Login = () => {
 
     useEffect(() => {
         console.log(userReduxCredentials); 
-        if (userReduxCredentials?.credentials?.token !== undefined || localStorage.getItem("SAVEJWT") !== null) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
+        console.log(userReduxCredentials?.credentials?.token); 
+
+        if (userReduxCredentials?.credentials?.token !== undefined) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
             navigate("/");       
     };});
 
@@ -78,7 +80,11 @@ const Login = () => {
                         console.log(res);
                         localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt));
                         localStorage.setItem("SAVEUSERMAIL", JSON.stringify(res.data.mail));
-                        localStorage.setItem("SAVEUSERROLE", JSON.stringify(res.data.role))
+                        if (res.data.role === null) {
+                            localStorage.setItem("SAVEUSERROLE", "userRole")
+                        } else {
+                            localStorage.setItem("SAVEUSERROLE", JSON.stringify(res.data.role))
+                        }                       
                         dispatch(login({
                             credentials: {
                                 token: res.data.jwt,

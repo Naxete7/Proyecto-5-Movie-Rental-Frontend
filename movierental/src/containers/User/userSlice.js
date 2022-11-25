@@ -14,10 +14,14 @@ export const userSlice = createSlice({
         }
       },
       userout: (state, action) => {
+        localStorage.removeItem('SAVEJWT')
+        localStorage.removeItem('SAVEUSERROLE')
+        localStorage.removeItem('SAVEUSERMAIL')
         return {
           ...state,
-          ...action.payload
+          ...action.payload,
         }
+
       }
       
     }

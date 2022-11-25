@@ -49,11 +49,20 @@ export const bringFilms = () => {
         }
     };
 
-    export const bringUserInfo = () => {
+    export const bringUserInfo = (email) => {
     
-        try {
-            return axios.get("http://localhost:3000/users/id/jesu@gmail.com")
-        } catch (error) {
-            console.log(error);
-        }
+        return axios.get("http://localhost:3000/users/id/" + email)
+        
+    };
+
+    export const bringUserOrders = (email) => {
+    
+        return axios.get(`http://localhost:3000/orders/${email}`)
+
+    };
+
+    export const bringAllOrders = () => {
+    
+        return axios.get(`http://localhost:3000/orders/`)
+
     };
