@@ -14,7 +14,7 @@ import Header from './components/Header/Header';
  import Register from './containers/User/Register/Register';
 import Footer from './components/Footer/Footer';
  import Films from './containers/Films/Films';
-import Series from './containers/Series/Series'
+import FilmsView from './containers/FilmsView/FilmsView';
 
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
           <Route path="/login" element={<Login />} />;
           <Route path='/register' element={<Register/>}/>;
             <Route path="/films" element={<Films/>}/>;
-          <Route path="/series" element={<Series/>}/>;
+          <Route path="/filmsView" element={<FilmsView/>}/>;
 
         </Routes>
       

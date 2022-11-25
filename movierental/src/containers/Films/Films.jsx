@@ -57,9 +57,9 @@ const [movies, setMovies] = useState([]);
                 <div className="leftSide col">
                     {
                         movies.map(movie => {
-                            return <div  className="movieDesign col " key={movie.id}>
+                            return <div  className="movieDesign col"  key={movie.id}>
                                 {/*<div>{movie.original_title}</div>*/}
-                                <div ><img className="moviePic" src={url+movie.poster_path} /></div>
+                                <div ><img className="moviePic" src={url+movie.poster_path} onClick={() => navigate("/filmsView")} href="../FilmsView" /></div>
                             </div>
                         })
                     }
