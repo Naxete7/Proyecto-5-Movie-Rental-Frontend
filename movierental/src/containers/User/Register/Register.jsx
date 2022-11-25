@@ -3,6 +3,8 @@ import "./Register.scss"
 import Navigator from "../../../components/Navigator/Navigator";
 import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../../services/apicalls";
+import { userData, login } from "../userSlice";
+import { useSelector, useDispatch } from "react-redux";
 
 
 import { Button, Checkbox, Form, Input } from 'antd';
@@ -11,6 +13,13 @@ import { Button, Checkbox, Form, Input } from 'antd';
 
 const Register = () => {
   let navigate = useNavigate()
+  const userReduxCredentials = useSelector(userData);
+
+  useEffect(() => {
+    console.log(userReduxCredentials); 
+    if (userReduxCredentials?.credentials?.token !== undefined) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
+        navigate("/");       
+};});
 
   const regMe = () => {
     registerUser(user)
@@ -31,7 +40,7 @@ const Register = () => {
 
   const [user,setUser] = useState({
     username: "",
-    email: "",
+    mail: "",
     password: "",
 
   })
@@ -76,8 +85,8 @@ const Register = () => {
         </Form.Item>
   
         <Form.Item
-          //label="Email"
-          name="Email"
+          //label="mail"
+          name="mail"
           rules={[
             {
               required: true,
@@ -85,7 +94,7 @@ const Register = () => {
             },
           ]}
         >
-          <input type="email" name="email" placeholder="email" onChange={(e)=>inputHandler(e)}/>
+          <input type="mail" name="mail" placeholder="mail" onChange={(e)=>inputHandler(e)}/>
         </Form.Item>
   
         <Form.Item

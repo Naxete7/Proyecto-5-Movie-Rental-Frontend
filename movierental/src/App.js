@@ -16,6 +16,11 @@ import Footer from './components/Footer/Footer';
  import Films from './containers/Films/Films';
 import FilmsView from './containers/FilmsView/FilmsView';
 
+import Profile from './containers/User/Profile/Profile';
+import UserOrders from './containers/User/UserOrders/UserOrders';
+import AllOrders from './components/Admin/AllOrders/AllOrders';
+import MyAccount from './containers/MyAccount/MyAccount';
+// import Films from './containers/Films/Films';
 
 function App() {
   return (
@@ -43,6 +48,12 @@ function App() {
           <Route path='/register' element={<Register/>}/>;
             <Route path="/films" element={<Films/>}/>;
           <Route path="/filmsView" element={<FilmsView/>}/>;
+          <Route path='/profile' element={<Profile/>} />;
+          <Route path='/userorders' element={<UserOrders/>} />;
+          <Route path='/allorders' element={<AllOrders/>} />;
+          <Route path='/myaccount' element={<MyAccount/>} />;
+            {/* <Route path="/films" element={<Films/>}/> */}
+
 
         </Routes>
       
