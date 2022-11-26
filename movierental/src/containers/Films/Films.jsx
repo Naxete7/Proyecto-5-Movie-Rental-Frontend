@@ -20,7 +20,7 @@ const Films = () => {
     
 const [movies, setMovies] = useState([]);
  
-    const url = "https://image.tmdb.org/t/p/original"
+    //const url = "https:/3005/movies/"
 
     useEffect(() => {
         //This function is triggered when the component is mounted for the first time.
@@ -32,8 +32,8 @@ const [movies, setMovies] = useState([]);
                 //Adding a 2 seconds delay on purpose...
 
                 bringFilms().then(
-                    (res) => {setMovies(res.data.results)
-                        console.log(res)}
+                    (res) => {setMovies(res.data)
+                        console.log(res.data)}
                 );
 
 
@@ -59,7 +59,7 @@ const [movies, setMovies] = useState([]);
                         movies.map(movie => {
                             return <div  className="movieDesign col"  key={movie.id}>
                                 {/*<div>{movie.original_title}</div>*/}
-                                <div ><img className="moviePic" src={url+movie.poster_path} onClick={() => navigate("/filmsView")} href="../FilmsView" /></div>
+                                <div ><img className="moviePic" src={movie.poster} onClick={() => navigate("/filmsView")}/></div>
                             </div>
                         })
                     }

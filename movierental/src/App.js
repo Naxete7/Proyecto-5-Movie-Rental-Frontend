@@ -31,9 +31,9 @@ function App() {
       
       <BrowserRouter>
       
-        <Header>
-        <navbar/>
-        </Header>
+        <Header/>
+       <navbar/>
+        
         
         
         <Routes>
@@ -41,7 +41,7 @@ function App() {
 
             {/* Cada Route contendrá una vista..... */} 
          
-          
+           
           <Route path="/" element={<Home />} />;
           
           <Route path="/login" element={<Login />} />;
