@@ -5,12 +5,20 @@ import { useEffect, useState } from "react";
 import { filmData, addFIlm } from "../FilmSlice";
 import { userData } from "../User/userSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { orderFilm } from "../../services/apicalls";
+import { useNavigate } from "react-router-dom";
 
 
 const FilmsView = () => {
   //const [film, setFilm] = useState({
   //  title:""
   //})
+  const orderMovie = (movie) => {
+
+  }
+
+  let navigate = useNavigate()
+
   const [movie, setMovie] = useState([]);
   const selectedFilm = useSelector(filmData);
   //const credentials = useSelector(userData);
