@@ -1,19 +1,20 @@
 
 import React, { useState, useEffect } from 'react';
 import "./Login.scss";
-
 import { loginUser } from '../../../services/apicalls';
-
 import { useNavigate } from 'react-router-dom';
-
-
 import { useSelector, useDispatch } from "react-redux";
-
 import { userData, login } from "../userSlice";
-
 import Navigator from '../../../components/Navigator/Navigator';
-
 import { errorCheck } from '../../../services/useful';
+
+
+
+
+
+
+
+
 
 const Login = () => {
 
@@ -94,7 +95,6 @@ const Login = () => {
                         }));
 
 
-
                         // if(res){
                         //     //Quiere decir que la respuesta del backend al proceso de login es correcta...
 
@@ -128,4 +128,5 @@ const Login = () => {
                 </div>
             )
         }
-        export default Login;
+export default Login;
+       
