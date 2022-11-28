@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-var root = 'https://localhost:3005/movies';
+var root = 'https://localhost:3001/films/';
 //var apiKey = '210d6a5dd3f16419ce349c9f1b200d6d';
 
 export const loginUser = async (body) => {
@@ -13,7 +13,7 @@ console.log(body)
 // console.log(bodyReq)
 
     return axios.post(
-        "http://localhost:3005/auth/login",
+        "http://localhost:3001/auth/login",
             body
             // {
             //     "mail": 'elbanking@punsdhi.com',
@@ -31,7 +31,7 @@ export const registerUser = async (body) => {
     console.log(body)
     
         return axios.post(
-            "http://localhost:3005/auth/register",
+            "http://localhost:3001/auth/register",
                 body
                 // {
                 //     "mail": 'elbanking@punsdhi.com',
@@ -44,7 +44,7 @@ export const bringFilms = () => {
     
         try {
     
-            return axios.get("http://localhost:3005/movies/");
+            return axios.get("http://localhost:3001/films");
             
     
         } catch (error) {
@@ -64,18 +64,18 @@ export const bringFilms = () => {
 }
     export const bringUserInfo = (email) => {
     
-        return axios.get("http://localhost:3005/users/id/" + email)
+        return axios.get("http://localhost:3001/users/id/" + email)
         
     };
 
     export const bringUserOrders = (email) => {
     
-        return axios.get(`http://localhost:3005/orders/${email}`)
+        return axios.get(`http://localhost:3001/orders/${email}`)
 
     };
 
     export const bringAllOrders = () => {
     
-        return axios.get(`http://localhost:3005/orders/`)
+        return axios.get(`http://localhost:3001/orders/`)
 
     };
