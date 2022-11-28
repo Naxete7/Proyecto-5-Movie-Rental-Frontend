@@ -11,7 +11,7 @@ const FilmsView = () => {
   //const [film, setFilm] = useState({
   //  title:""
   //})
-  
+  const [movie, setMovie] = useState([]);
   const selectedFilm = useSelector(filmData);
   //const credentials = useSelector(userData);
   console.log(selectedFilm);
@@ -19,11 +19,12 @@ const FilmsView = () => {
     
     return (
        <div className="filmsViewDesign">
-        {selectedFilm?.title}
-        <br/>
-        {selectedFilm?.poster}
-        <br/>
-        {selectedFilm?.genre};
+      <div>{selectedFilm?.title}</div>  
+       
+        <div>
+        <img className="moviePic" src={selectedFilm?.poster} /></div>  
+       
+      <div> {selectedFilm?.genre};</div> 
                 {/*<img className="moviePic" src={movie.poster}/>*/}
                 {/*{credentials?.credentials?.token !== undefined &&
 
