@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { Card } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import {addFilm, filmData} from "../FilmSlice"
-
+import card  from "react-bootstrap";
 
 
 
@@ -61,14 +61,14 @@ const [movies, setMovies] = useState([]);
 <div className="moviesShowcase row">
                 {/* Here I proceed to MAP the hook which contains all the movies */}
                
-                <div className="leftSide col-12"> 
+                <div className="leftSide col"> 
                     {
                         movies.map(movie => {
                             return <div  className="movieDesign col"  >
                                 {/*<div>{movie.original_title}</div>*/}
-                                <div ><card>
+                                <div className="col"><Card>
                                     <img className="moviePic" src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
-                              </card>
+                              </Card>
                                 </div>
                             </div>
                         })

@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 import { Button, Space } from 'antd';
 import { useState } from "react";
 import { useEffect } from "react";
-//import Carousel from 'react-bootstrap/Carousel';
+import { filmData } from "../FilmSlice";
 import img from '../../assets/img/Sin título.png'
 
 import "./Home.scss"
@@ -12,8 +12,12 @@ import "./Home.scss"
 const Home = () => {
     
     let navigate = useNavigate();
+    const filmsFromRdx = useSelector(filmData);
+ useEffect(()=> {
+       console.log("soy las peliculas", filmsFromRdx);    
+ })
     
-
+    
     return (
 
         

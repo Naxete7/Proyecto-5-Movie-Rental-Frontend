@@ -3,10 +3,9 @@
     width: auto;
 
     display: grid;
+    flex-direction: column;
     justify-content: center;
-    flex-direction: row;
-    justify-content: center;
-    //background-image: image(src"../../assets/img/anillo.png");
+   
     background-color: #030328;
     color: #ffc107;
 }

@@ -18,18 +18,16 @@ const FilmsView = () => {
   if (selectedFilm?.id_film !== undefined) {
     
     return (
-       <div className="filmsViewDesign">
+       <div className="filmsViewDesign display-flex">
       <div>{selectedFilm?.title}</div>  
        
-        <div>
-        <img className="moviePic" src={selectedFilm?.poster} /></div>  
-       
-      <div> {selectedFilm?.genre};</div> 
-                {/*<img className="moviePic" src={movie.poster}/>*/}
+        <div><img className="moviePic" src={selectedFilm?.poster} /></div>  
+
+      <div> {selectedFilm?.genre}</div> 
+                
                 {/*{credentials?.credentials?.token !== undefined &&
 
                     
-                
                 }*/}
                 <button className="buttonDesign">Alquilame</button>
             </div>
