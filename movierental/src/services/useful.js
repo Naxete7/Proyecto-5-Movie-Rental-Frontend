@@ -57,3 +57,11 @@ export const errorCheck = (field, value, type) => {
         break;
 
         }}
+
+export const setDayInSeventh = () => {
+    let days = 7
+    let date = new Date();
+    let last = new Date(date.getTime() + (days * 24 * 60 * 60 * 1000));
+
+    return last
+}
