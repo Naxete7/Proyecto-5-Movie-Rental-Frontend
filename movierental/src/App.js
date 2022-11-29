@@ -5,9 +5,16 @@ import './App.css';
 
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './containers/Home/Home';
+<<<<<<< HEAD
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+=======
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/components/Button/ButtonDesign.scss'
 import { Card } from 'react-bootstrap';
+>>>>>>> b2a88101174525c43bf730503f564b36a15c623d
 //Importaciones de containers y componentes
 // import Register from './containers/Register/Register';
 import Login from './containers/User/Login/Login.jsx';

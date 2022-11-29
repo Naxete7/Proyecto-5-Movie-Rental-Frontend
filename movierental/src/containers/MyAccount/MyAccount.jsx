@@ -11,6 +11,8 @@ import AllOrders from '../../components/Admin/AllOrders/AllOrders'
 import { userData } from "../User/userSlice";
 
 import { useSelector } from "react-redux";
+import AllUsers from "../../components/Admin/AllUsers/AllUsers";
+import DeleteUser from "../../components/Admin/DeleteUser/DeleteUser";
 
 const MyAccount = () => {
 
@@ -32,7 +34,7 @@ const MyAccount = () => {
         console.log(userRole); 
         // console.log(userReduxCredentials?.credentials?.token); 
 
-        if (userRole === null) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
+        if (userRole === "null" || userRole === null) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
             navigate("/");       
     };});
 
@@ -48,6 +50,8 @@ const MyAccount = () => {
         return <div>
             <Profile/>
             <AllOrders/>
+            <AllUsers/>
+            <DeleteUser/>
         </div>
     }
 };

@@ -79,3 +79,15 @@ export const bringFilms = () => {
         return axios.get(`http://localhost:3001/orders/`)
 
     };
+
+    export const bringAllUsers = () => {
+    
+        return axios.get(`http://localhost:3000/users/`)
+
+    };
+
+    export const deleteUser = (email) => {
+    
+        return axios.delete("http://localhost:3000/users/delete/" + email)
+        
+    };

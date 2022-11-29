@@ -37,9 +37,10 @@ const Login = () => {
 
     useEffect(() => {
         console.log(userReduxCredentials); 
-        console.log(userReduxCredentials?.credentials?.token); 
+        console.log(userReduxCredentials?.credentials?.token);
 
-        if (userReduxCredentials?.credentials?.token !== undefined) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
+
+        if (userReduxCredentials?.credentials?.token !== "") {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
             navigate("/");       
     };});
 
