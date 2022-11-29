@@ -37,17 +37,17 @@ const Login = () => {
 
     useEffect(() => {
         console.log(userReduxCredentials); 
-        console.log(userReduxCredentials?.credentials?.token);
+        let loged = localStorage.getItem("SAVEUSERMAIL")
+        console.log(loged)
 
-
-        if (userReduxCredentials?.credentials?.token !== "") {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
+        if (loged) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
             navigate("/");       
     };});
 
             //Handlers
 
             const inputHandler = (e) => {
-                //console.log(e.target.value);
+                console.log(e.target.value);
 
                 //Aqui setearemos DINÁMICAMENTE el BINDEO entre inputs y hook.
                 setUser((prevState) => ({
