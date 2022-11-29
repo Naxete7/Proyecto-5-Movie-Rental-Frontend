@@ -41,7 +41,15 @@ export const filmSlice = createSlice({
         ...action.payload
       }
     },
-  }
+  },
+  cleanSearch: (state, action) => {
+    return {
+      ...state,
+      ...action.payload
+    }
+  },
+
+
 
 });
 
