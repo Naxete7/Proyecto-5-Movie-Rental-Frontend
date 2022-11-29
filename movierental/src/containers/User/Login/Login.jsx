@@ -7,6 +7,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { userData, login } from "../userSlice";
 import Navigator from '../../../components/Navigator/Navigator';
 import { errorCheck } from '../../../services/useful';
+import { Card } from 'antd';
 
 
 
@@ -112,9 +113,9 @@ const Login = () => {
                     <Navigator pathUno={"/"} destinoUno={"Home"} pathDos={"/register"} destinoDos={"Register"} />
 
                     <div className="inputsContainer">
-                        <div>
+                        <div> <Card>
                             <input type="mail" name="mail" placeholder="mail" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "mail")} />
-                            <div className="errorInput">{userError.mailError}</div>
+                           </Card> <div className="errorInput">{userError.mailError}</div>
                         </div>
                         <div>
                             <input type="password" name="password" placeholder="password" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "password")} />

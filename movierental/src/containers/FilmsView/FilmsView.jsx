@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { filmData, addFIlm } from "../FilmSlice";
 import { userData } from "../User/userSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { Container, Image, Row } from "react-bootstrap";
 
 
 const FilmsView = () => {
@@ -18,22 +19,28 @@ const FilmsView = () => {
   if (selectedFilm?.id_film !== undefined) {
     
     return (
+
+      <Container fluid>
+        <Row>
        <div className="filmsViewDesign">
       <div>{selectedFilm?.title}</div>  
-       
-        <div>
-        <img className="moviePic" src={selectedFilm?.poster} /></div>  
-       
-      <div> {selectedFilm?.genre};</div> 
-                {/*<img className="moviePic" src={movie.poster}/>*/}
+       <Row>
+        <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
+            </Row>
+            <Row>
+      <div> {selectedFilm?.genre}</div> 
+                <div className="text-break"> {selectedFilm?.sinopsis}</div>
                 {/*{credentials?.credentials?.token !== undefined &&
 
                     
-                
                 }*/}
-                <button className="buttonDesign">Alquilame</button>
-            </div>
-
+            </Row>
+            <Row>
+              <button className="buttonDesign">Alquilame</button>
+              </Row>
+          </div>
+        </Row>  
+</Container>
 )
 
   } else {
