@@ -13,21 +13,25 @@ const FilmsView = () => {
   //const [film, setFilm] = useState({
   //  title:""
   //})
-  const orderMovie = async () => {
-    const mail = sessionStorage.getItem("SAVEUSERMAIL")
-    let today = new Date();
-    let date = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`
-    let end = setDayInSeventh()
-    let endDate = `${end.getDate()}/${end.getMonth()+1}/${end.getFullYear()}`
-    let movieBody = {
-      "startedAt": date,
-      "endedAt": endDate,
-      "userMail": mail,
-      "filmIdFilm": selectedFilm.id_film
+  const orderMovie =  () => {
+    try {
+      const mail = localStorage.getItem("SAVEUSERMAIL")
+      let today = new Date();
+      let date = `${today.getFullYear()}-${today.getMonth()+1}-${today.getDate()}`
+      let end = setDayInSeventh()
+      let endDate = `${end.getFullYear()}-${end.getMonth()+1}-${end.getDate()}`
+      let movieBody = {
+        "startedAt": date,
+        "endedAt": endDate,
+        "userMail": mail.replaceAll('"', ''),
+        "filmIdFilm": selectedFilm.id_film
+      }
+      console.log(movieBody)
+      let resp =  orderFilm(movieBody)
+      return resp
+    } catch (error) {
+      console.log(error)
     }
-
-    let resp = await orderFilm(movieBody)
-    return resp
   }
 
   const [movie, setMovie] = useState([]);
