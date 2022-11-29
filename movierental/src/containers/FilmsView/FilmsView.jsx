@@ -62,7 +62,7 @@ const FilmsView = () => {
             <Row>
 
               
-              <button className="buttonDesign">Alquilame</button>
+              <button className="buttonDesign" onClick={()=>orderMovie()}>Alquilame</button>
               </Row>
           </div>
         </Row>  
