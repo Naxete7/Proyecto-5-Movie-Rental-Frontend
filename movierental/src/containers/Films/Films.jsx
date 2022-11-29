@@ -66,7 +66,7 @@ const [movies, setMovies] = useState([]);
                         
                                 {/*<div>{movie.original_title}</div>*/}
                                 
-                                    <Image  className="moviePic " src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
+                                    <Image className="moviePic " src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
                             
                             </Col> 
                       ))

@@ -13,7 +13,7 @@ console.log(body)
 // console.log(bodyReq)
 
     return axios.post(
-        "http://localhost:3000/auth/login",
+        "http://localhost:3001/auth/login",
             body
             // {
             //     "mail": 'elbanking@punsdhi.com',
@@ -44,7 +44,7 @@ export const bringFilms = () => {
     
         try {
     
-            return axios.get("http://localhost:3000/films");
+            return axios.get("http://localhost:3001/films");
             
     
         } catch (error) {
@@ -64,13 +64,13 @@ export const bringFilms = () => {
 }
     export const bringUserInfo = (email) => {
     
-        return axios.get("http://localhost:3000/users/id/" + email)
+        return axios.get("http://localhost:3001/users/id/" + email)
         
     };
 
     export const bringUserOrders = (email) => {
     
-        return axios.get(`http://localhost:3000/orders/${email}`)
+        return axios.get(`http://localhost:3001/orders/${email}`)
 
     };
 
@@ -103,7 +103,7 @@ export const bringFilms = () => {
             }
         }
 
-        return await axios.post(`http://localhost:3000/orders/neworder`,movie,config)
+        return await axios.post(`http://localhost:3001/orders/neworder`,movie,config)
     }
 
     

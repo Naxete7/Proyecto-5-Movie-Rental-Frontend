@@ -50,12 +50,12 @@ const FilmsView = () => {
       <Container fluid >
         <Row>
        <div className="filmsTitle">
-      <div>{selectedFilm?.title}</div>  
+              <div>{selectedFilm?.title}</div>  
        <Row>
         <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
             </Row>
             <Row>
-      <div> {selectedFilm?.genre}</div> 
+      <div>{selectedFilm?.genre}</div> 
                 <div className="text-break"> {selectedFilm?.sinopsis}</div>
                  </Row>
               
