@@ -1,18 +1,41 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+//export const filmSlice = createSlice({
+//  name: 'film',
+//  initialState: {
+//    movies: []
+//  },
+//  reducers: {
+//    addSearch: (state, action) => {
+//      return {
+//        ...state,
+//        ...action.payload
+//      }
+//    },
+//    cleanSearch: (state, action) => {
+//      return {
+//        ...state,
+//        ...action.payload
+//      }
+//    },
+//  }
+
+//});
+
 export const filmSlice = createSlice({
   name: 'film',
   initialState: {
-    movies: []
+    details: {},
+    search: []
   },
   reducers: {
-    addSearch: (state, action) => {
+    addFilm: (state, action) => {
       return {
         ...state,
         ...action.payload
       }
     },
-    cleanSearch: (state, action) => {
+    addSearch: (state, action) => {
       return {
         ...state,
         ...action.payload
@@ -22,7 +45,8 @@ export const filmSlice = createSlice({
 
 });
 
-export const { addSearch, cleanSearch } = filmSlice.actions;
+
+export const { addSearch, cleanSearch, addFilm } = filmSlice.actions;
 
 export const filmData = (state) => state.film;
 
