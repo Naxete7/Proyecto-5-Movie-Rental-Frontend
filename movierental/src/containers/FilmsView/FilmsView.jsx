@@ -6,18 +6,29 @@ import { filmData, addFIlm } from "../FilmSlice";
 import { userData } from "../User/userSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { orderFilm } from "../../services/apicalls";
-import { useNavigate } from "react-router-dom";
+import { setDayInSeventh } from "../../services/useful";
 
 
 const FilmsView = () => {
   //const [film, setFilm] = useState({
   //  title:""
   //})
-  const orderMovie = (movie) => {
+  const orderMovie = async () => {
+    const mail = sessionStorage.getItem("SAVEUSERMAIL")
+    let today = new Date();
+    let date = `${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()}`
+    let end = setDayInSeventh()
+    let endDate = `${end.getDate()}/${end.getMonth()+1}/${end.getFullYear()}`
+    let movieBody = {
+      "startedAt": date,
+      "endedAt": endDate,
+      "userMail": mail,
+      "filmIdFilm": selectedFilm.id_film
+    }
 
+    let resp = await orderFilm(movieBody)
+    return resp
   }
-
-  let navigate = useNavigate()
 
   const [movie, setMovie] = useState([]);
   const selectedFilm = useSelector(filmData);
@@ -39,7 +50,7 @@ const FilmsView = () => {
                     
                 
                 }*/}
-                <button className="buttonDesign">Alquilame</button>
+                <button className="buttonDesign" onClick={()=>orderMovie()}>Alquilame</button>
             </div>
 
 )
