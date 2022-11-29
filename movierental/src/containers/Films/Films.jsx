@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { Card } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import {addFilm, filmData} from "../FilmSlice"
-import card  from "react-bootstrap";
+import card, { Col, Container, Image, Row }  from "react-bootstrap";
 
 
 
@@ -55,30 +55,27 @@ const [movies, setMovies] = useState([]);
 
     return (
 
-        
-        <div className="homeDesign container-fluid   d-flex flex-column align-items-center justify-content-around" >
-            
-<div className="moviesShowcase row">
+        <Container fluid >
+        {/*<div className="homeDesign    d-flex flex-column align-items-center justify-content-around" >*/}
+            <Row flex className="filmsDesign">
+{/*<div className="moviesShowcase ">*/}
                 {/* Here I proceed to MAP the hook which contains all the movies */}
-               
-                <div className="leftSide col"> 
+              
                     {
-                        movies.map(movie => {
-                            return <div  className="movieDesign col"  >
+                        movies.map(movie => ( <Col>
+                        
                                 {/*<div>{movie.original_title}</div>*/}
-                                <div className="col"><Card>
-                                    <img className="moviePic" src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
-                              </Card>
-                                </div>
-                            </div>
-                        })
+                                
+                                    <Image className="moviePic " src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
+                            
+                            </Col> 
+                      ))
                     }
 
-                </div>
-
-            </div>
-
-        </div>
+               
+          
+            </Row>
+           </Container> 
     )
 
 

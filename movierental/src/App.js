@@ -16,7 +16,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
  import Films from './containers/Films/Films';
 import FilmsView from './containers/FilmsView/FilmsView';
-
+import Image from 'react-bootstrap/Image'
 import Profile from './containers/User/Profile/Profile';
 import UserOrders from './containers/User/UserOrders/UserOrders';
 import AllOrders from './components/Admin/AllOrders/AllOrders';
