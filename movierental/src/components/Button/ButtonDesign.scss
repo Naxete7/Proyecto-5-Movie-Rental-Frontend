@@ -1,7 +1,7 @@
 .buttonHomeDesign {
 
     margin-bottom: 3em;
-    margin: 0.5em;
+   
     border-radius: 2em;
     cursor: pointer;
     font-size: larger;
@@ -13,6 +13,8 @@
     background-image: -o-linear-gradient(top, #ffc107, #2079b0);
     background-image: linear-gradient(to bottom, #ffc107, #2079b0);
     transition: 0.2s;
+
+    
 }
 
 .buttonHomeDesign:hover {
@@ -27,3 +29,4 @@
 
     transition: 0.2s;
 }
+

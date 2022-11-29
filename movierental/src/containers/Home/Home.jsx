@@ -1,26 +1,31 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import { useSelector } from "react-redux";
 import { Button, Space } from 'antd';
 import { useState } from "react";
 import { useEffect } from "react";
-//import Carousel from 'react-bootstrap/Carousel';
+import { filmData } from "../FilmSlice";
 import img from '../../assets/img/Sin título.png'
 
 import "./Home.scss"
+import { Image } from "react-bootstrap";
 
 const Home = () => {
     
     let navigate = useNavigate();
+    const filmsFromRdx = useSelector(filmData);
+ useEffect(()=> {
+       console.log("soy las peliculas", filmsFromRdx);    
+ })
     
-
+    
     return (
 
         
         <div className="homeDesign container-fluid   d-flex flex-column align-items-center justify-content-around" >
           
           
-            <div className="logo row"><img className="imgDesign" src={img} alt="imagen de portada" /></div>
+            <div className="logo row"><Image className="imgDesign" src={img} alt="imagen de portada" /></div>
             
 
             <div className="textCentralDesign row-12 d-flex align-items-center justify-content-center">Alquila todas las películas y series que quieras.</div>

@@ -76,9 +76,20 @@ export const bringFilms = () => {
 
     export const bringAllOrders = () => {
     
-        return axios.get(`http://localhost:3000/orders/`)
+        return axios.get(`http://localhost:3001/orders/`)
 
     };
+
+    export const bringAllUsers = () => {
+    
+        return axios.get(`http://localhost:3001/users/`)
+
+    };
+
+    export const deleteUser = (email) => {
+    
+        return axios.delete("http://localhost:3001/users/delete/" + email)
+        
 
     export const orderFilm = async (movie) => {
         const jwt = localStorage.getItem("SAVEJWT")
@@ -94,3 +105,5 @@ export const bringFilms = () => {
 
         return await axios.post(`http://localhost:3000/orders/neworder`,movie,config)
     }
+
+    };

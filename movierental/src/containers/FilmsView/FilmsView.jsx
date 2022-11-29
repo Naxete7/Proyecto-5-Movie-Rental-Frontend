@@ -7,12 +7,14 @@ import { userData } from "../User/userSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { orderFilm } from "../../services/apicalls";
 import { setDayInSeventh } from "../../services/useful";
+import { Container, Image, Row } from "react-bootstrap";
 
 
 const FilmsView = () => {
-  //const [film, setFilm] = useState({
-  //  title:""
-  //})
+
+  let loged = localStorage.getItem("SAVEUSERMAIL");
+
+
   const orderMovie =  () => {
     try {
       const mail = localStorage.getItem("SAVEUSERMAIL")
@@ -38,26 +40,58 @@ const FilmsView = () => {
   const selectedFilm = useSelector(filmData);
   //const credentials = useSelector(userData);
   console.log(selectedFilm);
+  console.log(loged);
   if (selectedFilm?.id_film !== undefined) {
-    
-    return (
+      
+
+    if (loged){
+          return (
+
+      <Container fluid>
+        <Row>
        <div className="filmsViewDesign">
       <div>{selectedFilm?.title}</div>  
-       
-        <div>
-        <img className="moviePic" src={selectedFilm?.poster} /></div>  
-       
-      <div> {selectedFilm?.genre};</div> 
-                {/*<img className="moviePic" src={movie.poster}/>*/}
-                {/*{credentials?.credentials?.token !== undefined &&
+       <Row>
+        <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
+            </Row>
+            <Row>
+      <div> {selectedFilm?.genre}</div> 
+                <div className="text-break"> {selectedFilm?.sinopsis}</div>
+                 </Row>
+              
+            <Row>
 
-                    
-                
-                }*/}
-                <button className="buttonDesign" onClick={()=>orderMovie()}>Alquilame</button>
-            </div>
-
+              
+              <button className="buttonDesign">Alquilame</button>
+              </Row>
+          </div>
+        </Row>  
+</Container>
 )
+    } else {
+      return (
+
+      <Container fluid>
+        <Row>
+       <div className="filmsViewDesign">
+      <div>{selectedFilm?.title}</div>  
+       <Row>
+        <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
+            </Row>
+            <Row>
+      <div> {selectedFilm?.genre}</div> 
+                <div className="text-break"> {selectedFilm?.sinopsis}</div>
+                 </Row>
+              
+          </div>
+        </Row>  
+</Container>
+)
+        }
+
+
+
+    
 
   } else {
     return (

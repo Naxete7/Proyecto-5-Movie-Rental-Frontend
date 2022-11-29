@@ -17,8 +17,11 @@ const Register = () => {
 
   useEffect(() => {
     console.log(userReduxCredentials); 
-    if (userReduxCredentials?.credentials?.token !== undefined) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
-        navigate("/");       
+    let loged = localStorage.getItem("SAVEUSERMAIL")
+    console.log(loged)
+
+    if (loged) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
+        navigate("/");      
 };});
 
   const regMe = () => {
