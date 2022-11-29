@@ -9,16 +9,20 @@ import { Container, Image, Row } from "react-bootstrap";
 
 
 const FilmsView = () => {
-  //const [film, setFilm] = useState({
-  //  title:""
-  //})
+
+  let loged = localStorage.getItem("SAVEUSERMAIL");
+
+
   const [movie, setMovie] = useState([]);
   const selectedFilm = useSelector(filmData);
   //const credentials = useSelector(userData);
   console.log(selectedFilm);
+  console.log(loged);
   if (selectedFilm?.id_film !== undefined) {
-    
-    return (
+      
+
+    if (loged){
+          return (
 
       <Container fluid>
         <Row>
@@ -30,18 +34,41 @@ const FilmsView = () => {
             <Row>
       <div> {selectedFilm?.genre}</div> 
                 <div className="text-break"> {selectedFilm?.sinopsis}</div>
-                {/*{credentials?.credentials?.token !== undefined &&
-
-                    
-                }*/}
-            </Row>
+                 </Row>
+              
             <Row>
+
+              
               <button className="buttonDesign">Alquilame</button>
               </Row>
           </div>
         </Row>  
 </Container>
 )
+    } else {
+      return (
+
+      <Container fluid>
+        <Row>
+       <div className="filmsViewDesign">
+      <div>{selectedFilm?.title}</div>  
+       <Row>
+        <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
+            </Row>
+            <Row>
+      <div> {selectedFilm?.genre}</div> 
+                <div className="text-break"> {selectedFilm?.sinopsis}</div>
+                 </Row>
+              
+          </div>
+        </Row>  
+</Container>
+)
+        }
+
+
+
+    
 
   } else {
     return (

@@ -7,9 +7,6 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './containers/Home/Home';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/components/Button/ButtonDesign.scss'
 import { Card } from 'react-bootstrap';
 //Importaciones de containers y componentes
