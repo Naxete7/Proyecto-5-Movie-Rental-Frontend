@@ -6,6 +6,8 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './containers/Home/Home';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 //Importaciones de containers y componentes
 // import Register from './containers/Register/Register';

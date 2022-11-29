@@ -18,8 +18,6 @@ const UserOrders = () => {
     useEffect(() => {
         //This function is triggered when the component is mounted for the first time.
 
-        console.log(userMail)
-
         if (userOrders.length === 0) {
 
             bringUserOrders(userMail)
@@ -27,6 +25,7 @@ const UserOrders = () => {
                 (res) => {
                     console.log(res)
                     setUserOrders(res.data)
+                    console.log(userOrders)
                 }
             )
             .catch((error) => {
@@ -38,6 +37,9 @@ const UserOrders = () => {
 
 
     }, [userOrders]);
+
+
+    
     if(error) {
         return <h2>{error.repeat(999)} </h2>
     }

@@ -1,6 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+
+import { Container } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
+import { Col } from 'react-bootstrap';
+
 import './Profile.scss';
 
 import { bringUserInfo } from '../../../services/apicalls';
@@ -25,30 +32,31 @@ const Profile = () => {
         if (userInfo.length === 0) {
             // bringmovies()
             bringUserInfo(userMail)
-            .then(
-                (res) => {
-                    setUserInfo(res.data)
-                    console.log(res)
-                }
-            )
-            .catch((error) =>{
-                console.error(error)
-                setError(error.response?.data  || 'ups intentalo de nuevo' )
-            })
+                .then(
+                    (res) => {
+                        setUserInfo(res.data)
+                        console.log(res)
+                    }
+                )
+                .catch((error) => {
+                    console.error(error)
+                    setError(error.response?.data || 'ups intentalo de nuevo')
+                })
         };
 
 
     }, [userInfo]);
 
-    if(error) {
+    console.log(userInfo)
+
+    if (error) {
         return <h2>{error.repeat(999)} </h2>
     }
 
-    if (userInfo.length !== 0) {
-        return <pre>{JSON.stringify(userInfo, null, 2)}</pre>
-    } else {
-        return <h2>no data</h2>
-    }
+    return (
+        <pre>{JSON.stringify(userInfo, null, 2)}</pre>
+    )
+   
 };
 
 export default Profile;
