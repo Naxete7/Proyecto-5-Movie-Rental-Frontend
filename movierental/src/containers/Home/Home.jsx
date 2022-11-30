@@ -5,8 +5,7 @@ import { Button, Space } from 'antd';
 import { useState } from "react";
 import { useEffect } from "react";
 import { filmData } from "../FilmSlice";
-import img from '../../assets/img/Sin título.png'
-import '../../components/Button/ButtonDesign.scss'
+
 import "./Home.scss"
 import { Image } from "react-bootstrap";
 
@@ -23,8 +22,6 @@ const Home = () => {
 
         
         <div className="homeDesign container-fluid   d-flex flex-column align-items-center justify-content-around" >
-          
-          
           
             
 

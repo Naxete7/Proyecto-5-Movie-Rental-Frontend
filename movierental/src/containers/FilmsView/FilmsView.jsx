@@ -48,23 +48,20 @@ const FilmsView = () => {
           return (
 
       <Container fluid className="filmsViewDesign" >
-        <Row>
-       <div className="filmsTitle">
-              <div>{selectedFilm?.title}</div>  
-       <Row>
-        <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
-            </Row>
-            <Row>
-      <div>{selectedFilm?.genre}</div> 
-                <div className="text-break"> {selectedFilm?.sinopsis}</div>
-                 </Row>
-              <br></br>
-           <Row className="d-flex align-content-center justify-content-center" >
+              <Row >
+                <Col className=" align-content-center justify-content-center">
 
-               <Button className="buttonDesign col-6  d-flex justify-content-center  " onClick={()=>orderMovie()}>Alquílame</Button>
-              {/*<button className="buttonDesign" hover onClick={()=>orderMovie()}>Alquílame</button>*/}
-              </Row>
-          </div>
+                <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
+                    <Button className="buttonDesign" onClick={()=>orderMovie()}>Alquílame</Button>
+                </Col>
+                <Col className=" d-grid align-content-start justify-content-start">
+                    <div className="titleDesign text-fluid">{selectedFilm?.title}</div>
+              <div className="genreDesign"> {selectedFilm?.genre}</div>  
+               <div className="sinopsisDesign text-break"> {selectedFilm?.sinopsis}</div>
+                </Col>
+                
+                
+                
         </Row>  
 </Container>
 )

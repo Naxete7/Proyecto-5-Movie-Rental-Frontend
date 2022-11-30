@@ -1,5 +1,5 @@
 .filmsViewDesign {
-    height: auto;
+    height: auto ;
     //width: 100vw;
 
     display: grid;
@@ -14,13 +14,13 @@ background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 .titleDesign {
 
 font-size: 4em;
-font-family: disney;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
  }
 
 
  .sinopsisDesign{
-font-family: disney;
+font-family: Franklin Gothic Medium;
  }
 
  .moviePicView{
@@ -37,29 +37,30 @@ font-size: 1.5em;
 
  }
 
-.buttonDesign {
-    width: 13vw;
-    margin-bottom: 3em;
-    color: whitesmoke;
-    border-radius: 2em;
-    cursor: pointer;
-    font-size: larger;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    ;
-    text-decoration: none;
-    padding-bottom: 1.8em;
-    transition: 0.2s;
-   
-}
+//.buttonDesign {
+//    width: 13vw;
+//    margin-bottom: 3em;
+//    color: whitesmoke;
+//    border-radius: 2em;
+//    cursor: pointer;
+//    font-size: larger;
+//    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+//    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+//    ;
+//    text-decoration: none;
+//    padding-bottom: 1.8em;
+//    transition: 0.2s;
+//   justify-content: center;
+//   align-items: center;
+//}
 
-.buttonDesign:hover {
+//.buttonDesign:hover {
 
 
-    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    ;
-    background-blend-mode: screen;
-    text-decoration: none;
+//    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+//    ;
+//    background-blend-mode: screen;
+//    text-decoration: none;
 
-    transition: 0.2s;
-}
+//    transition: 0.2s;
+//}

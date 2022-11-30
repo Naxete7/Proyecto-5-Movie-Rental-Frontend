@@ -132,7 +132,7 @@ const Register = () => {
             span: 16,
           }}
         >
-          <Button className="buttonDesign" type="primary" htmlType="submit" onClick={()=> regMe()}>
+          <Button className="buttonDesign   d-flex justify-content-center col-5  " type="primary" htmlType="submit" onClick={()=> regMe()}>
             Submit
           </Button>
         </Form.Item>
