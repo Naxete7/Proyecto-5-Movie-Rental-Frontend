@@ -1,12 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
-
+import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+
 import ListGroup from 'react-bootstrap/ListGroup';
 
 import { Container } from 'react-bootstrap';
 import { Row } from 'react-bootstrap';
 import { Col } from 'react-bootstrap';
+
+import { useNavigate } from 'react-router-dom';
 
 import './Profile.scss';
 
@@ -25,6 +28,7 @@ const Profile = () => {
     const [error, setError] = useState('');
     const user = useSelector(userData);
     const userMail = JSON.parse(localStorage.getItem("SAVEUSERMAIL"))
+    const navigate = useNavigate()
 
     useEffect(() => {
         //This function is triggered when the component is mounted for the first time.
@@ -54,9 +58,25 @@ const Profile = () => {
     }
 
     return (
-        <pre>{JSON.stringify(userInfo, null, 2)}</pre>
+
+
+        <Card style={{ width: '12rem' }} className=".card">
+            <Card.Img variant="top" src={`https://robohash.org/YOUR-TE${userInfo.mail}dsXT.png`} />
+            <Card.Body>
+                <Card.Title>{userInfo.name}</Card.Title>
+                <Card.Text>
+                    {userInfo.mail}
+                </Card.Text>
+                <Card.Text>
+                    {userInfo.birth_Date}
+                </Card.Text>
+                <Button variant="primary" onClick={()=> navigate("/films")}>Alquilar películas</Button>
+            </Card.Body>
+        </Card>
+
+
     )
-   
+
 };
 
 export default Profile;

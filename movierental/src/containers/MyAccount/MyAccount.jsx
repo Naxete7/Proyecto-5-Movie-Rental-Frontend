@@ -40,8 +40,8 @@ const MyAccount = () => {
 
     console.log(userRole); 
 
-    if(userRole === "userRole") {
-        return <div>
+    if(userRole === "userRole" || userRole === "2") {
+        return <div className = "myAccountDesign">
             <Profile/>
             <UserOrders/>
         </div>
@@ -51,7 +51,6 @@ const MyAccount = () => {
             <Profile/>
             <AllOrders/>
             <AllUsers/>
-            <DeleteUser/>
         </div>
     }
 };
