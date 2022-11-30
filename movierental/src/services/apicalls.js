@@ -1,8 +1,8 @@
 
 import axios from 'axios';
 
-var root = 'https://api.themoviedb.org/3/';
-var apiKey = '210d6a5dd3f16419ce349c9f1b200d6d';
+var root = 'https://localhost:3001/films/';
+//var apiKey = '210d6a5dd3f16419ce349c9f1b200d6d';
 
 export const loginUser = async (body) => {
    
@@ -44,7 +44,7 @@ export const bringFilms = () => {
     
         try {
     
-            return axios.get("http://api.themoviedb.org/3/movie/popular?api_key=78701b4e0dfb52f1194f8f82670bab14&language=en-US&page=1");
+            return axios.get("http://localhost:3000/films");
             
     
         } catch (error) {
@@ -57,7 +57,7 @@ export const bringFilms = () => {
 
     const config = {
         method: 'get',
-        url: `${root}search/movie?api_key=${apiKey}&language=en-US&query=${criteria}&page=1&include_adult=false`
+        url: `${root}search/movies`
     }
 
     return await axios(config);
@@ -76,11 +76,40 @@ export const bringFilms = () => {
 
     export const bringAllOrders = () => {
     
-        return axios.get(`http://localhost:3000/orders/`)
+        return axios.get(`http://localhost:3001/orders/`)
 
     };
+
+    export const bringAllUsers = () => {
+    
+        return axios.get(`http://localhost:3001/users/`)
+
+    };
+
+    export const deleteUser = (email) => {
+    
+        return axios.delete("http://localhost:3001/users/delete/" + email)
+        
+    }
+    export const orderFilm = async (movie) => {
+        const jwt = localStorage.getItem("SAVEJWT")
+        let config = {
+            headers: {
+                Authorization: `Bearer ${jwt}`,
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Content-Type, Authorization',
+                'Access-Control-Allow-Methods': '*',
+                "Content-Type": "application/json"
+            }
+        }
+
+        return await axios.post(`http://localhost:3000/orders/neworder`,movie,config)
+    }
+
+    
 
 
     export const bringOneFilm = (film) => {
         return axios.get(`http://localhost:3000/films/title/${film}`)
     }
+

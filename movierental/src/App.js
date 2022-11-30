@@ -6,7 +6,9 @@ import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Home from './containers/Home/Home';
 
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../src/components/Button/ButtonDesign.scss'
+import { Card } from 'react-bootstrap';
 //Importaciones de containers y componentes
 // import Register from './containers/Register/Register';
 import Login from './containers/User/Login/Login.jsx';
@@ -15,7 +17,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
  import Films from './containers/Films/Films';
 import FilmsView from './containers/FilmsView/FilmsView';
-
+import Image from 'react-bootstrap/Image'
 import Profile from './containers/User/Profile/Profile';
 import UserOrders from './containers/User/UserOrders/UserOrders';
 import AllOrders from './components/Admin/AllOrders/AllOrders';
@@ -31,30 +33,23 @@ function App() {
       
       <BrowserRouter>
       
-        <Header>
-        <navbar/>
-        </Header>
-        
+        <Header/>
+       <navbar/>
         
         <Routes>
         {/* La parte cambiante es lo que contiene Routes DENTRO */}
 
             {/* Cada Route contendrá una vista..... */} 
-         
-          
           <Route path="/" element={<Home />} />;
-          
           <Route path="/login" element={<Login />} />;
           <Route path='/register' element={<Register/>}/>;
-            <Route path="/films" element={<Films/>}/>;
+          <Route path="/films" element={<Films/>}/>;
           <Route path="/filmsView" element={<FilmsView/>}/>;
           <Route path='/profile' element={<Profile/>} />;
           <Route path='/userorders' element={<UserOrders/>} />;
           <Route path='/allorders' element={<AllOrders/>} />;
           <Route path='/myaccount' element={<MyAccount/>} />;
-            {/* <Route path="/films" element={<Films/>}/> */}
-
-
+           
         </Routes>
       
         <Footer/>

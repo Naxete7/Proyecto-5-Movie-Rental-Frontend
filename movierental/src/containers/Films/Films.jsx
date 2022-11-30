@@ -1,26 +1,35 @@
 import React from "react";
 import "../Films/Films.scss";
-import Navigator from "../../components/Navigator/Navigator";
 import { useNavigate } from "react-router-dom";
-import { registerUser } from "../../services/apicalls";
 import { bringFilms } from '../../services/apicalls'
 import { useState } from "react";
 import { useEffect } from "react";
-import { Button, Space } from 'antd';
-import img from '../../assets/img/Sin título.png'
-
-
+import { Card } from "antd";
+import { useSelector, useDispatch } from "react-redux";
+import {addFilm, filmData} from "../FilmSlice"
+import card, { Col, Container, Image, Row }  from "react-bootstrap";
 
 
 
 
 const Films = () => {
-    
+    const dispatch = useDispatch();
     let navigate = useNavigate();
     
 const [movies, setMovies] = useState([]);
  
-    const url = "https://image.tmdb.org/t/p/original"
+    //const url = "https:/3005/movies/"
+
+  const clickedMovie = (movie) => {
+
+        //Guardo la película seleccionada en redux.
+
+        dispatch(addFilm({...movie,details: movie}));
+
+        setTimeout(()=>{
+            navigate("/filmsView");
+        },750);
+    }
 
     useEffect(() => {
         //This function is triggered when the component is mounted for the first time.
@@ -29,15 +38,15 @@ const [movies, setMovies] = useState([]);
             // bringmovies();
 
             setTimeout(() => {
-                //Adding a 2 seconds delay on purpose...
+                //Adding a 1 seconds delay on purpose...
 
                 bringFilms().then(
-                    (res) => {setMovies(res.data.results)
-                        console.log(res)}
+                    (res) => {setMovies(res.data)
+                        console.log(res.data)}
                 );
 
 
-            }, 2000);
+            }, 1000);
 
         };
 
@@ -46,49 +55,31 @@ const [movies, setMovies] = useState([]);
 
     return (
 
-        
-        <div className="homeDesign container-fluid   d-flex flex-column align-items-center justify-content-around" >
-            
-            
-
-<div className="moviesShowcase row">
+        <Container fluid >
+        {/*<div className="homeDesign    d-flex flex-column align-items-center justify-content-around" >*/}
+            <Row flex className="filmsDesign">
+{/*<div className="moviesShowcase ">*/}
                 {/* Here I proceed to MAP the hook which contains all the movies */}
-               
-                <div className="leftSide col">
+              
                     {
-                        movies.map(movie => {
-                            return <div  className="movieDesign col"  key={movie.id}>
+                        movies.map(movie => ( <Col>
+                        
                                 {/*<div>{movie.original_title}</div>*/}
-                                <div ><img className="moviePic" src={url+movie.poster_path} onClick={() => navigate("/filmsView")} href="../FilmsView" /></div>
-                            </div>
-                        })
+                                
+                                    <Image className="moviePic " src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
+                            
+                            </Col> 
+                      ))
                     }
 
-                </div>
-
-            </div>
-
-        </div>
+               
+          
+            </Row>
+           </Container> 
     )
-
-  
 
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 export default Films

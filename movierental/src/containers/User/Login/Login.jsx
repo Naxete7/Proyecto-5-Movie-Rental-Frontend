@@ -1,19 +1,21 @@
 
 import React, { useState, useEffect } from 'react';
 import "./Login.scss";
-
 import { loginUser } from '../../../services/apicalls';
-
 import { useNavigate } from 'react-router-dom';
-
-
 import { useSelector, useDispatch } from "react-redux";
-
 import { userData, login } from "../userSlice";
-
 import Navigator from '../../../components/Navigator/Navigator';
-
 import { errorCheck } from '../../../services/useful';
+import { Card } from 'antd';
+
+
+
+
+
+
+
+
 
 const Login = () => {
 
@@ -35,16 +37,17 @@ const Login = () => {
 
     useEffect(() => {
         console.log(userReduxCredentials); 
-        console.log(userReduxCredentials?.credentials?.token); 
+        let loged = localStorage.getItem("SAVEUSERMAIL")
+        console.log(loged)
 
-        if (userReduxCredentials?.credentials?.token !== undefined) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
+        if (loged) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
             navigate("/");       
     };});
 
             //Handlers
 
             const inputHandler = (e) => {
-                //console.log(e.target.value);
+                console.log(e.target.value);
 
                 //Aqui setearemos DINÁMICAMENTE el BINDEO entre inputs y hook.
                 setUser((prevState) => ({
@@ -94,7 +97,6 @@ const Login = () => {
                         }));
 
 
-
                         // if(res){
                         //     //Quiere decir que la respuesta del backend al proceso de login es correcta...
 
@@ -112,9 +114,9 @@ const Login = () => {
                     <Navigator pathUno={"/"} destinoUno={"Home"} pathDos={"/register"} destinoDos={"Register"} />
 
                     <div className="inputsContainer">
-                        <div>
+                        <div> <Card>
                             <input type="mail" name="mail" placeholder="mail" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "mail")} />
-                            <div className="errorInput">{userError.mailError}</div>
+                           </Card> <div className="errorInput">{userError.mailError}</div>
                         </div>
                         <div>
                             <input type="password" name="password" placeholder="password" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "password")} />
@@ -128,4 +130,5 @@ const Login = () => {
                 </div>
             )
         }
-        export default Login;
+export default Login;
+       

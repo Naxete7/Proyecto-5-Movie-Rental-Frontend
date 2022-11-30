@@ -8,16 +8,34 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
+import { useDispatch } from "react-redux";
+import { userout } from "../../containers/User/userSlice";
+
 
 function OffcanvasExample() {
   const inputHandler = (e) => {
     console.log(e.target.value);
   }
 
+  const dispatch = useDispatch();
+  const logOut = () => {
+    localStorage.removeItem("SAVEUSERROLE")
+    localStorage.removeItem("SAVEUSERMAIL")
+    localStorage.removeItem("SAVEJWT")
+    dispatch(userout({
+      credentials: {
+        token: "",
+        mail: "",
+        role: ""
+      }
+    }))
+
+  }
+
   return (
     <>
       {[ 'lg'].map((expand) => (
-        <Navbar key={expand} bg="warning" expand={expand} className="mb-3 sticky-top">
+        <Navbar key={expand} bg="warning" expand={expand} className=" sticky-top ">
           <Container fluid>
             <Navbar.Brand href="/">Home  </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -37,15 +55,14 @@ function OffcanvasExample() {
                   <Nav.Link href="/Register">Register</Nav.Link>
                   <NavDropdown
                     title="Menú"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  >
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}>
                     <NavDropdown.Item href="/Films/">Películas</NavDropdown.Item>
-                    
-                    <NavDropdown.Item href="#action5">
+
+                    <NavDropdown.Item href="/myaccount">
                       Mi cuenta
                     </NavDropdown.Item>
-                      <NavDropdown.Item href="#action5">
-                     Cerrar sesión
+                    <NavDropdown.Item href="/" onClick={logOut}>
+                      Cerrar sesión
                     </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
@@ -55,14 +72,14 @@ function OffcanvasExample() {
                     placeholder="Search"
                     className="me-2"
                     aria-label="Search"
-                    onChange={(e)=>inputHandler(e)}
+                    onChange={(e) => inputHandler(e)}
                   />
                   <Button variant="outline-success">Search</Button>
                 </Form>
 
 
 
-                
+
               </Offcanvas.Body>
             </Navbar.Offcanvas>
           </Container>

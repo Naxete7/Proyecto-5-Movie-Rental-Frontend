@@ -1,30 +1,8 @@
+.buttonHomeDesign {
 
-.loginDesign {
-
-    height: 100vh;
-    width: 100vw;
-
-    background-color: #030328;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    
-
-}
-
-.buttonDesign {
-
-    height: 3.5em;
-    width: 7.5em;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 3em;
    
-border-radius: 2em;
+    border-radius: 2em;
     cursor: pointer;
     font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -35,10 +13,13 @@ border-radius: 2em;
     background-image: -o-linear-gradient(top, #ffc107, #2079b0);
     background-image: linear-gradient(to bottom, #ffc107, #2079b0);
     transition: 0.2s;
+
+    
 }
 
-.buttonDesign:hover{
-background: #2079b0;
+.buttonHomeDesign:hover {
+
+    background: #2079b0;
     background-image: -webkit-linear-gradient(top, #2079b0, #ffc107);
     background-image: -moz-linear-gradient(top, #2079b0, #ffc107);
     background-image: -ms-linear-gradient(top, #2079b0, #ffc107);
@@ -47,22 +28,5 @@ background: #2079b0;
     text-decoration: none;
 
     transition: 0.2s;
-
-    
 }
 
-.errorInput {
-
-   color: #ffc107;
-}
-
-input{
-width: 30vw;
-height: 5vh;
-border-radius: 0.5em;
-
-}
-
-pre{
-    color: aqua;
-}
