@@ -54,14 +54,14 @@ function OffcanvasExample() {
                   <Nav.Link href="/Login/">Login</Nav.Link>
                   <Nav.Link href="/Register">Register</Nav.Link>
                   <Nav.Link href="/Films">Películas</Nav.Link>
-                  <NavDropdown
+                  <NavDropdown 
                     title="Menú"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}>
                   
-                    <NavDropdown.Item href="/myaccount">
+                    <NavDropdown.Item className="desplegableDesign" href="/myaccount">
                       Mi cuenta
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="/" onClick={logOut}>
+                    <NavDropdown.Item className="desplegableDesign" href="/" onClick={logOut}>
                       Cerrar sesión
                     </NavDropdown.Item>
                   </NavDropdown>

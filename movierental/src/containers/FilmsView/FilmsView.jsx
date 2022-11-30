@@ -1,13 +1,13 @@
 import React from "react";
 import "./FilmsView.scss";
-
+import { Button, Space } from 'antd';
 import { useEffect, useState } from "react";
 import { filmData, addFIlm } from "../FilmSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { orderFilm } from "../../services/apicalls";
 import { setDayInSeventh } from "../../services/useful";
-
+import '../../components/Button/ButtonDesign.scss'
 
 
 const FilmsView = () => {
@@ -47,7 +47,7 @@ const FilmsView = () => {
     if (loged){
           return (
 
-      <Container fluid >
+      <Container fluid className="filmsViewDesign" >
         <Row>
        <div className="filmsTitle">
               <div>{selectedFilm?.title}</div>  
@@ -58,11 +58,11 @@ const FilmsView = () => {
       <div>{selectedFilm?.genre}</div> 
                 <div className="text-break"> {selectedFilm?.sinopsis}</div>
                  </Row>
-              
-            <Row>
+              <br></br>
+           <Row className="d-flex align-content-center justify-content-center" >
 
-              
-              <button className="buttonDesign" onClick={()=>orderMovie()}>Alquilame</button>
+               <Button className="buttonDesign col-6  d-flex justify-content-center  " onClick={()=>orderMovie()}>Alquílame</Button>
+              {/*<button className="buttonDesign" hover onClick={()=>orderMovie()}>Alquílame</button>*/}
               </Row>
           </div>
         </Row>  

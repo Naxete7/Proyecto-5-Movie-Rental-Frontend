@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import { filmData } from "../FilmSlice";
 import img from '../../assets/img/Sin título.png'
-
+import '../../components/Button/ButtonDesign.scss'
 import "./Home.scss"
 import { Image } from "react-bootstrap";
 
@@ -32,9 +32,9 @@ const Home = () => {
             
             <div className="buttonHome row-6  d-flex justify-content-center">
                 {/*<button className="buttonHomeDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</button>*/}
-                 <Button className="buttonHomeDesign col-6  d-flex justify-content-center " onClick={() => navigate("/login")} href="../Login/">Login</Button>
+                 <Button className="buttonDesign col-6  d-flex justify-content-center " onClick={() => navigate("/login")} href="../Login/">Login</Button>
 
-                <Button className="buttonHomeDesign col-6  d-flex justify-content-center  " onClick={() => navigate("/register")} href="../Register" >Suscríbete</Button>
+                <Button className="buttonDesign col-6  d-flex justify-content-center  " onClick={() => navigate("/register")} href="../Register" >Suscríbete</Button>
                 {/*<button className="buttonHomeDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
             </div>
 

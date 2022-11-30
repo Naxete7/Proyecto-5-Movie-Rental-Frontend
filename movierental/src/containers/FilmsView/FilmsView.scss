@@ -1,5 +1,5 @@
 .filmsViewDesign {
-    //height: 100vh;
+    height: auto;
     //width: 100vw;
 
     display: grid;
@@ -24,7 +24,7 @@ font-family: disney;
  }
 
  .moviePicView{
-    margin-top: 2em;
+    margin-top: 3em;
     height: 70vh;
     border-radius: 1em;
     box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
@@ -36,3 +36,30 @@ font-family: disney;
 font-size: 1.5em;
 
  }
+
+.buttonDesign {
+    width: 13vw;
+    margin-bottom: 3em;
+    color: whitesmoke;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    ;
+    text-decoration: none;
+    padding-bottom: 1.8em;
+    transition: 0.2s;
+   
+}
+
+.buttonDesign:hover {
+
+
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    ;
+    background-blend-mode: screen;
+    text-decoration: none;
+
+    transition: 0.2s;
+}

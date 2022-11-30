@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../../services/apicalls";
 import { userData, login } from "../userSlice";
 import { useSelector, useDispatch } from "react-redux";
-
+import '../../../components/Button/ButtonDesign.scss'
 
 import { Button, Checkbox, Form, Input } from 'antd';
 

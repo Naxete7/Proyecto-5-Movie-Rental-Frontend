@@ -8,7 +8,7 @@ import { userData, login } from "../userSlice";
 import Navigator from '../../../components/Navigator/Navigator';
 import { errorCheck } from '../../../services/useful';
 import { Card } from 'antd';
-
+import '../../../components/Button/ButtonDesign.scss'
 
 const Login = () => {
 
