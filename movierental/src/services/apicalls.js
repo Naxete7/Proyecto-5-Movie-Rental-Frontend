@@ -90,4 +90,20 @@ export const bringFilms = () => {
     
         return axios.delete("http://localhost:3000/users/delete/" + email)
         
-    };
+    }
+    export const orderFilm = async (movie) => {
+        const jwt = localStorage.getItem("SAVEJWT")
+        let config = {
+            headers: {
+                Authorization: `Bearer ${jwt}`,
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Content-Type, Authorization',
+                'Access-Control-Allow-Methods': '*',
+                "Content-Type": "application/json"
+            }
+        }
+
+        return await axios.post(`http://localhost:3000/orders/neworder`,movie,config)
+    }
+
+    
