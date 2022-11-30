@@ -10,13 +10,6 @@ import { errorCheck } from '../../../services/useful';
 import { Card } from 'antd';
 
 
-
-
-
-
-
-
-
 const Login = () => {
 
     let navigate = useNavigate();
@@ -114,9 +107,9 @@ const Login = () => {
                     <Navigator pathUno={"/"} destinoUno={"Home"} pathDos={"/register"} destinoDos={"Register"} />
 
                     <div className="inputsContainer">
-                        <div> <Card>
+                        <div>
                             <input type="mail" name="mail" placeholder="mail" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "mail")} />
-                           </Card> <div className="errorInput">{userError.mailError}</div>
+                            <div className="errorInput">{userError.mailError}</div>
                         </div>
                         <div>
                             <input type="password" name="password" placeholder="password" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "password")} />

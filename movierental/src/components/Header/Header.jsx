@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './Header.scss'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -35,7 +35,7 @@ function OffcanvasExample() {
   return (
     <>
       {[ 'lg'].map((expand) => (
-        <Navbar key={expand} bg="warning" expand={expand} className=" sticky-top ">
+        <Navbar key={expand} bg="#a18cd1" expand={expand} className=" navbarDesign sticky-top ">
           <Container fluid>
             <Navbar.Brand href="/">Home  </Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
@@ -50,14 +50,14 @@ function OffcanvasExample() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav className="justify-content-end flex-grow-2 pe-5">
                   <Nav.Link href="/Login/">Login</Nav.Link>
                   <Nav.Link href="/Register">Register</Nav.Link>
+                  <Nav.Link href="/Films">Películas</Nav.Link>
                   <NavDropdown
                     title="Menú"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}>
-                    <NavDropdown.Item href="/Films/">Películas</NavDropdown.Item>
-
+                  
                     <NavDropdown.Item href="/myaccount">
                       Mi cuenta
                     </NavDropdown.Item>
@@ -66,17 +66,7 @@ function OffcanvasExample() {
                     </NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
-                <Form className="d-flex">
-                  <Form.Control
-                    type="search"
-                    placeholder="Search"
-                    className="me-2"
-                    aria-label="Search"
-                    onChange={(e) => inputHandler(e)}
-                  />
-                  <Button variant="outline-success">Search</Button>
-                </Form>
-
+              
 
 
 

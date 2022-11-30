@@ -8,13 +8,19 @@ import { Card } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import {addFilm, filmData} from "../FilmSlice"
 import card, { Col, Container, Image, Row }  from "react-bootstrap";
+import Button from 'react-bootstrap/Button';
 
+import Form from 'react-bootstrap/Form';
 
 
 
 const Films = () => {
     const dispatch = useDispatch();
     let navigate = useNavigate();
+   
+    const inputHandler = (e) => {
+    console.log(e.target.value);
+  }
     
 const [movies, setMovies] = useState([]);
  
@@ -55,9 +61,22 @@ const [movies, setMovies] = useState([]);
 
     return (
 
-        <Container fluid >
+        <Container fluid className="filmsDesign" >
+            <Row className="d-flex align-content-end justify-content-end" >
+                  <Form className="d-flex searchDesign">
+                  <Form.Control 
+                    type="search"
+                    placeholder="Search"
+                    className="me-8"
+                    aria-label="Search"
+                    onChange={(e) => inputHandler(e)}
+                  />
+                  <Button bg="warning" variant="outline-success  ">Search</Button>
+                </Form>
+
+            </Row>
         {/*<div className="homeDesign    d-flex flex-column align-items-center justify-content-around" >*/}
-            <Row flex className="filmsDesign">
+            <Row flex >
 {/*<div className="moviesShowcase ">*/}
                 {/* Here I proceed to MAP the hook which contains all the movies */}
               
