@@ -1,7 +1,7 @@
 
 import axios from 'axios';
 
-var root = 'https://localhost:3001/films/';
+var root = 'https://localhost:3000/films/';
 //var apiKey = '210d6a5dd3f16419ce349c9f1b200d6d';
 
 export const loginUser = async (body) => {
@@ -76,19 +76,19 @@ export const bringFilms = () => {
 
     export const bringAllOrders = () => {
     
-        return axios.get(`http://localhost:3001/orders/`)
+        return axios.get(`http://localhost:3000/orders/`)
 
     };
 
     export const bringAllUsers = () => {
     
-        return axios.get(`http://localhost:3001/users/`)
+        return axios.get(`http://localhost:3000/users/`)
 
     };
 
     export const deleteUser = (email) => {
     
-        return axios.delete("http://localhost:3001/users/delete/" + email)
+        return axios.delete("http://localhost:3000/users/delete/" + email)
         
     }
     export const orderFilm = async (movie) => {
