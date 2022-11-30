@@ -79,3 +79,8 @@ export const bringFilms = () => {
         return axios.get(`http://localhost:3000/orders/`)
 
     };
+
+
+    export const bringOneFilm = (film) => {
+        return axios.get(`http://localhost:3000/films/title/${film}`)
+    }
