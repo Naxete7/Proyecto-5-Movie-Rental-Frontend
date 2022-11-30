@@ -1,7 +1,7 @@
 .filmsDesign {
 
        
-        background-color: #030328;
+        background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
         color: greenyellow;
 };
 
@@ -10,11 +10,18 @@
 //width: 10vw;
 margin: 2em;
 height: 55vh;
- border-radius: 1em;
+border-radius: 1em;
+box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
 };
 
-//.moviePic:hover{
-//width: 30vw;
-//height: 65vh;
+.moviePic:hover{
 
-//}
+height: 65vh;
+box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+}
+
+.searchDesign{
+        width: 40em;
+        
+}
+

@@ -1,30 +1,22 @@
 .buttonHomeDesign {
 
     margin-bottom: 3em;
-   
+   color: whitesmoke;
     border-radius: 2em;
     cursor: pointer;
     font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: #ffc107;
-    background-image: -webkit-linear-gradient(top, #ffc107, #2079b0);
-    background-image: -moz-linear-gradient(top, #ffc107, #2079b0);
-    background-image: -ms-linear-gradient(top, #ffc107, #2079b0);
-    background-image: -o-linear-gradient(top, #ffc107, #2079b0);
-    background-image: linear-gradient(to bottom, #ffc107, #2079b0);
+    background-color: linear-gradient(60deg, #685D79 0%, #485563 100%);
     transition: 0.2s;
-
-    
+    text-decoration: none;
+    padding-bottom: 1.8em;
 }
 
 .buttonHomeDesign:hover {
 
-    background: #2079b0;
-    background-image: -webkit-linear-gradient(top, #2079b0, #ffc107);
-    background-image: -moz-linear-gradient(top, #2079b0, #ffc107);
-    background-image: -ms-linear-gradient(top, #2079b0, #ffc107);
-    background-image: -o-linear-gradient(top, #2079b0, #ffc107);
-    background-image: linear-gradient(to bottom, #2079b0, #ffc107);
+    
+    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-blend-mode: screen;
     text-decoration: none;
 
     transition: 0.2s;

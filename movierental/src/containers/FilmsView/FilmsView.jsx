@@ -3,11 +3,11 @@ import "./FilmsView.scss";
 
 import { useEffect, useState } from "react";
 import { filmData, addFIlm } from "../FilmSlice";
-import { userData } from "../User/userSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { Col, Container, Image, Row } from "react-bootstrap";
 import { orderFilm } from "../../services/apicalls";
 import { setDayInSeventh } from "../../services/useful";
-import { Container, Image, Row } from "react-bootstrap";
+
 
 
 const FilmsView = () => {
@@ -47,15 +47,15 @@ const FilmsView = () => {
     if (loged){
           return (
 
-      <Container fluid>
+      <Container fluid >
         <Row>
-       <div className="filmsViewDesign">
-      <div>{selectedFilm?.title}</div>  
+       <div className="filmsTitle">
+              <div>{selectedFilm?.title}</div>  
        <Row>
         <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
             </Row>
             <Row>
-      <div> {selectedFilm?.genre}</div> 
+      <div>{selectedFilm?.genre}</div> 
                 <div className="text-break"> {selectedFilm?.sinopsis}</div>
                  </Row>
               
@@ -71,19 +71,34 @@ const FilmsView = () => {
     } else {
       return (
 
-      <Container fluid>
+      <Container fluid className="filmsViewDesign">
         <Row>
-       <div className="filmsViewDesign">
-      <div>{selectedFilm?.title}</div>  
-       <Row>
-        <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
-            </Row>
+                  
+              <Col>
+                
+                <div><Image className="moviePicView fluid" src={selectedFilm?.poster} /></div>
+
+              </Col>
+             
+              <Col>
+               <div className="titleDesign text-fluid">{selectedFilm?.title}</div>
+              <div className="genreDesign"> {selectedFilm?.genre}</div>  
+               <div className="sinopsisDesign text-break"> {selectedFilm?.sinopsis}</div>  
+              </Col>
+              
+              
+            
+              <Row>
+              
+              </Row>
+              
             <Row>
-      <div> {selectedFilm?.genre}</div> 
-                <div className="text-break"> {selectedFilm?.sinopsis}</div>
+                
+                <br/> <br/>
+                
                  </Row>
               
-          </div>
+         
         </Row>  
 </Container>
 )
@@ -104,3 +119,7 @@ const FilmsView = () => {
 
 
 export default FilmsView
+
+
+
+
