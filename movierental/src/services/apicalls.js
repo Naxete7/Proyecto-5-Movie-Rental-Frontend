@@ -107,22 +107,9 @@ export const bringFilms = () => {
     }
 
     
-export const searchMovies = async (search) => {
 
-    const config = {
-        method: 'get',
-        url: `http://localhost:3000/movies/movieByTitle/${search}`
+
+    export const bringOneFilm = (film) => {
+        return axios.get(`http://localhost:3000/films/title/${film}`)
     }
 
-    return await axios(config);
-}
-
-export const searchMoviesByGenre = async (search) => {
-
-    const config = {
-        method: 'get',
-        url: `http://localhost:3000/movies/movieByGenre/${search}`
-    }
-
-    return await axios(config);
-}
