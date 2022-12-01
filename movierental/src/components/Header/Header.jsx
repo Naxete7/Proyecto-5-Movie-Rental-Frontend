@@ -8,23 +8,27 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-import { useDispatch } from "react-redux";
-import { userout } from "../../containers/User/userSlice";
+import { useSelector, useDispatch } from "react-redux";
+import { userout, login, userData } from "../../containers/User/userSlice";
 import {useState} from 'react';
+import { useEffect } from 'react';
 
 
 
 function OffcanvasExample() {
+  let logged
   const inputHandler = (e) => {
     console.log(e.target.value);
   }
-  const [logg, setLogg] = useState("unlogged")
+ 
 
-  let logged = localStorage.getItem('SAVEUSERMAIL')
-
-
+  console.log(logged)
 
   const dispatch = useDispatch();
+  const credentials = useSelector(userData)
+
+  
+
   const logOut = () => {
     localStorage.removeItem("SAVEUSERROLE")
     localStorage.removeItem("SAVEUSERMAIL")
@@ -36,10 +40,9 @@ function OffcanvasExample() {
         role: ""
       }
     }))
-
   }
 
-  if (logged){
+  if (credentials.credentials.token != ""){
     return (
       
       <>
@@ -61,7 +64,7 @@ function OffcanvasExample() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-2 pe-5">
-                    <Nav.Link href="/myaccount">{logged}</Nav.Link>
+                    <Nav.Link href="/myaccount">{credentials.credentials.mail}</Nav.Link>
                     <Nav.Link href="/Films">Películas</Nav.Link>
                     <Nav.Link onClick={logOut} href="/">Log out</Nav.Link>
                     <NavDropdown
