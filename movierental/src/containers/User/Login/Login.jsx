@@ -25,62 +25,75 @@ const Login = () => {
 
     const [userError, setUserError] = useState({
         mailError: "",
-        passwordError: ""
+        passwordError: "",
+        LoginError: ""
     })
 
     useEffect(() => {
-        console.log(userReduxCredentials); 
+        console.log(userReduxCredentials);
         let loged = localStorage.getItem("SAVEUSERMAIL")
         console.log(loged)
 
         if (loged) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
-            navigate("/");       
-    };});
+            navigate("/");
+        };
+    });
 
-            //Handlers
+    //Handlers
 
-            const inputHandler = (e) => {
-                console.log(e.target.value);
+    const inputHandler = (e) => {
+        console.log(e.target.value);
 
-                //Aqui setearemos DINÁMICAMENTE el BINDEO entre inputs y hook.
-                setUser((prevState) => ({
-                    ...prevState,
-                    [e.target.name]: e.target.value
+        //Aqui setearemos DINÁMICAMENTE el BINDEO entre inputs y hook.
+        setUser((prevState) => ({
+            ...prevState,
+            [e.target.name]: e.target.value
 
-                }));
-            }
+        }));
+    }
 
-            const errorHandler = (field, value, type) => {
+    const errorHandler = (field, value, type) => {
 
-                let error = ""
+        let error = ""
 
-                error = errorCheck(field, value, type)
+        error = errorCheck(field, value, type)
 
-                setUserError(((prevState) => ({
-                    ...prevState,
-                    [field + "Error"]: error
+        setUserError(((prevState) => ({
+            ...prevState,
+            [field + "Error"]: error
 
-                })))
-            };
+        })))
+    };
 
 
-            //Funciones
+    //Funciones
 
-            const logMe = () => {
+    const logMe = () => {
 
-                //Estoy ejecutando loginUser y le paso el body (que en este caso es el hook user)
-                console.log(user)
-                loginUser(user)
-                    .then(res => {
-                        //Aqui procedo a guardar el token en redux, o en alguna otra parte del proyecto
-                        console.log(res);
+        //Estoy ejecutando loginUser y le paso el body (que en este caso es el hook user)
+        console.log(user)
+        try {
+            loginUser(user)
+                .then(res => {
+                    //Aqui procedo a guardar el token en redux, o en alguna otra parte del proyecto
+                    console.log(res);
+
+                    if (res.data.message === "Password or email is incorrect") {
+                        setUserError(((prevState) => ({
+                            ...prevState,
+                            LoginError: "El email o la contraseña son incorrectos"
+
+                        })))
+                    } else {
                         localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt));
                         localStorage.setItem("SAVEUSERMAIL", JSON.stringify(res.data.mail));
                         if (res.data.role === null) {
                             localStorage.setItem("SAVEUSERROLE", "userRole")
                         } else {
                             localStorage.setItem("SAVEUSERROLE", JSON.stringify(res.data.role))
-                        }                       
+                        }
+                        console.log(res.data.message)
+
                         dispatch(login({
                             credentials: {
                                 token: res.data.jwt,
@@ -88,40 +101,40 @@ const Login = () => {
                                 role: res.data.role
                             }
                         }));
+                        setUserError(((prevState) => ({
+                            ...prevState,
+                            LoginError: ""
 
-
-                        // if(res){
-                        //     //Quiere decir que la respuesta del backend al proceso de login es correcta...
-
-                        //     setTimeout(()=>{
-                        //         navigate("/");
-                        //     },1000);
-                        // }
-                    });
-
-            }
-
-            return (
-                <div className='loginDesign'>
-                    <pre>{JSON.stringify(user, null, 2)}</pre>
-                    <Navigator pathUno={"/"} destinoUno={"Home"} pathDos={"/register"} destinoDos={"Register"} />
-
-                    <div className="inputsContainer">
-                        <div>
-                            <input type="mail" name="mail" placeholder="mail" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "mail")} />
-                            <div className="errorInput">{userError.mailError}</div>
-                        </div>
-                        <div>
-                            <input type="password" name="password" placeholder="password" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "password")} />
-                            <div className="errorInput">{userError.passwordError}</div>
-                        </div>
-                    </div>
-                    <div onClick={() => logMe()} className="buttonDesign">
-                        Login me!
-                    </div>
-
-                </div>
-            )
+                        })))
+                    }
+                });
+        } catch (error) {
+            console.log(error)
         }
+
+    }
+    console.log(userError.LoginError)
+
+    return (
+        <div className='loginDesign'>
+            <pre>Welcome back! </pre>
+
+            <div className="inputsContainer">
+                <div className="errorInput">{userError.LoginError}</div>
+                <div>
+                    <input type="mail" name="mail" placeholder="mail" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "mail")} />
+                    <div className="errorInput">{userError.mailError}</div>
+                </div>
+                <div>
+                    <input type="password" name="password" placeholder="password" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "password")} />
+                    <div className="errorInput">{userError.passwordError}</div>
+                </div>
+            </div>
+            <div onClick={() => logMe()} className="buttonDesign">
+                Login me!
+            </div>
+
+        </div>
+    )
+}
 export default Login;
-       

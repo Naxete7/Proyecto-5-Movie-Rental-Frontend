@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import "./UserOrders.scss"
+import "./UserActiveOrders.scss"
 
-import { bringUserOrders } from '../../../services/apicalls';
+import { bringUserActiveOrders } from '../../../services/apicalls';
 
 import { userData } from "../userSlice";
 
@@ -9,9 +9,9 @@ import { useSelector } from "react-redux";
 
 import Card from 'react-bootstrap/Card';
 
-const UserOrders = () => {
+const UserActiveOrders = () => {
 
-    const [userOrders, setUserOrders] = useState([]);
+    const [userActiveOrders, setUserActiveOrders] = useState([]);
     const [error, setError] = useState('');
     const user = useSelector(userData);
     const userMail = JSON.parse(localStorage.getItem("SAVEUSERMAIL"))
@@ -19,14 +19,14 @@ const UserOrders = () => {
     useEffect(() => {
         //This function is triggered when the component is mounted for the first time.
 
-        if (userOrders.length === 0) {
+        if (userActiveOrders.length === 0) {
 
-            bringUserOrders(userMail)
+            bringUserActiveOrders(userMail)
                 .then(
                     (res) => {
                         console.log(res)
-                        setUserOrders(res.data)
-                        console.log(userOrders)
+                        setUserActiveOrders(res.data)
+                        console.log(userActiveOrders)
                     }
                 )
                 .catch((error) => {
@@ -37,32 +37,34 @@ const UserOrders = () => {
         };
 
 
-    }, [userOrders]);
+    }, 
+    // [userActiveOrders]
+    );
 
-    console.log(userOrders)
+
 
     if (error) {
         return <h2>{error.repeat(999)} </h2>
     }
-    if (userOrders.length !== 0) {
+    if (userActiveOrders.length !== 0) {
         return (
             // <pre>{JSON.stringify(userOrders, null, 2)}</pre>
             <div className='contentStyle'>
-            {userOrders.map(userOrder => {
+            {userActiveOrders.map(userActiveOrder => {
                 return (
                     
-                        <Card style={{ width: '12rem' }} className="cards" key={userOrder.id_order}>
-                    <Card.Img variant="top" src={userOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />
+                        <Card style={{ width: '12rem' }} className="cards">
+                    <Card.Img variant="top" src={userActiveOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />
                     <Card.Body>
-                        <Card.Title>{userOrder.name}</Card.Title>
+                        <Card.Title>{userActiveOrder.name}</Card.Title>
                         <Card.Text>
-                            {userOrder.userMail}
+                            {userActiveOrder.userMail}
                         </Card.Text>
                         <Card.Text>
-                            {userOrder.startedAt}-{userOrder.endedAt}
+                            {userActiveOrder.startedAt}-{userActiveOrder.endedAt}
                         </Card.Text>
                         <Card.Text>
-                        {userOrder.film.title}
+                        {userActiveOrder.film.title}
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -78,4 +80,4 @@ const UserOrders = () => {
     }
 };
 
-export default UserOrders;
+export default UserActiveOrders;

@@ -8,6 +8,8 @@ import { userData } from "../User/userSlice";
 import { useSelector } from "react-redux";
 import AllUsers from "../../components/Admin/AllUsers/AllUsers";
 import DeleteUser from "../../components/Admin/DeleteUser/DeleteUser";
+import UserActiveOrders from "../User/UserActiveOrders/UserActiveOrders";
+import ActiveAllOrders from "../../components/Admin/ActiveAllOrders/ActiveAllOrders";
 
 const MyAccount = () => {
 
@@ -38,12 +40,14 @@ const MyAccount = () => {
     if(userRole === "userRole" || userRole === "2") {
         return <div className = "myAccountDesign">
             <Profile/>
+            <UserActiveOrders/>
             <UserOrders/>
         </div>
     }
     else {
         return <div>
             <Profile/>
+            <ActiveAllOrders/>
             <AllOrders/>
             <AllUsers/>
         </div>
