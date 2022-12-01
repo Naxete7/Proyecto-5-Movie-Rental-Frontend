@@ -48,16 +48,16 @@ const FilmsView = () => {
           return (
 
       <Container fluid className="filmsViewDesign" >
-              <Row >
-                <Col className=" align-content-center justify-content-center">
+              <Row className= "align-items-center">
+                <Col >
 
-                <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
+                <div><Image className="moviePicView fluid" src={selectedFilm?.poster} /></div>  
                     <Button className="buttonDesign" onClick={()=>orderMovie()}>Alquílame</Button>
                 </Col>
-                <Col className=" d-grid align-content-start justify-content-start">
+                <Col className=" align-items-center">
                     <div className="titleDesign text-fluid">{selectedFilm?.title}</div>
               <div className="genreDesign"> {selectedFilm?.genre}</div>  
-               <div className="sinopsisDesign text-break"> {selectedFilm?.sinopsis}</div>
+               <div className="sinopsisDesign text-break "> {selectedFilm?.sinopsis}</div>
                 </Col>
                 
                 
@@ -69,7 +69,7 @@ const FilmsView = () => {
       return (
 
       <Container fluid className="filmsViewDesign">
-        <Row>
+        <Row className= "align-items-center">
                   
               <Col>
                 
@@ -77,10 +77,10 @@ const FilmsView = () => {
 
               </Col>
              
-              <Col>
-               <div className="titleDesign text-fluid">{selectedFilm?.title}</div>
-              <div className="genreDesign"> {selectedFilm?.genre}</div>  
-               <div className="sinopsisDesign text-break"> {selectedFilm?.sinopsis}</div>  
+              <Col className= "align-items-center">
+               <div className="titleDesign text-fluid align-items-center">{selectedFilm?.title}</div>
+              <div className="genreDesign align-items-center"> {selectedFilm?.genre}</div>  
+               <div className="sinopsisDesign text-break  align-items-center"> {selectedFilm?.sinopsis}</div>  
               </Col>
               
               
