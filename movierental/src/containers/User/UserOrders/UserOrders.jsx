@@ -8,6 +8,7 @@ import { userData } from "../userSlice";
 import { useSelector } from "react-redux";
 
 import Card from 'react-bootstrap/Card';
+import { Col, Row, Container } from 'react-bootstrap';
 
 const UserOrders = () => {
 
@@ -53,8 +54,10 @@ const UserOrders = () => {
             <div className='contentStyle'>
             {userOrders.map(userOrder => {
                 return (
-                    
-                        <Card style={{ width: '12rem' }} className="cards">
+                    <Container className='d-flex align-content-center'>
+                        <Row>
+                            <Col className='d-flex-wrap'>
+                        <Card style={{ width: '12em' }} className="cards">
                     <Card.Img variant="top" src={userOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />
                     <Card.Body>
                         <Card.Title>{userOrder.name}</Card.Title>
@@ -68,8 +71,10 @@ const UserOrders = () => {
                             {userOrder.film.title}
                         </Card.Text>
                     </Card.Body>
-                </Card>
-                    
+                            </Card>
+                            </Col>
+                          </Row>  
+                   </Container> 
                 )
 
                 
