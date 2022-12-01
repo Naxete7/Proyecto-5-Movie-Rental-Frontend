@@ -75,7 +75,7 @@ const Login = () => {
                 loginUser(user)
                     .then(res => {
                         //Aqui procedo a guardar el token en redux, o en alguna otra parte del proyecto
-                        console.log(res);
+                        console.log(res,"AQUI LAS RESPONSEEEE");
                         localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt));
                         localStorage.setItem("SAVEUSERMAIL", JSON.stringify(res.data.mail));
                         if (res.data.role === null) {
@@ -90,6 +90,8 @@ const Login = () => {
                                 role: res.data.role
                             }
                         }));
+                        console.log(userData,"Soy el machooooo")
+                        
 
 
                         // if(res){
