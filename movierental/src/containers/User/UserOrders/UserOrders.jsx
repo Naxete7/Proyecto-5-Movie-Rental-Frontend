@@ -55,7 +55,7 @@ const UserOrders = () => {
             {userOrders.map(userOrder => {
                 return (
                     <Container className='d-flex align-content-center'>
-                        <Row>
+                        <Row className='d-flex justify-content-center'>
                             <Col className='d-flex-wrap'>
                         <Card style={{ width: '12em' }} className="cards" key={userOrder.id_order}>
                     <Card.Img variant="top" src={userOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />

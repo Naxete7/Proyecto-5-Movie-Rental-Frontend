@@ -132,8 +132,11 @@ const Login = () => {
                     <div className="errorInput">{userError.passwordError}</div>
                 </div>
             </div>
-            <div onClick={() => logMe()} className="buttonDesign">
-                Login me!
+                <div className="buttonHome row  d-flex justify-content-center">
+              
+                 <Button className="buttonDesign col-12  d-flex justify-content-center " onClick={() => logMe()}>Login me!</Button>
+
+            
             </div>
 
         </div>
