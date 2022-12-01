@@ -8,7 +8,7 @@ import { userData } from "../User/userSlice";
 import { useSelector } from "react-redux";
 import AllUsers from "../../components/Admin/AllUsers/AllUsers";
 import DeleteUser from "../../components/Admin/DeleteUser/DeleteUser";
-
+import { Container, Row, Col } from "react-bootstrap";
 const MyAccount = () => {
 
     let navigate = useNavigate();
@@ -42,11 +42,11 @@ const MyAccount = () => {
         </div>
     }
     else {
-        return <div>
-            <Profile/>
-            <AllOrders/>
-            <AllUsers/>
-        </div>
+        return  <Container >
+        <Row  >   <Profile/> </Row> 
+        <Row > <AllOrders/></Row>  
+        <Row>  <AllUsers/></Row>
+        </Container>
     }
 };
 
