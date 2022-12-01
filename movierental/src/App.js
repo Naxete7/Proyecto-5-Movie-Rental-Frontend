@@ -24,11 +24,27 @@ import AllOrders from './components/Admin/AllOrders/AllOrders';
 import MyAccount from './containers/MyAccount/MyAccount';
 import { createContext, useContext, useState } from 'react';
 // import Films from './containers/Films/Films';
+import { useSelector, useDispatch } from "react-redux";
+import { login } from "./containers/User/userSlice";
 
 const CurrentUserContext = createContext(null)
 
 function App() {
+  const dispatch = useDispatch();
   const [currentUser, setCurrentUser] = useState(null)
+  let logged = useSelector(state => state.currentUser === currentUser)
+  console.log(currentUser)
+
+  if (logged) {
+    console.log("ENTROOOOOO")
+    dispatch(login({
+      credentials: {
+        token: localStorage.getItem("SAVEJWT"),
+        mail: localStorage.getItem("SAVEUSERMAIL"),
+        role: localStorage.getItem("SAVEUSERROLE")
+      }
+    }))
+  }
   
 
   
@@ -50,7 +66,7 @@ function App() {
           >
             <Header/>
         </CurrentUserContext.Provider>
-       <navbar/>
+       
         
         <Routes>
         {/* La parte cambiante es lo que contiene Routes DENTRO */}
