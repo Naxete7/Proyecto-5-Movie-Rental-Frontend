@@ -24,7 +24,7 @@ const Home = () => {
         <div className="homeDesign container-fluid   d-flex flex-column align-items-center justify-content-around" >
           
             
-
+ <div className="tituloDesign row-12 d-flex align-items-center justify-content-center">VideoRent</div>
             <div className="textCentralDesign row-12 d-flex align-items-center justify-content-center">Alquila todas las películas que quieras.</div>
             
             <div className="buttonHome row-6  d-flex justify-content-center">
