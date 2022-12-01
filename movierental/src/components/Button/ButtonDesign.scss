@@ -1,21 +1,22 @@
-.buttonHomeDesign {
-
+.buttonDesign {
+margin-top: 1em;
     margin-bottom: 3em;
    color: whitesmoke;
     border-radius: 2em;
     cursor: pointer;
     font-size: larger;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: linear-gradient(60deg, #685D79 0%, #485563 100%);
-    transition: 0.2s;
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);;
     text-decoration: none;
     padding-bottom: 1.8em;
+    transition: 0.2s;
+    align-content: center;
 }
 
-.buttonHomeDesign:hover {
+.buttonDesign:hover {
 
     
-    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);;
     background-blend-mode: screen;
     text-decoration: none;
 

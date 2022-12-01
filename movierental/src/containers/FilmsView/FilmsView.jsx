@@ -1,13 +1,13 @@
 import React from "react";
 import "./FilmsView.scss";
-
+import { Button, Space } from 'antd';
 import { useEffect, useState } from "react";
 import { filmData, addFIlm } from "../FilmSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { orderFilm } from "../../services/apicalls";
 import { setDayInSeventh } from "../../services/useful";
-
+import '../../components/Button/ButtonDesign.scss'
 
 
 const FilmsView = () => {
@@ -47,24 +47,22 @@ const FilmsView = () => {
     if (loged){
           return (
 
-      <Container fluid >
-        <Row>
-       <div className="filmsTitle">
-              <div>{selectedFilm?.title}</div>  
-       <Row>
-        <div><Image className="moviePic fluid" src={selectedFilm?.poster} /></div>  
-            </Row>
-            <Row>
-      <div>{selectedFilm?.genre}</div> 
-                <div className="text-break"> {selectedFilm?.sinopsis}</div>
-                 </Row>
-              
-            <Row>
+      <Container fluid className="filmsViewDesign" >
+              <Row className= "align-items-center">
+                <Col >
 
-              
-              <button className="buttonDesign" onClick={()=>orderMovie()}>Alquilame</button>
-              </Row>
-          </div>
+                <div><Image className="moviePicView fluid" src={selectedFilm?.poster} /></div>  
+                    <Button className="buttonDesign" onClick={()=>orderMovie()}>Alquílame</Button>
+                </Col>
+                <Col className=" align-items-center">
+                    <div className="titleDesign text-fluid">{selectedFilm?.title}</div>
+                  <div className="genreDesign">Género: {selectedFilm?.genre}</div>  
+                  <div className="ratingDesign align-items-center">Puntuación: {selectedFilm?.rating}</div> 
+               <div className="sinopsisDesign text-break "> {selectedFilm?.sinopsis}</div>
+                </Col>
+                
+                
+                
         </Row>  
 </Container>
 )
@@ -72,7 +70,7 @@ const FilmsView = () => {
       return (
 
       <Container fluid className="filmsViewDesign">
-        <Row>
+        <Row className= "align-items-center">
                   
               <Col>
                 
@@ -80,10 +78,11 @@ const FilmsView = () => {
 
               </Col>
              
-              <Col>
-               <div className="titleDesign text-fluid">{selectedFilm?.title}</div>
-              <div className="genreDesign"> {selectedFilm?.genre}</div>  
-               <div className="sinopsisDesign text-break"> {selectedFilm?.sinopsis}</div>  
+              <Col className= "align-items-center">
+               <div className="titleDesign text-fluid align-items-center">{selectedFilm?.title}</div>
+                <div className="genreDesign">Género: {selectedFilm?.genre}</div>  
+               <div className="ratingDesign align-items-center">Puntuación: {selectedFilm?.rating}</div> 
+               <div className="sinopsisDesign text-break  align-items-center"> {selectedFilm?.sinopsis}</div>  
               </Col>
               
               

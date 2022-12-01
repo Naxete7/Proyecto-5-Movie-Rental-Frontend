@@ -17,14 +17,11 @@ import Form from 'react-bootstrap/Form';
 const Films = () => {
     const dispatch = useDispatch();
     let navigate = useNavigate();
-   
     const inputHandler = (e) => {
     console.log(e.target.value);
   }
-    
 const [movies, setMovies] = useState([]);
  
-    //const url = "https:/3005/movies/"
 
   const clickedMovie = (movie) => {
 
@@ -41,7 +38,7 @@ const [movies, setMovies] = useState([]);
         //This function is triggered when the component is mounted for the first time.
 
         if (movies.length === 0) {
-            // bringmovies();
+           
 
             setTimeout(() => {
                 //Adding a 1 seconds delay on purpose...
@@ -67,7 +64,7 @@ const [movies, setMovies] = useState([]);
                   <Form.Control 
                     type="search"
                     placeholder="Search"
-                    className="me-8"
+                    name="search"
                     aria-label="Search"
                     onChange={(e) => inputHandler(e)}
                   />
@@ -75,15 +72,15 @@ const [movies, setMovies] = useState([]);
                 </Form>
 
             </Row>
-        {/*<div className="homeDesign    d-flex flex-column align-items-center justify-content-around" >*/}
+        
             <Row flex >
-{/*<div className="moviesShowcase ">*/}
+
                 {/* Here I proceed to MAP the hook which contains all the movies */}
               
                     {
                         movies.map(movie => ( <Col>
                         
-                                {/*<div>{movie.original_title}</div>*/}
+                               
                                 
                                     <Image className="moviePic " src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
                             
