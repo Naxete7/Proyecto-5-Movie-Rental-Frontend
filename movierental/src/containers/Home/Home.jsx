@@ -4,7 +4,6 @@ import { useSelector } from "react-redux";
 import { Button, Space } from 'antd';
 import { useState } from "react";
 import { useEffect } from "react";
-import { filmData } from "../FilmSlice";
 
 import "./Home.scss"
 import { Image } from "react-bootstrap";
@@ -12,11 +11,7 @@ import { Image } from "react-bootstrap";
 const Home = () => {
     
     let navigate = useNavigate();
-    const filmsFromRdx = useSelector(filmData);
- useEffect(()=> {
-       console.log("soy las peliculas", filmsFromRdx);    
- })
-    
+      
     
     return (
 

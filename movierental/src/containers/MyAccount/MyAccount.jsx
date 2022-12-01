@@ -49,6 +49,7 @@ const MyAccount = () => {
     else {
         return  <Container >
         <Row  >   <Profile/> </Row> 
+        <Row  >   <ActiveAllOrders/> </Row> 
         <Row > <AllOrders/></Row>  
         <Row>  <AllUsers/></Row>
         </Container>
