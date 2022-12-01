@@ -8,13 +8,8 @@ import { userData, login } from "../userSlice";
 import Navigator from '../../../components/Navigator/Navigator';
 import { errorCheck } from '../../../services/useful';
 import { Card } from 'antd';
-
-
-
-
-
-
-
+import '../../../components/Button/ButtonDesign.scss'
+import { Button, Space } from 'antd';
 
 
 const Login = () => {
@@ -114,20 +109,20 @@ const Login = () => {
                     <Navigator pathUno={"/"} destinoUno={"Home"} pathDos={"/register"} destinoDos={"Register"} />
 
                     <div className="inputsContainer">
-                        <div> <Card>
+                        <div>
                             <input type="mail" name="mail" placeholder="mail" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "mail")} />
-                           </Card> <div className="errorInput">{userError.mailError}</div>
+                            <div className="errorInput">{userError.mailError}</div>
                         </div>
                         <div>
                             <input type="password" name="password" placeholder="password" onChange={(e) => inputHandler(e)} onBlur={(e) => errorHandler(e.target.name, e.target.value, "password")} />
                             <div className="errorInput">{userError.passwordError}</div>
                         </div>
-                    </div>
-                    <div onClick={() => logMe()} className="buttonDesign">
-                        Login me!
+                        <br></br>
                     </div>
 
-                </div>
+                     <Button className="buttonDesign   d-flex justify-content-center  " onClick={() => logMe()}>Login me!</Button>
+                   
+                    </div>
             )
         }
 export default Login;

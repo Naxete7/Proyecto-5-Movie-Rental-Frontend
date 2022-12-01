@@ -2,59 +2,22 @@
 
 .homeDesign {
 
-height: auto;
-width: auto;
-//display: grid;
-//justify-content: center;
-//flex-direction: row;
-//justify-content: center;
-//background-image: image(src"../../assets/img/anillo.png");
-background-color: #030328;
-color: #ffc107;
+height:90vh;
+width: 100vw;
+background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+color: linear-gradient(60deg, #29323c 0%, #485563 100%);;
 }
 
 .textCentralDesign {
-//   margin-top: 1em;
-//justify-content: center;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 1.5em;
 }
 
+.tituloDesign{
+font-size: 3.5em;
+font-family: Nunito;
 
-.buttonHomeDesign{
-    
-margin-bottom: 3em;
-margin: 0.5em;
-    border-radius: 2em;
-    cursor: pointer;
-    font-size: larger;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background: #ffc107;
-    background-image: -webkit-linear-gradient(top, #ffc107, #2079b0);
-        background-image: -moz-linear-gradient(top, #ffc107, #2079b0);
-        background-image: -ms-linear-gradient(top, #ffc107, #2079b0);
-        background-image: -o-linear-gradient(top, #ffc107, #2079b0);
-        background-image: linear-gradient(to bottom, #ffc107, #2079b0);
-    transition: 0.2s;
 }
 
-.buttonHomeDesign:hover {
-
-    background: #2079b0;
-        background-image: -webkit-linear-gradient(top, #2079b0, #ffc107);
-        background-image: -moz-linear-gradient(top, #2079b0, #ffc107);
-        background-image: -ms-linear-gradient(top, #2079b0, #ffc107);
-        background-image: -o-linear-gradient(top, #2079b0, #ffc107);
-        background-image: linear-gradient(to bottom, #2079b0, #ffc107);
-        text-decoration: none;
-
-    transition: 0.2s;
-}
-
-
-
-
-.leftSide{
-    display: flex;
-    flex-wrap: wrap;
-}
 
