@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
 import ListGroup from 'react-bootstrap/ListGroup';
 
 import { Container } from 'react-bootstrap';
@@ -58,7 +57,7 @@ const Profile = () => {
     }
 
     return (
-
+<Container className='profileDesign'>
 
         <Card style={{ width: '12rem' }} className=".card">
             <Card.Img variant="top" src={`https://robohash.org/YOUR-TE${userInfo.mail}dsXT.png`} />
@@ -74,7 +73,7 @@ const Profile = () => {
             </Card.Body>
         </Card>
 
-
+</Container>
     )
 
 };

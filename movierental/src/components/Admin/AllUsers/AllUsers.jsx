@@ -60,11 +60,11 @@ const AllUsers = () => {
     if (allUsers.length !== 0) {
         return (
             // <pre>{JSON.stringify(allUsers, null, 2)}</pre>
-            <div className='contentStyle'>
+            <div className='contentStyle2'>
                 {
                     allUsers.map(allUser => {
                         return (
-                            <Card style={{ width: '12rem' }} className="cards" key={allUser.mail}>
+                            <Card style={{ width: '12rem' }} className="cards2" key={allUser.mail}>
                                 <Card.Img variant="top" src={`https://robohash.org/YOUR-TE${allUser.mail}dsXT.png`} />
                                 <Card.Body>
                                     <Card.Title>{allUser.name}</Card.Title>

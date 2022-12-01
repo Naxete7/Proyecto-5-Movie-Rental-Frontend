@@ -8,6 +8,10 @@ import { userData } from "../User/userSlice";
 import { useSelector } from "react-redux";
 import AllUsers from "../../components/Admin/AllUsers/AllUsers";
 import DeleteUser from "../../components/Admin/DeleteUser/DeleteUser";
+import UserActiveOrders from "../User/UserActiveOrders/UserActiveOrders";
+import ActiveAllOrders from "../../components/Admin/ActiveAllOrders/ActiveAllOrders";
+
+import { Container, Row, Col } from "react-bootstrap";
 
 const MyAccount = () => {
 
@@ -38,15 +42,16 @@ const MyAccount = () => {
     if(userRole === "userRole" || userRole === "2") {
         return <div className = "myAccountDesign">
             <Profile/>
+            <UserActiveOrders/>
             <UserOrders/>
         </div>
     }
     else {
-        return <div>
-            <Profile/>
-            <AllOrders/>
-            <AllUsers/>
-        </div>
+        return  <Container >
+        <Row  >   <Profile/> </Row> 
+        <Row > <AllOrders/></Row>  
+        <Row>  <AllUsers/></Row>
+        </Container>
     }
 };
 
