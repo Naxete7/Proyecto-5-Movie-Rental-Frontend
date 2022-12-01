@@ -22,9 +22,18 @@ import Profile from './containers/User/Profile/Profile';
 import UserOrders from './containers/User/UserOrders/UserOrders';
 import AllOrders from './components/Admin/AllOrders/AllOrders';
 import MyAccount from './containers/MyAccount/MyAccount';
+import { createContext, useContext, useState } from 'react';
 // import Films from './containers/Films/Films';
 
+const CurrentUserContext = createContext(null)
+
 function App() {
+  const [currentUser, setCurrentUser] = useState(null)
+  
+
+  
+
+
   return (
     // Todos los elementos en React van a estar en lenguaje JSX.
     <div className="App">
@@ -33,7 +42,14 @@ function App() {
       
       <BrowserRouter>
       
-        <Header/>
+        <CurrentUserContext.Provider
+          value={{
+            currentUser,
+            setCurrentUser
+          }}
+          >
+            <Header/>
+        </CurrentUserContext.Provider>
        <navbar/>
         
         <Routes>

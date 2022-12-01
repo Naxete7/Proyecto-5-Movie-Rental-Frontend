@@ -28,6 +28,7 @@ const UserOrders = () => {
                         setUserOrders(res.data)
                         console.log(userOrders)
                     }
+                    
                 )
                 .catch((error) => {
                     console.error(error)
@@ -42,9 +43,11 @@ const UserOrders = () => {
 
 
     if (error) {
-        return <h2>{error.repeat(999)} </h2>
+        return <h2>{ error.repeat(999) } </h2>
+
     }
     if (userOrders.length !== 0) {
+        console.log(userOrders,"-----------------------------------------------------------------------------------------------------------")
         return (
             // <pre>{JSON.stringify(userOrders, null, 2)}</pre>
             <div className='contentStyle'>
@@ -62,7 +65,7 @@ const UserOrders = () => {
                             {userOrder.startedAt}-{userOrder.endedAt}
                         </Card.Text>
                         <Card.Text>
-                        {userOrder.film.title}
+                            {userOrder.film.title}
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -76,6 +79,7 @@ const UserOrders = () => {
     } else {
         return <h2>no data</h2>
     }
+        
 };
 
 export default UserOrders;
