@@ -56,7 +56,8 @@ const FilmsView = () => {
                 </Col>
                 <Col className=" align-items-center">
                     <div className="titleDesign text-fluid">{selectedFilm?.title}</div>
-              <div className="genreDesign"> {selectedFilm?.genre}</div>  
+                  <div className="genreDesign">Género: {selectedFilm?.genre}</div>  
+                  <div className="ratingDesign align-items-center">Puntuación: {selectedFilm?.rating}</div> 
                <div className="sinopsisDesign text-break "> {selectedFilm?.sinopsis}</div>
                 </Col>
                 
@@ -79,7 +80,8 @@ const FilmsView = () => {
              
               <Col className= "align-items-center">
                <div className="titleDesign text-fluid align-items-center">{selectedFilm?.title}</div>
-              <div className="genreDesign align-items-center"> {selectedFilm?.genre}</div>  
+                <div className="genreDesign">Género: {selectedFilm?.genre}</div>  
+               <div className="ratingDesign align-items-center">Puntuación: {selectedFilm?.rating}</div> 
                <div className="sinopsisDesign text-break  align-items-center"> {selectedFilm?.sinopsis}</div>  
               </Col>
               
