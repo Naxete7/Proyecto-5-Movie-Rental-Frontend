@@ -7,6 +7,9 @@ import {Provider} from 'react-redux';
 import store from './app/store';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Image from 'react-bootstrap/Image'
+import rootReducer from './reducers';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

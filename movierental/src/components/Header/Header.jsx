@@ -8,7 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { userout } from "../../containers/User/userSlice";
 import {useState} from 'react';
 
@@ -22,9 +22,10 @@ function OffcanvasExample() {
 
   let logged = localStorage.getItem('SAVEUSERMAIL')
 
-
-
   const dispatch = useDispatch();
+  
+  
+
   const logOut = () => {
     localStorage.removeItem("SAVEUSERROLE")
     localStorage.removeItem("SAVEUSERMAIL")
@@ -36,7 +37,6 @@ function OffcanvasExample() {
         role: ""
       }
     }))
-
   }
 
   if (logged){
