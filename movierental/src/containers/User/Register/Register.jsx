@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../../services/apicalls";
 import { userData, login } from "../userSlice";
 import { useSelector, useDispatch } from "react-redux";
-
+import '../../../components/Button/ButtonDesign.scss'
 
 import { Button, Checkbox, Form, Input } from 'antd';
 
@@ -132,7 +132,7 @@ const Register = () => {
             span: 16,
           }}
         >
-          <Button className="buttonDesign" type="primary" htmlType="submit" onClick={()=> regMe()}>
+          <Button className="buttonDesign   d-flex justify-content-center col-5  " type="primary" htmlType="submit" onClick={()=> regMe()}>
             Submit
           </Button>
         </Form.Item>

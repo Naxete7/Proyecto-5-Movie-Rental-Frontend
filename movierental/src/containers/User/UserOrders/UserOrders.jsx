@@ -8,6 +8,7 @@ import { userData } from "../userSlice";
 import { useSelector } from "react-redux";
 
 import Card from 'react-bootstrap/Card';
+import { Col, Row, Container } from 'react-bootstrap';
 
 const UserOrders = () => {
 
@@ -28,6 +29,7 @@ const UserOrders = () => {
                         setUserOrders(res.data)
                         console.log(userOrders)
                     }
+                    
                 )
                 .catch((error) => {
                     console.error(error)
@@ -42,16 +44,20 @@ const UserOrders = () => {
     console.log(userOrders)
 
     if (error) {
-        return <h2>{error.repeat(999)} </h2>
+        return <h2>{ error.repeat(999) } </h2>
+
     }
     if (userOrders.length !== 0) {
+        console.log(userOrders,"-----------------------------------------------------------------------------------------------------------")
         return (
             // <pre>{JSON.stringify(userOrders, null, 2)}</pre>
             <div className='contentStyle'>
             {userOrders.map(userOrder => {
                 return (
-                    
-                        <Card style={{ width: '12rem' }} className="cards" key={userOrder.id_order}>
+                    <Container className='d-flex align-content-center'>
+                        <Row>
+                            <Col className='d-flex-wrap'>
+                        <Card style={{ width: '12em' }} className="cards" key={userOrder.id_order}>
                     <Card.Img variant="top" src={userOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />
                     <Card.Body>
                         <Card.Title>{userOrder.name}</Card.Title>
@@ -62,11 +68,13 @@ const UserOrders = () => {
                             {userOrder.startedAt}-{userOrder.endedAt}
                         </Card.Text>
                         <Card.Text>
-                        {userOrder.film.title}
+                            {userOrder.film.title}
                         </Card.Text>
                     </Card.Body>
-                </Card>
-                    
+                            </Card>
+                            </Col>
+                          </Row>  
+                   </Container> 
                 )
 
                 
@@ -76,6 +84,7 @@ const UserOrders = () => {
     } else {
         return <h2>no data</h2>
     }
+        
 };
 
 export default UserOrders;

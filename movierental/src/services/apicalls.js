@@ -115,9 +115,14 @@ export const orderFilm = async (movie) => {
             'Access-Control-Allow-Methods': '*',
             "Content-Type": "application/json"
         }
+
     }
-
-    return await axios.post(`http://localhost:3000/orders/neworder`, movie, config)
+    return await axios.post(`http://localhost:3000/orders/neworder`,movie,config)
 }
+    
 
 
+    export const bringOneFilm = (film) => {
+        return axios.get(`http://localhost:3000/films/title/${film}`)
+   
+    }
