@@ -1,14 +1,12 @@
 
 import axios from 'axios';
-
-var root = 'https://localhost:3000/films/';
 //var apiKey = '210d6a5dd3f16419ce349c9f1b200d6d';
 
 export const loginUser = async (body, res) => {
 
     try {
         let resp = await axios.post(
-            "http://localhost:3000/auth/login",
+            "https://proyecto04-videoclub-production-4de8.up.railway.app/auth/login",
             body
         );
         console.log(resp)
@@ -32,7 +30,7 @@ export const registerUser = async (body) => {
     console.log(body)
 
     return axios.post(
-        "http://localhost:3000/auth/register",
+        "https://proyecto04-videoclub-production-4de8.up.railway.app/auth/register",
         body
         // {
         //     "mail": 'elbanking@punsdhi.com',
@@ -45,7 +43,7 @@ export const bringFilms = () => {
 
     try {
 
-        return axios.get("http://localhost:3000/films");
+        return axios.get("https://proyecto04-videoclub-production-4de8.up.railway.app/films");
 
 
     } catch (error) {
@@ -57,7 +55,7 @@ export const bringComedia = () => {
 
     try {
 
-        return axios.get("http://localhost:3000/films/genre/comedia");
+        return axios.get("https://proyecto04-videoclub-production-4de8.up.railway.app/films/genre/comedia");
 
 
     } catch (error) {
@@ -69,7 +67,7 @@ export const bringAccion = () => {
 
     try {
 
-        return axios.get("http://localhost:3000/films/genre/accion");
+        return axios.get("https://proyecto04-videoclub-production-4de8.up.railway.app/films/genre/accion");
 
 
     } catch (error) {
@@ -80,7 +78,7 @@ export const bringInfantil = () => {
 
     try {
 
-        return axios.get("http://localhost:3000/films/genre/infantil");
+        return axios.get("https://proyecto04-videoclub-production-4de8.up.railway.app/films/genre/infantil");
 
 
     } catch (error) {
@@ -93,7 +91,7 @@ export const searchFilms = async (criteria) => {
     
     try {
 
-        return await axios.get(`http://localhost:3000/films/title/${criteria}`)
+        return await axios.get(`https://proyecto04-videoclub-production-4de8.up.railway.app/films/title/${criteria}`)
         
     } catch (error) {
         console.log(error);
@@ -102,43 +100,43 @@ export const searchFilms = async (criteria) => {
 
 export const bringUserInfo = (email) => {
 
-    return axios.get("http://localhost:3000/users/id/" + email)
+    return axios.get("https://proyecto04-videoclub-production-4de8.up.railway.app/users/id/" + email)
 
 };
 
 export const bringUserOrders = (email) => {
 
-    return axios.get(`http://localhost:3000/orders/${email}`)
+    return axios.get(`https://proyecto04-videoclub-production-4de8.up.railway.app/orders/${email}`)
 
 };
 
 export const bringUserActiveOrders = (email) => {
 
-    return axios.get(`http://localhost:3000/orders/active/${email}`)
+    return axios.get(`https://proyecto04-videoclub-production-4de8.up.railway.app/orders/active/${email}`)
 
 };
 
 export const bringAllOrders = () => {
 
-    return axios.get(`http://localhost:3000/orders/`)
+    return axios.get(`https://proyecto04-videoclub-production-4de8.up.railway.app/orders/`)
 
 };
 
 export const bringActiveAllOrders = () => {
 
-    return axios.get(`http://localhost:3000/orders/active/orders/all`)
+    return axios.get(`https://proyecto04-videoclub-production-4de8.up.railway.app/orders/active/orders/all`)
 
 };
 
 export const bringAllUsers = () => {
 
-    return axios.get(`http://localhost:3000/users/`)
+    return axios.get(`https://proyecto04-videoclub-production-4de8.up.railway.app/users/`)
 
 };
 
 export const deleteUser = (email) => {
 
-    return axios.delete("http://localhost:3000/users/delete/" + email)
+    return axios.delete("https://proyecto04-videoclub-production-4de8.up.railway.app/users/delete/" + email)
 
 };
 
@@ -154,10 +152,10 @@ export const orderFilm = async (movie) => {
         }
 
     }
-    return await axios.post(`http://localhost:3000/orders/neworder`,movie,config)
+    return await axios.post(`https://proyecto04-videoclub-production-4de8.up.railway.app/orders/neworder`,movie,config)
 };
 
 export const bringOneFilm = (film) => {
-        return axios.get(`http://localhost:3000/films/title/${film}`)
+        return axios.get(`https://proyecto04-videoclub-production-4de8.up.railway.app/films/title/${film}`)
    
     }
