@@ -83,7 +83,7 @@ const [movies, setMovies] = useState([]);
                                
                                 
                                     <Image className="moviePic " src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
-                            
+                            {/*<h3>{movie.title}</h3>*/}
                             </Col> 
                       ))
                     }
