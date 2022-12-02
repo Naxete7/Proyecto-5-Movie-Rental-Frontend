@@ -43,8 +43,8 @@ function OffcanvasExample() {
       }
     }))
   }
-  console.log(credentials.credentials)
-  if (userMailHeader != ""){
+  console.log(userMailHeader)
+  if (userMailHeader !== null){
     return (
       
       <>
