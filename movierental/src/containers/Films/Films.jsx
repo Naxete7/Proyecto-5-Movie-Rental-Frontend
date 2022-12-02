@@ -76,7 +76,11 @@ const Films = () => {
         if (movies.length === 0) {
 
 
-                //Adding a 1 seconds delay on purpose...
+            //Adding a 1 seconds delay on purpose...
+
+
+
+            setTimeout(() => {
 
                 bringFilms().then(
                     (res) => {
@@ -85,8 +89,9 @@ const Films = () => {
                     }
                 );
 
+            }, 3000);
 
-           
+
 
         };
 
@@ -106,7 +111,7 @@ const Films = () => {
                     .then(res => {
                         console.log(res)
                         setMovies(res.data)
-                    console.log(res.data)
+                        console.log(res.data)
                     })
                     .catch(error => console.log(error));
 
@@ -129,53 +134,87 @@ const Films = () => {
     console.log(movies)
 
 
-    return (
-        <Container fluid className="filmsDesign" >
-            <Row className="d-flex align-content-end justify-content-end" >
-                <Form className="d-flex searchDesign">
-                    <Form.Control
-                        type="criteria"
-                        placeholder="search for a film!"
-                        name="criteria"
-                        aria-label="Go!"
-                        onChange={(e) => inputHandler(e)}
-                    />
-                    <Button bg="warning" variant="outline-success  ">Search</Button>
-                </Form>
 
-            </Row>
+    if (movies.length === 0) {
+        return (
+            <Container fluid className="filmsDesign" >
+                 <Row className="d-flex align-content-end justify-content-end" >
+                    <Form className="d-flex searchDesign">
+                        <Form.Control
+                            type="criteria"
+                            placeholder="search for a film!"
+                            name="criteria"
+                            aria-label="Go!"
+                            onChange={(e) => inputHandler(e)}
+                        />
+                    </Form>
 
-            <Row flex >
+                </Row>
+                <Row flex >
 
-            <Button bg="warning" variant="outline-success" onClick={allFilms}>Todas</Button>
-                <Button bg="warning" variant="outline-success" onClick={filmsComedia}>Comedia</Button>
-                <Button bg="warning" variant="outline-success" onClick={filmsAccion}>Acción</Button>
-                <Button bg="warning" variant="outline-success" onClick={filmsInfantil}>Infantil</Button>
-
-
-
-            </Row>
-
-            <Row flex >
-
-                {/* Here I proceed to MAP the hook which contains all the movies */}
-
-                {
-                    movies.map(movie => (<Col>
+                    <Button bg="warning" variant="outline-success" onClick={allFilms}>Todas</Button>
+                    <Button bg="warning" variant="outline-success" onClick={filmsComedia}>Comedia</Button>
+                    <Button bg="warning" variant="outline-success" onClick={filmsAccion}>Acción</Button>
+                    <Button bg="warning" variant="outline-success" onClick={filmsInfantil}>Infantil</Button>
 
 
 
-                        <Image className="moviePic " src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
+                </Row>
+                <Row className="d-flex align-content-end justify-content-end" >
+                    <div className="spinner">Searching for films</div>
 
-                    </Col>
-                    ))
-                }
+                </Row>
+
+            </Container>
+        )
+    } else {
+        return (
+            <Container fluid className="filmsDesign" >
+                <Row className="d-flex align-content-end justify-content-end" >
+                    <Form className="d-flex searchDesign">
+                        <Form.Control
+                            type="criteria"
+                            placeholder="search for a film!"
+                            name="criteria"
+                            aria-label="Go!"
+                            onChange={(e) => inputHandler(e)}
+                        />
+                    </Form>
+
+                </Row>
+
+                <Row flex >
+
+                    <Button bg="warning" variant="outline-success" onClick={allFilms}>Todas</Button>
+                    <Button bg="warning" variant="outline-success" onClick={filmsComedia}>Comedia</Button>
+                    <Button bg="warning" variant="outline-success" onClick={filmsAccion}>Acción</Button>
+                    <Button bg="warning" variant="outline-success" onClick={filmsInfantil}>Infantil</Button>
 
 
 
-            </Row>
-        </Container>
-    )
+                </Row>
+
+                <Row flex >
+
+                    {/* Here I proceed to MAP the hook which contains all the movies */}
+
+                    {
+                        movies.map(movie => (<Col>
+
+
+
+                            <Image className="moviePic " src={movie.poster} onClick={() => clickedMovie(movie)} key={movie.id} />
+
+                        </Col>
+                        ))
+                    }
+
+
+
+                </Row>
+            </Container>
+        )
+    }
 
 
 
