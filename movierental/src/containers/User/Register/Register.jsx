@@ -6,12 +6,14 @@ import { registerUser } from "../../../services/apicalls";
 import { userData, login } from "../userSlice";
 import { useSelector, useDispatch } from "react-redux";
 import '../../../components/Button/ButtonDesign.scss'
+import { loginUser } from "../../../services/apicalls";
 
 import { Button, Checkbox, Form, Input } from 'antd';
 
 
 
 const Register = () => {
+  let dispatch = useDispatch()
   let navigate = useNavigate()
   const userReduxCredentials = useSelector(userData);
 
@@ -28,6 +30,37 @@ const Register = () => {
     registerUser(user)
       .then(res => {
         console.log(res)
+        try {
+          loginUser(user)
+              .then(res => {
+                  //Aqui procedo a guardar el token en redux, o en alguna otra parte del proyecto
+                  console.log(res);
+
+                  if (res.data.message === "Password or email is incorrect") {
+                      console.log("Email o contraseña incorrectos")
+                  } else {
+                      localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt));
+                      localStorage.setItem("SAVEUSERMAIL", JSON.stringify(res.data.mail));
+                      if (res.data.role === null) {
+                          localStorage.setItem("SAVEUSERROLE", "userRole")
+                      } else {
+                          localStorage.setItem("SAVEUSERROLE", JSON.stringify(res.data.role))
+                      }
+                      console.log(res.data.message)
+
+                      dispatch(login({
+                          credentials: {
+                              token: res.data.jwt,
+                              mail: res.data.mail,
+                              role: res.data.role
+                          }
+                      }));
+                      
+                  }
+              });
+      } catch (error) {
+          console.log(error)
+      }
       })
   }
 

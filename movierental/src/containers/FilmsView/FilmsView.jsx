@@ -2,7 +2,7 @@ import React from "react";
 import "./FilmsView.scss";
 import { Button, Space } from 'antd';
 import { useEffect, useState } from "react";
-import { filmData, addFIlm } from "../FilmSlice";
+import { filmData, addFIlm } from "../Films/FilmSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { Col, Container, Image, Row } from "react-bootstrap";
 import { orderFilm } from "../../services/apicalls";

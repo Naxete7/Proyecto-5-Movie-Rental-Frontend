@@ -25,25 +25,32 @@ import MyAccount from './containers/MyAccount/MyAccount';
 import { createContext, useContext, useState } from 'react';
 // import Films from './containers/Films/Films';
 import { useSelector, useDispatch } from "react-redux";
-import { login } from "./containers/User/userSlice";
+import { login, userData } from "./containers/User/userSlice";
 
 const CurrentUserContext = createContext(null)
 
 function App() {
+
+
   const dispatch = useDispatch();
-  const [currentUser, setCurrentUser] = useState(null)
-  let logged = useSelector(state => state.currentUser === currentUser)
+  const credentials = useSelector(userData)
+  const [currentUser, setCurrentUser] = useState({
+    role: credentials.role,
+    email: credentials.mail,
+    token: credentials.token
+  })
+  let logged = currentUser
   console.log(currentUser)
 
-  if (logged) {
+  if (currentUser.email != "") {
     console.log("ENTROOOOOO")
-    dispatch(login({
-      credentials: {
-        token: localStorage.getItem("SAVEJWT"),
-        mail: localStorage.getItem("SAVEUSERMAIL"),
-        role: localStorage.getItem("SAVEUSERROLE")
-      }
-    }))
+    // dispatch(login({
+    //   credentials: {
+    //     token: localStorage.getItem("SAVEJWT"),
+    //     mail: localStorage.getItem("SAVEUSERMAIL"),
+    //     role: localStorage.getItem("SAVEUSERROLE")
+    //   }
+    // }))
   }
   
 

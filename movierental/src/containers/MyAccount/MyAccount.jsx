@@ -48,9 +48,10 @@ const MyAccount = () => {
     }
     else {
         return  <Container >
-        <Row className="d-flex align-content-center" > <h1>Administradores</h1>  <Profile/> </Row> 
-        <Row > <h1>Alquileres</h1> <AllOrders/></Row>  
-        <Row> <h1>Usuarios</h1>   <AllUsers/></Row>
+        <Row  >   <Profile/> </Row> 
+        <Row  >   <ActiveAllOrders/> </Row> 
+        <Row > <AllOrders/></Row>  
+        <Row>  <AllUsers/></Row>
         </Container>
     }
 };
