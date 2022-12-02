@@ -53,16 +53,53 @@ export const bringFilms = () => {
     }
 };
 
+export const bringComedia = () => {
+
+    try {
+
+        return axios.get("http://localhost:3000/films/genre/comedia");
+
+
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+export const bringAccion = () => {
+
+    try {
+
+        return axios.get("http://localhost:3000/films/genre/accion");
+
+
+    } catch (error) {
+        console.log(error);
+    }
+};
+export const bringInfantil = () => {
+
+    try {
+
+        return axios.get("http://localhost:3000/films/genre/infantil");
+
+
+    } catch (error) {
+        console.log(error);
+    }
+};
 
 export const searchFilms = async (criteria) => {
 
-    const config = {
-        method: 'get',
-        url: `${root}search/movies`
-    }
+    
+    try {
 
-    return await axios(config);
+        return await axios.get(`http://localhost:3000/films/title/${criteria}`)
+        
+    } catch (error) {
+        console.log(error);
+    }
 }
+
 export const bringUserInfo = (email) => {
 
     return axios.get("http://localhost:3000/users/id/" + email)
@@ -74,7 +111,6 @@ export const bringUserOrders = (email) => {
     return axios.get(`http://localhost:3000/orders/${email}`)
 
 };
-
 
 export const bringUserActiveOrders = (email) => {
 
@@ -104,7 +140,8 @@ export const deleteUser = (email) => {
 
     return axios.delete("http://localhost:3000/users/delete/" + email)
 
-}
+};
+
 export const orderFilm = async (movie) => {
     const jwt = localStorage.getItem("SAVEJWT")
     let config = {
@@ -118,11 +155,9 @@ export const orderFilm = async (movie) => {
 
     }
     return await axios.post(`http://localhost:3000/orders/neworder`,movie,config)
-}
-    
+};
 
-
-    export const bringOneFilm = (film) => {
+export const bringOneFilm = (film) => {
         return axios.get(`http://localhost:3000/films/title/${film}`)
    
     }
