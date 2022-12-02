@@ -21,6 +21,8 @@ function OffcanvasExample() {
     console.log(e.target.value);
   }
  
+  let userMailHeader = JSON.parse(localStorage.getItem('SAVEUSERMAIL'));
+  console.log(userMailHeader)
 
   console.log(logged)
 
@@ -41,8 +43,8 @@ function OffcanvasExample() {
       }
     }))
   }
-
-  if (credentials.credentials.token != ""){
+  console.log(credentials.credentials)
+  if (userMailHeader != ""){
     return (
       
       <>
@@ -64,7 +66,7 @@ function OffcanvasExample() {
                 </Offcanvas.Header>
                 <Offcanvas.Body>
                   <Nav className="justify-content-end flex-grow-2 pe-5">
-                    <Nav.Link href="/myaccount">{credentials.credentials.mail}</Nav.Link>
+                    <Nav.Link href="/myaccount">{userMailHeader}</Nav.Link>
                     <Nav.Link href="/Films">Películas</Nav.Link>
                     <Nav.Link onClick={logOut} href="/">Log out</Nav.Link>
                     <NavDropdown
