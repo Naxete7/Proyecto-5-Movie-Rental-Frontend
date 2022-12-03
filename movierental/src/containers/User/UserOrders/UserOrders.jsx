@@ -51,12 +51,16 @@ const UserOrders = () => {
         console.log(userOrders,"-----------------------------------------------------------------------------------------------------------")
         return (
             // <pre>{JSON.stringify(userOrders, null, 2)}</pre>
-            <div className='contentStyle'>
-            {userOrders.map(userOrder => {
+            <div className='contentStyle'> 
+                
+              
+                {userOrders.map(userOrder => {
+                  <div><h1> Todos los alquileres realizados por el usuario </h1> </div>
                 return (
-                    <Container className='d-flex align-content-center'>
-                        <Row className='d-flex justify-content-center'>
-                            <Col className='d-flex-wrap'>
+                    
+                  
+   
+                     
                         <Card style={{ width: '12em' }} className="cards" key={userOrder.id_order}>
                     <Card.Img variant="top" src={userOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />
                     <Card.Body>
@@ -72,9 +76,7 @@ const UserOrders = () => {
                         </Card.Text>
                     </Card.Body>
                             </Card>
-                            </Col>
-                          </Row>  
-                   </Container> 
+                    
                 )
 
                 
@@ -82,7 +84,7 @@ const UserOrders = () => {
             </div>
         )
     } else {
-        return <h2>no data</h2>
+        return <h2>Este usuario aun no ha realizado alquileres</h2>
     }
         
 };

@@ -40,7 +40,9 @@ const AllOrders = () => {
     if (allOrders.length !== 0) {
         return (
         // <pre>{JSON.stringify(allOrders, null, 2)}</pre>
-        <div className='contentStyle'>
+            <div className='contentStyle'>
+                <div className='contentStyle'></div>
+                <br></br>
             {
                 allOrders.map(allOrder => {
                     return (
