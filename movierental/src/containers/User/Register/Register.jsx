@@ -78,6 +78,7 @@ const Register = () => {
     username: "",
     mail: "",
     password: "",
+    birth_Date:""
 
   })
     const onFinish = (values) => {
@@ -104,8 +105,8 @@ const Register = () => {
         autoComplete="off"
       >
         
-          <Navigator pathUno={"/login"} destinoUno={"Login"} pathDos={"/"} destinoDos={"Home"}/>
-    
+         
+        <h1 className=" mb-3 ">REGISTER</h1>
           <Form.Item
             
           //label="Username"
@@ -132,6 +133,20 @@ const Register = () => {
         >
           <input type="mail" name="mail" placeholder="mail" onChange={(e)=>inputHandler(e)}/>
         </Form.Item>
+
+        <Form.Item
+          //label="Password"
+          name="birth_Date"
+          rules={[
+            {
+              required: true,
+              message: 'Please input your birthdate!',
+            },
+          ]}
+        >
+          <input type="birth_Date" name="birth_Date" placeholder="birthdate yyyy-mm-dd" onChange={(e)=>inputHandler(e)}/>
+
+        </Form.Item>
   
         <Form.Item
           //label="Password"
@@ -155,7 +170,6 @@ const Register = () => {
             span: 16,
           }}
         >
-          <Checkbox>Remember me</Checkbox>
        
             </Form.Item>
   
