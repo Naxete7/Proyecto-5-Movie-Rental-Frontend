@@ -24,9 +24,9 @@ const UserActiveOrders = () => {
             bringUserActiveOrders(userMail)
                 .then(
                     (res) => {
-                        console.log(res)
+                        
                         setUserActiveOrders(res.data)
-                        console.log(userActiveOrders)
+                        
                     }
                 )
                 .catch((error) => {

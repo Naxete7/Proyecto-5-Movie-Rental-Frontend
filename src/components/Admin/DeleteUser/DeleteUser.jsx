@@ -5,7 +5,6 @@ import './DeleteUser.scss';
 
 import { deleteUser } from '../../../services/apicalls';
 
-import { useSelector } from "react-redux";
 
 import { Button, Checkbox, Form, Input } from 'antd';
 
@@ -16,15 +15,15 @@ const DeleteUser = () => {
           })
 
     const deleteMe = () => {
-        console.log(userDelete)
+        
         deleteUser(userDelete.mail)
           .then(res => {
-            console.log(res)
+           
           })
       }
 
     const inputHandler = (e) => {
-        console.log(e.target.value)
+        
     
         //Aquí setearemos de forma DINÁMICA el BINDEO entre inputs y hook
         setUserDelete((prevState)=> ({

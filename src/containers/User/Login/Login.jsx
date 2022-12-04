@@ -32,9 +32,9 @@ const Login = () => {
     })
 
     useEffect(() => {
-        console.log(userReduxCredentials);
+     
         let loged = localStorage.getItem("SAVEUSERMAIL")
-        console.log(loged)
+       
 
         if (loged) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
             navigate("/");
@@ -44,7 +44,7 @@ const Login = () => {
     //Handlers
 
     const inputHandler = (e) => {
-        console.log(e.target.value);
+       
 
         //Aqui setearemos DINÁMICAMENTE el BINDEO entre inputs y hook.
         setUser((prevState) => ({
@@ -73,12 +73,12 @@ const Login = () => {
     const logMe = () => {
 
         //Estoy ejecutando loginUser y le paso el body (que en este caso es el hook user)
-        console.log(user)
+       
         try {
             loginUser(user)
                 .then(res => {
                     //Aqui procedo a guardar el token en redux, o en alguna otra parte del proyecto
-                    console.log(res);
+                   
 
                     if (res.data.message === "Password or email is incorrect") {
                         setUserError(((prevState) => ({
@@ -94,7 +94,7 @@ const Login = () => {
                         } else {
                             localStorage.setItem("SAVEUSERROLE", JSON.stringify(res.data.role))
                         }
-                        console.log(res.data.message)
+                        
 
                         dispatch(login({
                             credentials: {
@@ -115,11 +115,11 @@ const Login = () => {
         }
 
     }
-    console.log(userError.LoginError)
+    
 
     return (
         <div className='loginDesign'>
-            <pre>Welcome back! </pre>
+            <pre>Bienvenido de nuevo</pre>
 
             <div className="inputsContainer">
                 <div className="errorInput">{userError.LoginError}</div>

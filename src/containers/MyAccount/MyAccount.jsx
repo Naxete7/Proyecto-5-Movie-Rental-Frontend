@@ -17,8 +17,6 @@ const MyAccount = () => {
 
     let navigate = useNavigate();
 
-    const userReduxCredentials = useSelector(userData);
-
    
 
     const userRole = localStorage.getItem("SAVEUSERROLE")
@@ -30,18 +28,18 @@ const MyAccount = () => {
     useEffect(() => {
         
 
-        console.log(userRole); 
+     
         // console.log(userReduxCredentials?.credentials?.token); 
 
         if (userRole === "null" || userRole === null) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
             navigate("/");       
     };});
 
-    console.log(userRole); 
+ 
 
     if(userRole === "userRole" || userRole === "2") {
         return <div className = "myAccountDesign">
-         <Container>
+                <Container>
                 <Row><h2>Usuario</h2></Row>
                 <Row> <Profile /></Row>
                 <Row><h2>Alquileres en activo</h2></Row>
@@ -61,7 +59,7 @@ const MyAccount = () => {
             <Row > <AllOrders /></Row>  
             <Row><h2>Todos los usuarios</h2></Row>
         <Row>  <AllUsers/></Row>
-        </Container>
+                 </Container>
     }
 };
 

@@ -18,12 +18,12 @@ const ActiveAllOrders = () => {
             bringActiveAllOrders()
             .then(
                 (res) => {
-                    console.log(res)
+                    
                     setActiveAllOrders(res.data)
                 }
             )
             .catch((error) => {
-                console.error(error)
+                
                 setError(error.response?.data  || 'ups intentalo de nuevo' )
             })
 
@@ -32,7 +32,7 @@ const ActiveAllOrders = () => {
 
     }, []);
 
-    console.log(activeAllOrders)
+   
 
     if(error) {
         return <pre>{error.repeat(999)} </pre>

@@ -18,12 +18,12 @@ const AllOrders = () => {
             bringAllOrders()
             .then(
                 (res) => {
-                    console.log(res)
+                   
                     setAllOrders(res.data)
                 }
             )
             .catch((error) => {
-                console.error(error)
+                
                 setError(error.response?.data  || 'ups intentalo de nuevo' )
             })
 
@@ -32,10 +32,10 @@ const AllOrders = () => {
 
     }, [allOrders]);
 
-    console.log(allOrders)
+    
 
     if(error) {
-        return <pre>{error.repeat(999)} </pre>
+        return <pre>{error.repeat(1)} </pre>
     }
     if (allOrders.length !== 0) {
         return (

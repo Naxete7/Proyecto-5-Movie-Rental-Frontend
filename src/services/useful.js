@@ -52,7 +52,7 @@ export const errorCheck = (field, value, type) => {
 
         default:
             console.log("FATAL ERROR WE ARE GOING TO DIE!");
-            console.log(type)
+           
 
         break;
 

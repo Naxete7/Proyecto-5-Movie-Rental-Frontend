@@ -16,21 +16,11 @@ import { useEffect } from 'react';
 
 
 function OffcanvasExample() {
-  let logged
-  const inputHandler = (e) => {
-    console.log(e.target.value);
-  }
- 
-  let userMailHeader = JSON.parse(localStorage.getItem('SAVEUSERMAIL'));
-  console.log(userMailHeader)
-
-  console.log(logged)
+  
+   let userMailHeader = JSON.parse(localStorage.getItem('SAVEUSERMAIL'));
 
   const dispatch = useDispatch();
-  const credentials = useSelector(userData)
-
-  
-
+   
   const logOut = () => {
     localStorage.removeItem("SAVEUSERROLE")
     localStorage.removeItem("SAVEUSERMAIL")
@@ -43,10 +33,9 @@ function OffcanvasExample() {
       }
     }))
   }
-  console.log(userMailHeader)
+  
   if (userMailHeader !== null){
     return (
-      
       <>
         {
         [ 'lg'].map((expand) => (
@@ -69,12 +58,8 @@ function OffcanvasExample() {
                     <Nav.Link href="/myaccount">{userMailHeader}</Nav.Link>
                     <Nav.Link href="/Films">Películas</Nav.Link>
                     <Nav.Link onClick={logOut} href="/">Log out</Nav.Link>
-                    
                   </Nav>
                 
-  
-  
-  
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
             </Container>
@@ -118,9 +103,6 @@ function OffcanvasExample() {
                     </NavDropdown>
                   </Nav>
                 
-  
-  
-  
                 </Offcanvas.Body>
               </Navbar.Offcanvas>
             </Container>
