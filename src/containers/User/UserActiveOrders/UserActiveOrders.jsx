@@ -49,11 +49,14 @@ const UserActiveOrders = () => {
     if (userActiveOrders.length !== 0) {
         return (
             // <pre>{JSON.stringify(userOrders, null, 2)}</pre>
-            <div className='contentStyle'>
+           
+            <div className='contentStyle'> 
+                
             {userActiveOrders.map(userActiveOrder => {
                 return (
-                    
-                        <Card style={{ width: '12rem' }} className="cards">
+                  
+                    <Card style={{ width: '12rem' }} className="cards">
+                        
                     <Card.Img variant="top" src={userActiveOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />
                     <Card.Body>
                         <Card.Title>{userActiveOrder.name}</Card.Title>
