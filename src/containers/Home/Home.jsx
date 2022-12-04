@@ -24,10 +24,7 @@ const Home = () => {
 
         if (movies.length === 0) {
 
-
             //Adding a 1 seconds delay on purpose...
-
-
 
             setTimeout(() => {
 
@@ -39,8 +36,6 @@ const Home = () => {
                 );
 
             }, 1000);
-
-
 
         };
 
@@ -91,15 +86,15 @@ const Home = () => {
 
         return (
             <Container fluid >
-                {/*<Row className="d-flex align-content-end justify-content-end" >*/}
+               
                  <Row className="tituloDesign  align-items-center justify-content-center">VR</Row> 
                 <Row className="d-flex align-content-end justify-content-end" >
                     <div className="buttonHome row-6  d-flex justify-content-center">
-                        {/*<button className="buttonHomeDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Login</button>*/}
+                       
                         <Button className="buttonDesign  d-flex justify-content-center " onClick={() => navigate("/login")} href="../Login/">Login</Button>
 
                         <Button className="buttonDesign  d-flex justify-content-center  " onClick={() => navigate("/register")} href="../Register" >Suscríbete</Button>
-                        {/*<button className="buttonHomeDesign" onClick={() => navigate("/login")} href="../Login/Login.jsx</div>">Subscríbete ya</button>*/}
+                  
                     </div>
 
                 </Row>
