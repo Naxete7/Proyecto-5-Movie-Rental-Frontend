@@ -105,7 +105,7 @@ const Home = () => {
                 </Row>
 
                 <Row flex >
-                    <pre>TOP RATED FILMS</pre>
+                    <pre>PELÍCULAS MÁS VALORADAS</pre>
 
                     <Carousel>
 
