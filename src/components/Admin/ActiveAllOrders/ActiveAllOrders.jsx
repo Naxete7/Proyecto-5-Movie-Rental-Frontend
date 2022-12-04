@@ -35,7 +35,7 @@ const ActiveAllOrders = () => {
     console.log(activeAllOrders)
 
     if(error) {
-        return <h2>{error.repeat(999)} </h2>
+        return <pre>{error.repeat(999)} </pre>
     }
     if (activeAllOrders.length !== 0) {
         return (
@@ -63,7 +63,7 @@ const ActiveAllOrders = () => {
         
         )
     } else {
-        return <h2>no data</h2>
+        return <pre>No hay pedidos activos en la plataformas</pre>
     }
 };
 

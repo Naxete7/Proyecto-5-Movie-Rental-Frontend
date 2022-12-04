@@ -41,16 +41,25 @@ const MyAccount = () => {
 
     if(userRole === "userRole" || userRole === "2") {
         return <div className = "myAccountDesign">
-            <Profile/>
-            <UserActiveOrders/>
-            <UserOrders/>
+         <Container>
+                <Row><h2>Usuario</h2></Row>
+                <Row> <Profile /></Row>
+                <Row><h2>Alquileres en activo</h2></Row>
+                <Row> <UserActiveOrders /></Row> 
+                <Row><h2>Todos los alquileres realizados</h2></Row>
+                 <Row>  <UserOrders /></Row> 
+                </Container>
         </div>
     }
     else {
-        return  <Container >
-        <Row  >   <Profile/> </Row> 
-        <Row  >   <ActiveAllOrders/> </Row> 
-        <Row > <AllOrders/></Row>  
+        return <Container >
+            <Row><h2>Usuario</h2></Row>
+            <Row  > <Profile /> </Row> 
+             <Row><h2>Alquileres en activo</h2></Row>
+            <Row  > <ActiveAllOrders /> </Row> 
+            <Row><h2>Todos los alquileres realizados</h2></Row>
+            <Row > <AllOrders /></Row>  
+            <Row><h2>Todos los usuarios</h2></Row>
         <Row>  <AllUsers/></Row>
         </Container>
     }

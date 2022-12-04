@@ -51,6 +51,18 @@ export const bringFilms = () => {
     }
 };
 
+export const bringTopRated = () => {
+
+    try {
+
+        return axios.get("https://proyecto04-videoclub-production-4de8.up.railway.app/films/topfilms");
+
+
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 export const bringComedia = () => {
 
     try {

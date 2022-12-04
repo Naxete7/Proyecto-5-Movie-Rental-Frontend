@@ -57,22 +57,24 @@ const Profile = () => {
     }
 
     return (
-<Container className='profileDesign'>
-
-        <Card style={{ width: '12rem' }} className=".card">
-            <Card.Img variant="top" src={`https://robohash.org/YOUR-TE${userInfo.mail}dsXT.png`} />
-            <Card.Body>
-                <Card.Title>{userInfo.name}</Card.Title>
-                <Card.Text>
-                    {userInfo.mail}
-                </Card.Text>
-                <Card.Text>
-                    {userInfo.birth_Date}
-                </Card.Text>
-                <Button variant="primary" onClick={()=> navigate("/films")}>Alquilar películas</Button>
-            </Card.Body>
-        </Card>
-
+<Container >
+    <Row className='d-flex justify-content-center'>
+        
+                 <Card style={{ width: '12rem' }} className="cards">
+                  <Card.Img variant="top" src={`https://robohash.org/YOUR-TE${userInfo.mail}dsXT.png`} />
+                      <Card.Body>
+                           <Card.Title>{userInfo.name}</Card.Title>
+                               <Card.Text>
+                                    {userInfo.mail}
+                               </Card.Text>
+                                <Card.Text>
+                                     {userInfo.birth_Date}
+                               </Card.Text>
+                                 <Button variant="warning" onClick={()=> navigate("/films")}>Alquilar películas</Button>
+                          </Card.Body>
+              </Card>
+       
+    </Row>
 </Container>
     )
 

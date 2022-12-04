@@ -23,6 +23,7 @@ transition: 0.7s;
 }
 
 .searchDesign{
+        margin-top: 1em;
         width: 40em;
         
 }
@@ -34,3 +35,9 @@ transition: 0.7s;
         justify-content: center;
 }
 
+.buttonSearch {
+margin: 0.2em;
+        width: 10em;
+        background-color:white ;
+        border-radius: 2em;
+}

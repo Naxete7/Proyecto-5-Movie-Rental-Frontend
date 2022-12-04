@@ -89,7 +89,7 @@ const Films = () => {
                     }
                 );
 
-            }, 3000);
+            }, 1000);
 
 
 
@@ -138,8 +138,8 @@ const Films = () => {
     if (movies.length === 0) {
         return (
             <Container fluid className="filmsDesign" >
-                 <Row className="d-flex align-content-end justify-content-end" >
-                    <Form className="d-flex searchDesign">
+                 <Row className="d-flex justify-content-center" >
+                    <Form className="d-flex searchDesign ">
                         <Form.Control
                             type="criteria"
                             placeholder="search for a film!"
@@ -150,14 +150,13 @@ const Films = () => {
                     </Form>
 
                 </Row>
-                <Row flex >
+  <br></br>
+                <Row   >
 
-                    <Button bg="warning" variant="outline-success" onClick={allFilms}>Todas</Button>
-                    <Button bg="warning" variant="outline-success" onClick={filmsComedia}>Comedia</Button>
-                    <Button bg="warning" variant="outline-success" onClick={filmsAccion}>Acción</Button>
-                    <Button bg="warning" variant="outline-success" onClick={filmsInfantil}>Infantil</Button>
-
-
+                    <Col><Button className="buttonSearch" variant="warning" size="lg" active onClick={allFilms}>Todas</Button></Col>
+                <Col>  <Button className="buttonSearch" variant="warning" size="lg" active onClick={filmsComedia}>Comedia</Button></Col>
+                 <Col> <Button className="buttonSearch" variant="warning" size="lg" active onClick={filmsAccion}>Acción</Button></Col> 
+                 <Col> <Button className="buttonSearch" variant="warning" size="lg" active onClick={filmsInfantil}>Infantil</Button></Col> 
 
                 </Row>
                 <Row className="d-flex align-content-end justify-content-center w-100">
@@ -170,7 +169,7 @@ const Films = () => {
     } else {
         return (
             <Container fluid className="filmsDesign" >
-                <Row className="d-flex align-content-end justify-content-end" >
+                <Row className="d-flex justify-content-center" >
                     <Form className="d-flex searchDesign">
                         <Form.Control
                             type="criteria"
@@ -182,15 +181,13 @@ const Films = () => {
                     </Form>
 
                 </Row>
+<br></br>
+                <Row   >
 
-                <Row flex >
-
-                    <Button bg="warning" variant="outline-success" onClick={allFilms}>Todas</Button>
-                    <Button bg="warning" variant="outline-success" onClick={filmsComedia}>Comedia</Button>
-                    <Button bg="warning" variant="outline-success" onClick={filmsAccion}>Acción</Button>
-                    <Button bg="warning" variant="outline-success" onClick={filmsInfantil}>Infantil</Button>
-
-
+                    <Col><Button className="buttonSearch" variant="warning" size="lg" active onClick={allFilms}>Todas</Button></Col>
+                <Col>  <Button className="buttonSearch" variant="warning" size="lg" active onClick={filmsComedia}>Comedia</Button></Col>
+                 <Col> <Button className="buttonSearch" variant="warning" size="lg" active onClick={filmsAccion}>Acción</Button></Col> 
+                 <Col> <Button className="buttonSearch" variant="warning" size="lg" active onClick={filmsInfantil}>Infantil</Button></Col> 
 
                 </Row>
 
