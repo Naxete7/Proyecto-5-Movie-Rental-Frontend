@@ -18,9 +18,9 @@ const Register = () => {
   const userReduxCredentials = useSelector(userData);
 
   useEffect(() => {
-    console.log(userReduxCredentials); 
+  
     let loged = localStorage.getItem("SAVEUSERMAIL")
-    console.log(loged)
+  
 
     if (loged) {          // TODO: redireccionar a una vista que diga que no puede acceder a registro si ya está logueado con un timeout y que luego redireccione a home            
         navigate("/");      
@@ -29,15 +29,14 @@ const Register = () => {
   const regMe = () => {
     registerUser(user)
       .then(res => {
-        console.log(res)
+        
         try {
           loginUser(user)
               .then(res => {
                   //Aqui procedo a guardar el token en redux, o en alguna otra parte del proyecto
-                  console.log(res);
 
                   if (res.data.message === "Password or email is incorrect") {
-                      console.log("Email o contraseña incorrectos")
+                     
                   } else {
                       localStorage.setItem("SAVEJWT", JSON.stringify(res.data.jwt));
                       localStorage.setItem("SAVEUSERMAIL", JSON.stringify(res.data.mail));
@@ -46,7 +45,7 @@ const Register = () => {
                       } else {
                           localStorage.setItem("SAVEUSERROLE", JSON.stringify(res.data.role))
                       }
-                      console.log(res.data.message)
+                      
 
                       dispatch(login({
                           credentials: {
@@ -65,7 +64,6 @@ const Register = () => {
   }
 
   const inputHandler = (e) => {
-    console.log(e.target.value)
 
     //Aquí setearemos de forma DINÁMICA el BINDEO entre inputs y hook
     setUser((prevState)=> ({

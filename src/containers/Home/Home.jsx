@@ -34,7 +34,7 @@ const Home = () => {
                 bringTopRated().then(
                     (res) => {
                         setMovies(res.data)
-                        console.log(res.data)
+                     
                     }
                 );
 

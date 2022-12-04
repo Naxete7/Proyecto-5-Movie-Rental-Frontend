@@ -2,12 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
-
-import { Container } from 'react-bootstrap';
-import { Row } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-
+import { Container,Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 import './Profile.scss';
@@ -38,11 +33,10 @@ const Profile = () => {
                 .then(
                     (res) => {
                         setUserInfo(res.data)
-                        console.log(res)
+                       
                     }
                 )
                 .catch((error) => {
-                    console.error(error)
                     setError(error.response?.data || 'ups intentalo de nuevo')
                 })
         };
@@ -50,10 +44,10 @@ const Profile = () => {
 
     }, [userInfo]);
 
-    console.log(userInfo)
+    
 
     if (error) {
-        return <h2>{error.repeat(999)} </h2>
+        return <h2>{error.repeat(1)} </h2>
     }
 
     return (
@@ -67,7 +61,6 @@ const Profile = () => {
                                <Card.Text>
                                     {userInfo.mail}
                                </Card.Text>
-                               
                                  <Button variant="warning" onClick={()=> navigate("/films")}>Alquilar películas</Button>
                           </Card.Body>
               </Card>

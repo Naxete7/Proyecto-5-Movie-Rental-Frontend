@@ -9,7 +9,7 @@ export const loginUser = async (body, res) => {
             "https://proyecto04-videoclub-production-4de8.up.railway.app/auth/login",
             body
         );
-        console.log(resp)
+        
     
         if (resp.data === "Password or email is incorrect") {
             return "El email o la contraseña son incorrectos"
@@ -18,7 +18,7 @@ export const loginUser = async (body, res) => {
             return resp
         }
     } catch (error) {
-        console.log(error)
+       
         return error.response
     }
 
@@ -27,7 +27,7 @@ export const loginUser = async (body, res) => {
 
 export const registerUser = async (body) => {
 
-    console.log(body)
+    
 
     return axios.post(
         "https://proyecto04-videoclub-production-4de8.up.railway.app/auth/register",

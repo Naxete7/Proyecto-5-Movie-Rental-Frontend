@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import "./AllUsers.scss"
 
 import { bringAllUsers, deleteUser } from '../../../services/apicalls';
-
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
@@ -17,18 +16,18 @@ const AllUsers = () => {
 
 
     const deleteMe = (userDelete) => {
-        console.log(userDelete)
+        
         deleteUser(userDelete)
             .then(res => {
                 bringAllUsers()
                     .then(
                         (res) => {
-                            console.log(res)
+                            
                             setAllUsers(res.data)
                         }
                     )
                     .catch((error) => {
-                        console.error(error)
+                       
                         setError(error.response?.data || 'ups intentalo de nuevo')
                     })
 
@@ -42,12 +41,12 @@ const AllUsers = () => {
         bringAllUsers()
             .then(
                 (res) => {
-                    console.log(res)
+                   
                     setAllUsers(res.data)
                 }
             )
             .catch((error) => {
-                console.error(error)
+                
                 setError(error.response?.data || 'ups intentalo de nuevo')
             })
 
@@ -83,7 +82,7 @@ const AllUsers = () => {
 
         )
     } else {
-        return <h2>no data</h2>
+        return <h2>no hay datos</h2>
     }
 };
 

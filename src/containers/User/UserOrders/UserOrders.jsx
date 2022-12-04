@@ -2,11 +2,8 @@ import React, { useState, useEffect } from 'react';
 import "./UserOrders.scss"
 
 import { bringUserOrders } from '../../../services/apicalls';
-
 import { userData } from "../userSlice";
-
 import { useSelector } from "react-redux";
-
 import Card from 'react-bootstrap/Card';
 import { Col, Row, Container } from 'react-bootstrap';
 
@@ -25,14 +22,14 @@ const UserOrders = () => {
             bringUserOrders(userMail)
                 .then(
                     (res) => {
-                        console.log(res)
+                        
                         setUserOrders(res.data)
-                        console.log(userOrders)
+                        
                     }
                     
                 )
                 .catch((error) => {
-                    console.error(error)
+                   
                     setError(error.response?.data || 'ups intentalo de nuevo')
                 })
 
@@ -41,14 +38,14 @@ const UserOrders = () => {
 
     }, [userOrders]);
 
-    console.log(userOrders)
+    
 
     if (error) {
-        return <pre>{ error.repeat(999) } </pre>
+        return <pre>{ error.repeat(1) } </pre>
 
     }
     if (userOrders.length !== 0) {
-        console.log(userOrders,"-----------------------------------------------------------------------------------------------------------")
+       
         return (
             // <pre>{JSON.stringify(userOrders, null, 2)}</pre>
             <div className='contentStyle'> 
@@ -58,9 +55,6 @@ const UserOrders = () => {
                   <div><h1> Todos los alquileres realizados por el usuario </h1> </div>
                 return (
                     
-                  
-   
-                     
                         <Card style={{ width: '12em' }} className="cards" key={userOrder.id_order}>
                     <Card.Img className='imgCards' variant="top" src={userOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />
                     <Card.Body>

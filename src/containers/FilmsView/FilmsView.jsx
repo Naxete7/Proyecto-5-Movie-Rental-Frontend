@@ -4,7 +4,7 @@ import { Button, Space } from 'antd';
 import { useEffect, useState } from "react";
 import { filmData, addFIlm } from "../Films/FilmSlice";
 import { useSelector, useDispatch } from "react-redux";
-import { Col, Container, Image, Row } from "react-bootstrap";
+import { Col, Container, Image, Row, Spinner } from "react-bootstrap";
 import { orderFilm } from "../../services/apicalls";
 import { setDayInSeventh } from "../../services/useful";
 import '../../components/Button/ButtonDesign.scss'
@@ -30,7 +30,7 @@ const FilmsView = () => {
         "userMail": mail.replaceAll('"', ''),
         "filmIdFilm": selectedFilm.id_film
       }
-      console.log(movieBody)
+     
       let resp =  orderFilm(movieBody)
       setTimeout(() => {
         navigate("/myaccount");
@@ -43,12 +43,9 @@ const FilmsView = () => {
 
   const [movie, setMovie] = useState([]);
   const selectedFilm = useSelector(filmData);
-  //const credentials = useSelector(userData);
-  console.log(selectedFilm);
-  console.log(loged);
+
   if (selectedFilm?.id_film !== undefined) {
       
-
     if (loged){
           return (
 
@@ -89,8 +86,6 @@ const FilmsView = () => {
                <div className="ratingDesign align-items-center">Puntuación: {selectedFilm?.rating}</div> 
                <div className="sinopsisDesign text-break  align-items-center"> {selectedFilm?.sinopsis}</div>  
               </Col>
-              
-              
             
               <Row>
               
@@ -109,12 +104,11 @@ const FilmsView = () => {
         }
 
 
-
-    
-
   } else {
     return (
-      <div className="">Ha habido un error</div>
+      <div className="filmsViewDesign"> <Spinner className=" spinnerDesign mb-5" /> 
+        <h3>Ha habido un error</h3></div>
+      
     )
    
   }

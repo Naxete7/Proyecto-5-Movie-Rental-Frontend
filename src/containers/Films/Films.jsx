@@ -22,7 +22,7 @@ const Films = () => {
     const [criteria, setCriteria] = useState('')
 
     const inputHandler = (e) => {
-        console.log(e.target.value);
+       
         setCriteria(e.target.value);
     }
 
@@ -65,7 +65,7 @@ const Films = () => {
         bringFilms().then(
             (res) => {
                 setMovies(res.data)
-                console.log(res.data)
+                
             }
         );
     }
@@ -85,7 +85,7 @@ const Films = () => {
                 bringFilms().then(
                     (res) => {
                         setMovies(res.data)
-                        console.log(res.data)
+                        
                     }
                 );
 
@@ -99,7 +99,7 @@ const Films = () => {
 
     useEffect(() => {
 
-        console.log(criteria)
+        
 
         if (criteria !== '') {
 
@@ -109,9 +109,9 @@ const Films = () => {
 
                 searchFilms(criteria)
                     .then(res => {
-                        console.log(res)
+                       
                         setMovies(res.data)
-                        console.log(res.data)
+                        
                     })
                     .catch(error => console.log(error));
 
@@ -123,15 +123,13 @@ const Films = () => {
             bringFilms().then(
                 (res) => {
                     setMovies(res.data)
-                    console.log(res.data)
+                    
                 }
             );
         }
 
     }, [criteria])
 
-    console.log(criteria)
-    console.log(movies)
 
 
 
