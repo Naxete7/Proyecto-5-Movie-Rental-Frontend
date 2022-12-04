@@ -44,7 +44,7 @@ const UserActiveOrders = () => {
 
 
     if (error) {
-        return <h2>{error.repeat(999)} </h2>
+        return <pre>{error.repeat(999)} </pre>
     }
     if (userActiveOrders.length !== 0) {
         return (
@@ -79,7 +79,7 @@ const UserActiveOrders = () => {
             </div>
         )
     } else {
-        return <h2>no data</h2>
+        return <pre>No tienes pedidos activos</pre>
     }
 };
 

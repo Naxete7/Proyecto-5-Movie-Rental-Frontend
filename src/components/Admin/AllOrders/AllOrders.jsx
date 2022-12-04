@@ -35,7 +35,7 @@ const AllOrders = () => {
     console.log(allOrders)
 
     if(error) {
-        return <h2>{error.repeat(999)} </h2>
+        return <pre>{error.repeat(999)} </pre>
     }
     if (allOrders.length !== 0) {
         return (
@@ -65,7 +65,7 @@ const AllOrders = () => {
         
         )
     } else {
-        return <h2>no data</h2>
+        return <pre>Todavía no hay pedidos en la plataforma</pre>
     }
 };
 
