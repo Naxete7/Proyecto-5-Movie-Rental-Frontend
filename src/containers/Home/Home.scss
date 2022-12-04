@@ -2,7 +2,7 @@
 
 .homeDesign {
 
-height: 82vh;
+min-height: 100vh;
 //width: 80vw;
 background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 color: linear-gradient(60deg, #29323c 0%, #485563 100%);;
@@ -15,8 +15,8 @@ color: linear-gradient(60deg, #29323c 0%, #485563 100%);;
 }
 
 .tituloDesign{
-font-size: 3.5em;
-font-family: Nunito;
+font-size: 4em;
+font-family: 'Courier New', Courier, monospace
 
 }
 

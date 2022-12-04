@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import "./UserActiveOrders.scss"
+//import "./UserActiveOrders.scss"
 
 import { bringUserActiveOrders } from '../../../services/apicalls';
 
@@ -57,14 +57,15 @@ const UserActiveOrders = () => {
                   
                     <Card style={{ width: '12rem' }} className="cards">
                         
-                    <Card.Img variant="top" src={userActiveOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />
+                    <Card.Img className='imgCards' variant="top" src={userActiveOrder.film.poster || "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/b0MxU37dNmMwKtoPVYPKOZSIrIn.jpg"} />
                     <Card.Body>
                         <Card.Title>{userActiveOrder.name}</Card.Title>
                         <Card.Text>
                             {userActiveOrder.userMail}
                         </Card.Text>
                         <Card.Text>
-                            {userActiveOrder.startedAt}-{userActiveOrder.endedAt}
+                                Desde {userActiveOrder.startedAt} <br></br>
+                               Hasta {userActiveOrder.endedAt}
                         </Card.Text>
                         <Card.Text>
                         {userActiveOrder.film.title}

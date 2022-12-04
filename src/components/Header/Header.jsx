@@ -52,7 +52,7 @@ function OffcanvasExample() {
         [ 'lg'].map((expand) => (
           <Navbar key={expand} bg="#a18cd1" expand={expand} className=" navbarDesign sticky-top ">
             <Container fluid>
-              <Navbar.Brand href="/">Home  </Navbar.Brand>
+              <Navbar.Brand className='logoDesign' href="/">VR</Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
@@ -88,7 +88,7 @@ function OffcanvasExample() {
         {[ 'lg'].map((expand) => (
           <Navbar key={expand} bg="#a18cd1" expand={expand} className=" navbarDesign sticky-top ">
             <Container fluid>
-              <Navbar.Brand href="/">Home  </Navbar.Brand>
+              <Navbar.Brand className='logoDesign' href="/">VR</Navbar.Brand>
               <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
               <Navbar.Offcanvas
                 id={`offcanvasNavbar-expand-${expand}`}
