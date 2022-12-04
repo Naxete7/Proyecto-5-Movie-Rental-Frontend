@@ -1,33 +1,33 @@
 <div align="center" id="top"> 
-  <img src="./.github/app.gif" alt="Movierental" />
+  <img src="./.github/app.gif" alt="Movie-Rental-Frontend" />
 
   &#xa0;
 
-  <!-- <a href="https://movierental.netlify.app">Demo</a> -->
+  <!-- <a href="https://Movie-Rental-Frontend.netlify.app">Demo</a> -->
 </div>
 
-<h1 align="center">Movierental</h1>
+<h1 align="center">Movie-Rental-Frontend</h1>
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/JotaroKujoo/movierental?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/JotaroKujoo/Movie-Rental-Frontend?color=56BEB8">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/JotaroKujoo/movierental?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/JotaroKujoo/Movie-Rental-Frontend?color=56BEB8">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/JotaroKujoo/movierental?color=56BEB8">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/JotaroKujoo/Movie-Rental-Frontend?color=56BEB8">
 
-  <img alt="License" src="https://img.shields.io/github/license/JotaroKujoo/movierental?color=56BEB8">
+  <img alt="License" src="https://img.shields.io/github/license/JotaroKujoo/Movie-Rental-Frontend?color=56BEB8">
 
-  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/JotaroKujoo/movierental?color=56BEB8" /> -->
+  <!-- <img alt="Github issues" src="https://img.shields.io/github/issues/JotaroKujoo/Movie-Rental-Frontend?color=56BEB8" /> -->
 
-  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/JotaroKujoo/movierental?color=56BEB8" /> -->
+  <!-- <img alt="Github forks" src="https://img.shields.io/github/forks/JotaroKujoo/Movie-Rental-Frontend?color=56BEB8" /> -->
 
-  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/JotaroKujoo/movierental?color=56BEB8" /> -->
+  <!-- <img alt="Github stars" src="https://img.shields.io/github/stars/JotaroKujoo/Movie-Rental-Frontend?color=56BEB8" /> -->
 </p>
 
 <!-- Status -->
 
 <!-- <h4 align="center"> 
-	🚧  Movierental 🚀 Under construction...  🚧
+	🚧  Movie-Rental-Frontend 🚀 Under construction...  🚧
 </h4> 
 
 <hr> -->
@@ -46,52 +46,56 @@
 
 ## :dart: About ##
 
-Describe your project
+Web de renting de películas desplegada en Amazon Web Service el frontend, Backend (Base de datos y API) desplegados en Railway.
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: Registrar  usuarios;
+
+:heavy_check_mark: Iniciar sesión;
+
+:heavy_check_mark: Buscar películas por título y género;
+
+:heavy_check_mark: Alquilar películas si has iniciado sesión;
+
+:heavy_check_mark: Consultar las películas que hemos alquilado (vigentes e histórico);
+
+:heavy_check_mark: El admin puede ver todos los usuarios y todos los pedidos (vigentes e históricos);
+
+
+
+
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
+
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [React-Bootstrap](https://react-bootstrap.github.io/)
+- [Ant-Design](https://ant.design/docs/spec/introduce)
+- [Amazon Web Service](https://aws.amazon.com/es/?nc2=h_lg)
 
-## :white_check_mark: Requirements ##
+## :white_check_mark: Register ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Podrás registrarte con tu correo electrónico, nombre y contraseña.
 
-## :checkered_flag: Starting ##
 
-```bash
-# Clone this project
-$ git clone https://github.com/JotaroKujoo/movierental
+## :checkered_flag: Log in ##
+Podrás iniciar sesión con el correo electrónico y la contraseña
 
-# Access
-$ cd movierental
 
-# Install dependencies
-$ yarn
+## :office: Orders ##
+El usuario podrá realizar pedidos si ha iniciado sesión y comprobar cuando termina el pedido en su perfil
 
-# Run the project
-$ yarn start
-
-# The server will initialize in the <http://localhost:3000>
-```
 
 ## :memo: License ##
 
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/JotaroKujoo" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/JotaroKujoo" target="_blank">Nacho García Valero, Jesus Valenzuela Chuliá y Jose Rodríguez Calero</a>
 
 &#xa0;
 
