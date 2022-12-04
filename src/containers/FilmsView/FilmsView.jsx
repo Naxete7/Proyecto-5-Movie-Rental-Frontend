@@ -8,9 +8,11 @@ import { Col, Container, Image, Row } from "react-bootstrap";
 import { orderFilm } from "../../services/apicalls";
 import { setDayInSeventh } from "../../services/useful";
 import '../../components/Button/ButtonDesign.scss'
+import { useNavigate } from "react-router-dom";
 
 
 const FilmsView = () => {
+  let navigate = useNavigate();
 
   let loged = localStorage.getItem("SAVEUSERMAIL");
 
@@ -30,6 +32,9 @@ const FilmsView = () => {
       }
       console.log(movieBody)
       let resp =  orderFilm(movieBody)
+      setTimeout(() => {
+        navigate("/myaccount");
+    }, 750);
       return resp
     } catch (error) {
       console.log(error)

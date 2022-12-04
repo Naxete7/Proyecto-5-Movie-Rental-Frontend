@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { Card } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import { addFilm, filmData } from "./FilmSlice"
-import card, { Col, Container, Image, Row } from "react-bootstrap";
+import card, { Col, Container, Image, Row, Spinner } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 
 import Form from 'react-bootstrap/Form';
@@ -159,9 +159,8 @@ const Films = () => {
                  <Col> <Button className="buttonSearch" variant="warning" size="lg" active onClick={filmsInfantil}>Infantil</Button></Col> 
 
                 </Row>
-
-                <Row className="d-flex align-content-end justify-content-end" >
-                    <div className="spinner">Busca tu película</div>
+                <Row className="d-flex align-content-end justify-content-center w-100">
+                    <Spinner className=""/>
 
                 </Row>
 

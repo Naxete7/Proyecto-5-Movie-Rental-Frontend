@@ -69,17 +69,7 @@ function OffcanvasExample() {
                     <Nav.Link href="/myaccount">{userMailHeader}</Nav.Link>
                     <Nav.Link href="/Films">Películas</Nav.Link>
                     <Nav.Link onClick={logOut} href="/">Log out</Nav.Link>
-                    <NavDropdown
-                      title="Géneros"
-                      id={`offcanvasNavbarDropdown-expand-${expand}`}>
                     
-                      <NavDropdown.Item >
-                        Genero 1
-                      </NavDropdown.Item>
-                      <NavDropdown.Item >
-                        Genero 2
-                      </NavDropdown.Item>
-                    </NavDropdown>
                   </Nav>
                 
   

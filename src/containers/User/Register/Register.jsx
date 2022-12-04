@@ -77,7 +77,7 @@ const Register = () => {
   const [user,setUser] = useState({
     username: "",
     mail: "",
-    password: "",
+    password: ""
 
   })
     const onFinish = (values) => {
@@ -104,8 +104,8 @@ const Register = () => {
         autoComplete="off"
       >
         
-          <Navigator pathUno={"/login"} destinoUno={"Login"} pathDos={"/"} destinoDos={"Home"}/>
-    
+         
+        <h1 className=" mb-3 ">REGISTER</h1>
           <Form.Item
             
           //label="Username"
@@ -132,6 +132,8 @@ const Register = () => {
         >
           <input type="mail" name="mail" placeholder="mail" onChange={(e)=>inputHandler(e)}/>
         </Form.Item>
+
+        
   
         <Form.Item
           //label="Password"
@@ -155,7 +157,6 @@ const Register = () => {
             span: 16,
           }}
         >
-          <Checkbox>Remember me</Checkbox>
        
             </Form.Item>
   
