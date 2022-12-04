@@ -65,16 +65,14 @@ const AllUsers = () => {
                     allUsers.map(allUser => {
                         return (
                             
-                            <Card style={{ width: '12rem' }} className="cards2" key={allUser.mail}>
+                            <Card style={{ width: '12rem' }} className="cards" key={allUser.mail}>
                                 <Card.Img variant="top" src={`https://robohash.org/YOUR-TE${allUser.mail}dsXT.png`} />
                                 <Card.Body>
                                     <Card.Title>{allUser.name}</Card.Title>
                                     <Card.Text>
                                         {allUser.mail}
                                     </Card.Text>
-                                    <Card.Text>
-                                        {allUser.birth_Date}
-                                    </Card.Text>
+                                   
                                     <Button variant="warning" onClick={() => deleteMe(allUser.mail)}>Delete</Button>
                                 </Card.Body>
                             </Card>

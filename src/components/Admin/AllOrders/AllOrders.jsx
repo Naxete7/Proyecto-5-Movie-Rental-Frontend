@@ -47,14 +47,15 @@ const AllOrders = () => {
                 allOrders.map(allOrder => {
                     return (
                         <Card style={{ width: '12rem' }} className="cards" key={allOrder.id_order}>
-                        <Card.Img variant="top" src={allOrder.film.poster} />
+                        <Card.Img className='imgCards' variant="top" src={allOrder.film.poster} />
                         <Card.Body>
                             {/* <Card.Title>{allOrder.film.title}</Card.Title> */}
                             <Card.Text>
                                 {allOrder.userMail}
                             </Card.Text>
                             <Card.Text>
-                                From {allOrder.startedAt} Until {allOrder.endedAt}
+                                    Desde {allOrder.startedAt} <br></br>
+                                    Hasta {allOrder.endedAt}
                             </Card.Text>
                         </Card.Body>
                     </Card>

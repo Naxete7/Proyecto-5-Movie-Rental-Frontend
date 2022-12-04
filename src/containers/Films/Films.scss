@@ -1,5 +1,5 @@
 .filmsDesign {
-        height: 100vh;
+        min-height: 100vh;
        
         background-image: linear-gradient(75deg, #f6d365 0%, #fda085 100%);
        
@@ -40,4 +40,12 @@ margin: 0.2em;
         width: 10em;
         background-color:white ;
         border-radius: 2em;
+}
+
+
+.spinnerDesign {
+
+        margin-top: 10em;
+        height: 5em;
+        width: 5em;
 }

@@ -159,8 +159,9 @@ const Films = () => {
                  <Col> <Button className="buttonSearch" variant="warning" size="lg" active onClick={filmsInfantil}>Infantil</Button></Col> 
 
                 </Row>
-                <Row className="d-flex align-content-end justify-content-center w-100">
-                    <Spinner className=""/>
+              
+                <Row className="d-flex align-content-end justify-content-center w-100 spinnerDesign">
+                    <Spinner className=" spinnerDesign"/>
 
                 </Row>
 
