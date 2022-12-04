@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "VideoRent",
+  "name": "Create VideoRent Sample",
   "icons": [
     {
       "src": "favicon.ico",
