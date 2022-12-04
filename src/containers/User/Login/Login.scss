@@ -1,4 +1,3 @@
-
 .loginDesign {
 
     height: 90vh;
@@ -11,7 +10,7 @@
     justify-content: center;
     align-items: center;
 
-    
+
 
 }
 
@@ -19,16 +18,33 @@
 
 .errorInput {
     margin-bottom: 1em;
-   color: #ff0707;
+    color: #ff0707;
 }
 
-input{
-width: 30vw;
-height: 5vh;
-border-radius: 0.5em;
+input {
+    width: 30vw;
+    height: 5vh;
+    border-radius: 0.5em;
 
 }
 
-pre{
-    color: aqua;
+pre {
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.buttonDesignLogin {
+    // margin-top: 1em;
+    // margin-bottom: 3em;
+    color: whitesmoke;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: larger;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
+    ;
+    text-decoration: none;
+    padding: 0.7em;
+    transition: 0.2s;
+    align-content: center;
 }
