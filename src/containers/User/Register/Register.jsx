@@ -77,8 +77,7 @@ const Register = () => {
   const [user,setUser] = useState({
     username: "",
     mail: "",
-    password: "",
-    birth_Date:""
+    password: ""
 
   })
     const onFinish = (values) => {
@@ -134,19 +133,7 @@ const Register = () => {
           <input type="mail" name="mail" placeholder="mail" onChange={(e)=>inputHandler(e)}/>
         </Form.Item>
 
-        <Form.Item
-          //label="Password"
-          name="birth_Date"
-          rules={[
-            {
-              required: true,
-              message: 'Please input your birthdate!',
-            },
-          ]}
-        >
-          <input type="birth_Date" name="birth_Date" placeholder="birthdate yyyy-mm-dd" onChange={(e)=>inputHandler(e)}/>
-
-        </Form.Item>
+        
   
         <Form.Item
           //label="Password"
