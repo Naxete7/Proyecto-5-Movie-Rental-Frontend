@@ -47,7 +47,7 @@ export const bringFilms = () => {
 
 
     } catch (error) {
-        console.log(error);
+       
     }
 };
 
@@ -59,7 +59,7 @@ export const bringTopRated = () => {
 
 
     } catch (error) {
-        console.log(error);
+      
     }
 };
 
@@ -71,7 +71,7 @@ export const bringComedia = () => {
 
 
     } catch (error) {
-        console.log(error);
+       
     }
 };
 
@@ -83,7 +83,7 @@ export const bringAccion = () => {
 
 
     } catch (error) {
-        console.log(error);
+        
     }
 };
 export const bringInfantil = () => {
@@ -94,7 +94,7 @@ export const bringInfantil = () => {
 
 
     } catch (error) {
-        console.log(error);
+      
     }
 };
 
@@ -106,7 +106,7 @@ export const searchFilms = async (criteria) => {
         return await axios.get(`https://proyecto04-videoclub-production-4de8.up.railway.app/films/title/${criteria}`)
         
     } catch (error) {
-        console.log(error);
+        
     }
 }
 

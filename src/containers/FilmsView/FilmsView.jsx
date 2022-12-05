@@ -1,9 +1,8 @@
 import React from "react";
 import "./FilmsView.scss";
-import { Button, Space } from 'antd';
-import { useEffect, useState } from "react";
-import { filmData, addFIlm } from "../Films/FilmSlice";
-import { useSelector, useDispatch } from "react-redux";
+import { Button } from 'antd';
+import { filmData } from "../Films/FilmSlice";
+import { useSelector } from "react-redux";
 import { Col, Container, Image, Row, Spinner } from "react-bootstrap";
 import { orderFilm } from "../../services/apicalls";
 import { setDayInSeventh } from "../../services/useful";
@@ -36,12 +35,10 @@ const FilmsView = () => {
         navigate("/myaccount");
     }, 750);
       return resp
-    } catch (error) {
-      console.log(error)
-    }
+    } catch (error) {}
   }
 
-  const [movie, setMovie] = useState([]);
+  //const [movie, setMovie] = useState([]);
   const selectedFilm = useSelector(filmData);
 
   if (selectedFilm?.id_film !== undefined) {

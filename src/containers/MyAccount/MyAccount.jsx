@@ -1,17 +1,16 @@
 import "./MyAccount.scss"
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Profile from '../User/Profile/Profile'
 import UserOrders from '../User/UserOrders/UserOrders';
 import AllOrders from '../../components/Admin/AllOrders/AllOrders'
-import { userData } from "../User/userSlice";
-import { useSelector } from "react-redux";
+
 import AllUsers from "../../components/Admin/AllUsers/AllUsers";
-import DeleteUser from "../../components/Admin/DeleteUser/DeleteUser";
+
 import UserActiveOrders from "../User/UserActiveOrders/UserActiveOrders";
 import ActiveAllOrders from "../../components/Admin/ActiveAllOrders/ActiveAllOrders";
 
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row,  } from "react-bootstrap";
 
 const MyAccount = () => {
 

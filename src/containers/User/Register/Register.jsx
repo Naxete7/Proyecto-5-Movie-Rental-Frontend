@@ -1,21 +1,21 @@
 import React, {useState, useEffect} from "react";
 import "./Register.scss"
-import Navigator from "../../../components/Navigator/Navigator";
+
 import { useNavigate } from "react-router-dom";
 import { registerUser } from "../../../services/apicalls";
-import { userData, login } from "../userSlice";
-import { useSelector, useDispatch } from "react-redux";
+import {  login } from "../userSlice";
+import {  useDispatch } from "react-redux";
 import '../../../components/Button/ButtonDesign.scss'
 import { loginUser } from "../../../services/apicalls";
 
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Form} from 'antd';
 
 
 
 const Register = () => {
   let dispatch = useDispatch()
   let navigate = useNavigate()
-  const userReduxCredentials = useSelector(userData);
+  
 
   useEffect(() => {
   
@@ -58,7 +58,7 @@ const Register = () => {
                   }
               });
       } catch (error) {
-          console.log(error)
+         
       }
       })
   }
@@ -79,10 +79,10 @@ const Register = () => {
 
   })
     const onFinish = (values) => {
-      console.log('Success:', values);
+     
     };
     const onFinishFailed = (errorInfo) => {
-      console.log('Failed:', errorInfo);
+    
     };
     return (
       <div className="registerDesign">

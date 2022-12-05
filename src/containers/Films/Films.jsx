@@ -4,10 +4,10 @@ import { useNavigate } from "react-router-dom";
 import { bringFilms, bringAccion, bringComedia, bringInfantil, searchFilms } from '../../services/apicalls'
 import { useState } from "react";
 import { useEffect } from "react";
-import { Card } from "antd";
-import { useSelector, useDispatch } from "react-redux";
-import { addFilm, filmData } from "./FilmSlice"
-import card, { Col, Container, Image, Row, Spinner } from "react-bootstrap";
+
+import { useDispatch } from "react-redux";
+import { addFilm, } from "./FilmSlice"
+import  { Col, Container, Image, Row, Spinner } from "react-bootstrap";
 import Button from 'react-bootstrap/Button';
 
 import Form from 'react-bootstrap/Form';
