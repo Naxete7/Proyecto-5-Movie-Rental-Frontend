@@ -52,7 +52,6 @@ const FilmsView = () => {
       <Container fluid className="filmsViewDesign" >
               <Row className= "align-items-center">
                 <Col >
-
                 <div><Image className="moviePicView fluid" src={selectedFilm?.poster} /></div>  
                     <Button className="buttonDesign" onClick={()=>orderMovie()}>Alquílame</Button>
                 </Col>
