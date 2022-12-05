@@ -40,10 +40,10 @@ function App() {
     token: credentials.token
   })
   let logged = currentUser
-  console.log(currentUser)
+  
 
   if (currentUser.email != "") {
-    console.log("ENTROOOOOO")
+    
     // dispatch(login({
     //   credentials: {
     //     token: localStorage.getItem("SAVEJWT"),
