@@ -8,7 +8,7 @@ import Home from './containers/Home/Home';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../src/components/Button/ButtonDesign.scss'
-import { Card } from 'react-bootstrap';
+
 //Importaciones de containers y componentes
 // import Register from './containers/Register/Register';
 import Login from './containers/User/Login/Login.jsx';
@@ -17,32 +17,32 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
  import Films from './containers/Films/Films';
 import FilmsView from './containers/FilmsView/FilmsView';
-import Image from 'react-bootstrap/Image'
+
 import Profile from './containers/User/Profile/Profile';
 import UserOrders from './containers/User/UserOrders/UserOrders';
 import AllOrders from './components/Admin/AllOrders/AllOrders';
 import MyAccount from './containers/MyAccount/MyAccount';
-import { createContext, useContext, useState } from 'react';
+import { createContext,  useState } from 'react';
 // import Films from './containers/Films/Films';
-import { useSelector, useDispatch } from "react-redux";
-import { login, userData } from "./containers/User/userSlice";
+import { useSelector } from "react-redux";
+import {  userData } from "./containers/User/userSlice";
 
 const CurrentUserContext = createContext(null)
 
 function App() {
 
 
-  const dispatch = useDispatch();
+
   const credentials = useSelector(userData)
   const [currentUser, setCurrentUser] = useState({
     role: credentials.role,
     email: credentials.mail,
     token: credentials.token
   })
-  let logged = currentUser
+
   
 
-  if (currentUser.email != "") {
+  if (currentUser.email !== "") {
     
     // dispatch(login({
     //   credentials: {

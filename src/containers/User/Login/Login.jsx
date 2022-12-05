@@ -3,22 +3,18 @@ import React, { useState, useEffect } from 'react';
 import "./Login.scss";
 import { loginUser } from '../../../services/apicalls';
 import { useNavigate } from 'react-router-dom';
-import { useSelector, useDispatch } from "react-redux";
-import { userData, login } from "../userSlice";
-import Navigator from '../../../components/Navigator/Navigator';
+import {  useDispatch } from "react-redux";
+import { login } from "../userSlice";
 import { errorCheck } from '../../../services/useful';
-import { Card } from 'antd';
+
 import '../../../components/Button/ButtonDesign.scss'
-import { Button, Space } from 'antd';
-
-
 const Login = () => {
 
     let navigate = useNavigate();
 
     const dispatch = useDispatch();
 
-    const userReduxCredentials = useSelector(userData);
+  
 
     const [user, setUser] = useState({
         mail: "",
@@ -111,7 +107,7 @@ const Login = () => {
                     }
                 });
         } catch (error) {
-            console.log(error)
+           
         }
 
     }

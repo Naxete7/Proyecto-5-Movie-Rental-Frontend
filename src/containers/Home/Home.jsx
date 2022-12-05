@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { Button, Space } from 'antd';
+
+import { Button} from 'antd';
 import { useState } from "react";
 import { useEffect } from "react";
 import { bringTopRated } from "../../services/apicalls";
-import card, { Col, Container, Image, Row } from "react-bootstrap";
+import { Container, Image, Row } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 import { useDispatch } from "react-redux";
 import { addFilm } from "../Films/FilmSlice";
