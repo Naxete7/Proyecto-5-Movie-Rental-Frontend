@@ -97,6 +97,9 @@ En este proyecto hemos realizado una app, para poder alquilar películas. Para e
 También podran registrarse usuarios nuevos, los cuales también se almacenaran en esta base de datos.
 La parte de frontend la desplegaremos en AWS.
 
+Enlace:
+https://main.d1xynfdiiv00mo.amplifyapp.com/
+
 ## Página de inicio ##
 
 ![Captura de pantalla 2022-12-04 204811](https://user-images.githubusercontent.com/109297564/205518740-d7512efb-cd9b-455a-aa84-c93b143ad70a.jpg)
