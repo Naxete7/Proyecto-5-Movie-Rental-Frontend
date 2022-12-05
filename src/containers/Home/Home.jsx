@@ -57,8 +57,8 @@ const Home = () => {
 
             <Container fluid className="filmsDesign" >
                 <Row className="d-flex align-content-end justify-content-end" >
-                    <div className="tituloDesign row-12 d-flex align-items-center justify-content-center">VideoRent</div>
-                    <div className="textCentralDesign row-12 d-flex align-items-center justify-content-center">Alquila todas las películas que quieras.</div>
+                    <div className="tituloDesign  d-flex align-items-center justify-content-center">VideoRent</div>
+                    <div className="textCentralDesign  d-flex align-items-center justify-content-center">Alquila todas las películas que quieras.</div>
 
                 </Row>
 <br></br>
@@ -92,7 +92,6 @@ const Home = () => {
                     <div className="buttonHome row-6  d-flex justify-content-center">
                        
                         <Button className="buttonDesign  d-flex justify-content-center " onClick={() => navigate("/login")} href="../Login/">Login</Button>
-
                         <Button className="buttonDesign  d-flex justify-content-center  " onClick={() => navigate("/register")} href="../Register" >Suscríbete</Button>
                   
                     </div>
